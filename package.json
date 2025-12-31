@@ -4,11 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "serve -s dist -l $PORT -n"
+    "start": "node server.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
