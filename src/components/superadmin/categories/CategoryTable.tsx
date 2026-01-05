@@ -108,15 +108,15 @@ export default function CategoryTable({
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       {/* Action Menu - Shows when rows are selected */}
       {hasSelection && (
-        <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+        <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedRows.size} {selectedRows.size === 1 ? 'item' : 'items'} selected
               </span>
               <button
                 onClick={clearSelection}
-                className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                className="text-sm text-orange-600 hover:text-orange-800 font-medium"
               >
                 Clear selection
               </button>
@@ -170,7 +170,7 @@ export default function CategoryTable({
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -204,7 +204,7 @@ export default function CategoryTable({
                     type="checkbox"
                     checked={selectedRows.has(item.id)}
                     onChange={(e) => handleSelectRow(item.id, e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
@@ -225,7 +225,7 @@ export default function CategoryTable({
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="text-sm text-gray-900">
                     {item.productCount !== undefined ? (
-                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
                         {item.productCount}
                       </span>
                     ) : (
@@ -272,7 +272,7 @@ export default function CategoryTable({
                             onView(item);
                             setActiveMenu(null);
                           }}
-                          className="flex items-center w-full px-4 py-2 text-sm text-blue-600 hover:bg-blue-50"
+                          className="flex items-center w-full px-4 py-2 text-sm text-orange-600 hover:bg-orange-50"
                         >
                           <Eye className="w-4 h-4 mr-2" />
                           View Category

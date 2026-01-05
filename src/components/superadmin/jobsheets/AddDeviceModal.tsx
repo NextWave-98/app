@@ -91,7 +91,7 @@ export default function AddDeviceModal({
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <Smartphone className="w-6 h-6 text-blue-600 mr-2" />
+            <Smartphone className="w-6 h-6 text-orange-600 mr-2" />
             <div>
               <h2 className="text-xl font-bold text-gray-900">Register New Device</h2>
               <p className="text-sm text-gray-600 mt-1">Customer: {customerName}</p>
@@ -117,7 +117,7 @@ export default function AddDeviceModal({
               value={formData.deviceType}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               {DEVICE_TYPES.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -140,7 +140,7 @@ export default function AddDeviceModal({
                 onChange={handleChange}
                 required
                 placeholder="e.g., Apple, Samsung, HP"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -155,7 +155,7 @@ export default function AddDeviceModal({
                 onChange={handleChange}
                 required
                 placeholder="e.g., iPhone 14 Pro, Galaxy S23"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function AddDeviceModal({
                 value={formData.serialNumber || ''}
                 onChange={handleChange}
                 placeholder="Device serial number"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -186,7 +186,7 @@ export default function AddDeviceModal({
                 value={formData.imei || ''}
                 onChange={handleChange}
                 placeholder="For mobile devices"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function AddDeviceModal({
                 name="purchaseDate"
                 value={formData.purchaseDate || ''}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function AddDeviceModal({
                 name="warrantyExpiry"
                 value={formData.warrantyExpiry || ''}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function AddDeviceModal({
               onChange={handleChange}
               rows={3}
               placeholder="Any additional information about the device..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
             />
           </div>
 
@@ -248,7 +248,7 @@ export default function AddDeviceModal({
             <button
               type="submit"
               disabled={loading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Registering...' : 'Register Device'}
             </button>

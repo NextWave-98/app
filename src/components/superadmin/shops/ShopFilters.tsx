@@ -25,7 +25,7 @@ export default function ShopFilters({
         {hasActiveFilters && (
           <button
             onClick={onReset}
-            className="ml-auto text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1"
+            className="ml-auto text-sm text-orange-600 hover:text-orange-700 flex items-center gap-1"
           >
             <X className="w-4 h-4" />
             Clear All
@@ -44,7 +44,7 @@ export default function ShopFilters({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search shops, branch code, manager..."
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           />
         </div>
 
@@ -60,7 +60,7 @@ export default function ShopFilters({
                 onStatusChange(value === 'true');
               }
             }}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Status</option>
             <option value="true">Active</option>

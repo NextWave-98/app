@@ -37,8 +37,8 @@ export default function InventoryTable({
   const [selectedRows, setSelectedRows] = useState<Set<string>>(new Set());
 
   const formatCurrency = (amount: number | undefined) => {
-    if (amount === undefined || amount === null) return 'LKR 0';
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    if (amount === undefined || amount === null) return 'USD 0';
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const formatDate = (dateString: string | undefined) => {
@@ -80,7 +80,7 @@ export default function InventoryTable({
   const getStockHealthColor = (quantity: number, minStock: number, maxStock: number) => {
     if (quantity === 0) return 'bg-red-500';
     if (quantity < minStock) return 'bg-yellow-500';
-    if (quantity > maxStock) return 'bg-blue-500';
+    if (quantity > maxStock) return 'bg-orange-500';
     return 'bg-green-500';
   };
 
@@ -112,15 +112,15 @@ export default function InventoryTable({
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       {/* Action Menu - Shows when rows are selected */}
       {hasSelection && (
-        <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+        <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedRows.size} {selectedRows.size === 1 ? 'item' : 'items'} selected
               </span>
               <button
                 onClick={clearSelection}
-                className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                className="text-sm text-orange-600 hover:text-orange-800 font-medium"
               >
                 Clear selection
               </button>
@@ -176,7 +176,7 @@ export default function InventoryTable({
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -214,7 +214,7 @@ export default function InventoryTable({
                     type="checkbox"
                     checked={selectedRows.has(item.id)}
                     onChange={(e) => handleSelectRow(item.id, e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                   />
                 </td>
                 <td className="px-6 py-4">

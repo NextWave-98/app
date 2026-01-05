@@ -39,8 +39,8 @@ export default function JobSheetTable({
   const [selectedRows, setSelectedRows] = useState<Set<string>>(new Set());
 
   const formatCurrency = (amount: number | undefined | null) => {
-    if (amount == null) return 'LKR 0.00';
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    if (amount == null) return 'USD 0.00';
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const handleSelectAll = (checked: boolean) => {
@@ -100,15 +100,15 @@ export default function JobSheetTable({
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       {/* Action Menu - Shows when rows are selected */}
       {hasSelection && (
-        <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+        <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedRows.size} {selectedRows.size === 1 ? 'item' : 'items'} selected
               </span>
               <button
                 onClick={clearSelection}
-                className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                className="text-sm text-orange-600 hover:text-orange-800 font-medium"
               >
                 Clear selection
               </button>
@@ -156,7 +156,7 @@ export default function JobSheetTable({
                     onDownloadPDF(selectedJobSheets[0]);
                     clearSelection();
                   }}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                 >
                   <Download className="w-4 h-4 mr-1.5" />
                   Download
@@ -168,7 +168,7 @@ export default function JobSheetTable({
                     onPrintCard(selectedJobSheets[0]);
                     clearSelection();
                   }}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                 >
                   <Printer className="w-4 h-4 mr-1.5" />
                   Print
@@ -188,7 +188,7 @@ export default function JobSheetTable({
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -233,13 +233,13 @@ export default function JobSheetTable({
                     type="checkbox"
                     checked={selectedRows.has(jobSheet.id.toString())}
                     onChange={(e) => handleSelectRow(jobSheet.id.toString(), e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <FileText className="h-5 w-5 text-blue-600" />
+                    <div className="flex-shrink-0 h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <FileText className="h-5 w-5 text-orange-600" />
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-medium text-gray-900">{jobSheet.jobNumber}</div>

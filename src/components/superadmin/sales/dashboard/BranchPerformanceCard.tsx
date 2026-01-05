@@ -9,7 +9,7 @@ export default function BranchPerformanceCard({ branches }: BranchPerformanceCar
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       notation: 'compact',
       maximumFractionDigits: 1,
     }).format(amount);
@@ -19,7 +19,7 @@ export default function BranchPerformanceCard({ branches }: BranchPerformanceCar
     return (
       <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-          <Building2 className="w-5 h-5 text-blue-600" />
+          <Building2 className="w-5 h-5 text-orange-600" />
           Top Branches
         </h3>
         <div className="flex items-center justify-center h-64 text-gray-500">
@@ -32,7 +32,7 @@ export default function BranchPerformanceCard({ branches }: BranchPerformanceCar
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-        <Building2 className="w-5 h-5 text-blue-600" />
+        <Building2 className="w-5 h-5 text-orange-600" />
         Top Branches
       </h3>
       
@@ -40,7 +40,7 @@ export default function BranchPerformanceCard({ branches }: BranchPerformanceCar
         {branches.slice(0, 5).map((branch, index) => (
           <div key={branch.locationId} className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 font-semibold text-sm">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-orange-100 text-orange-600 font-semibold text-sm">
                 {index + 1}
               </div>
               <div>

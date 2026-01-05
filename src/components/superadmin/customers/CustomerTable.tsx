@@ -56,7 +56,7 @@ export default function CustomerTable({
   };
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${(amount / 1000).toLocaleString()}K`;
+    return `USD ${(amount / 1000).toLocaleString()}K`;
   };
 
   const isSelected = (customer: Customer) => {
@@ -98,7 +98,7 @@ export default function CustomerTable({
                     type="checkbox"
                     checked={selectedCustomers.length === customers.length && customers.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -137,7 +137,7 @@ export default function CustomerTable({
                       type="checkbox"
                       checked={isSelected(customer)}
                       onChange={() => handleSelectCustomer(customer)}
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                     />
                   </td>
                 )}

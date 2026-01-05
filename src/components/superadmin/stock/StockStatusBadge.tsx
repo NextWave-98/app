@@ -44,9 +44,9 @@ export default function StockStatusBadge({ status }: StockStatusBadgeProps) {
         return {
           text: 'Back Order',
           icon: Clock,
-          color: 'text-blue-800',
-          bgColor: 'bg-blue-100',
-          borderColor: 'border-blue-200',
+          color: 'text-orange-800',
+          bgColor: 'bg-orange-100',
+          borderColor: 'border-orange-200',
         };
       default:
         return {

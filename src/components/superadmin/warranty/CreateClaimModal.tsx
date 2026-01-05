@@ -88,8 +88,8 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
         <form onSubmit={formik.handleSubmit}>
           <div className="p-6 space-y-6">
             {/* Warranty Info */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-              <p className="text-xs text-blue-600 mb-1">Warranty Details</p>
+            <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+              <p className="text-xs text-orange-600 mb-1">Warranty Details</p>
               <p className="text-lg font-semibold text-gray-900">{warranty.warrantyNumber}</p>
               <div className="grid grid-cols-2 gap-4 mt-3">
                 <div>
@@ -146,7 +146,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               </label>
               <select
                 {...formik.getFieldProps('issueType')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.issueType && formik.errors.issueType ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -174,7 +174,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               <textarea
                 {...formik.getFieldProps('issueDescription')}
                 rows={4}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.issueDescription && formik.errors.issueDescription ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Describe the issue in detail (symptoms, when it started, frequency, etc.)"
@@ -191,7 +191,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               </label>
               <select
                 {...formik.getFieldProps('priority')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.priority && formik.errors.priority ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -208,12 +208,12 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
             {/* Estimated Cost */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Estimated Repair Cost (LKR) (Optional)
+                Estimated Repair Cost (USD) (Optional)
               </label>
               <input
                 type="number"
                 {...formik.getFieldProps('estimatedCost')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.estimatedCost && formik.errors.estimatedCost ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="5000"
@@ -232,7 +232,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               <textarea
                 {...formik.getFieldProps('notes')}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Any additional information that might be helpful..."
               />
             </div>
@@ -240,7 +240,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
             {/* Info Box */}
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
               <h4 className="text-sm font-semibold text-gray-900 mb-2 flex items-center">
-                <ClipboardCheck className="w-4 h-4 mr-2 text-blue-600" />
+                <ClipboardCheck className="w-4 h-4 mr-2 text-orange-600" />
                 What happens next?
               </h4>
               <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
@@ -264,7 +264,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 flex items-center gap-2"
               disabled={loading}
             >
               <ClipboardCheck className="w-4 h-4" />

@@ -12,11 +12,11 @@ const HomePage = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-purple-900/70 to-pink-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 via-purple-900/70 to-pink-900/60"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32 lg:py-40 w-full">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-              Welcome to Lanka Tech Solutions
+              Welcome to GadgetChain Manager
             </h1>
             <p className="mt-6 max-w-3xl mx-auto text-xl sm:text-2xl text-gray-100 leading-relaxed drop-shadow-md">
               Your trusted partner for quality mobile devices and exceptional service.
@@ -47,7 +47,7 @@ const HomePage = () => {
                 Who We Are
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Lanka Tech Solutions is a leading provider of mobile devices and technology solutions.
+                GadgetChain Manager is a leading provider of mobile devices and technology solutions.
                 With years of experience in the industry, we've built a reputation for
                 excellence, reliability, and customer satisfaction.
               </p>
@@ -67,7 +67,7 @@ const HomePage = () => {
                 <div className="text-4xl font-bold text-purple-600 mb-2">10+</div>
                 <div className="text-gray-700 font-medium">Years Experience</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl text-center">
+              <div className="bg-gradient-to-br from-orange-50 to-purple-50 p-8 rounded-2xl text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">50K+</div>
                 <div className="text-gray-700 font-medium">Happy Customers</div>
               </div>
@@ -75,7 +75,7 @@ const HomePage = () => {
                 <div className="text-4xl font-bold text-purple-600 mb-2">24/7</div>
                 <div className="text-gray-700 font-medium">Support Available</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl text-center">
+              <div className="bg-gradient-to-br from-purple-50 to-orange-50 p-8 rounded-2xl text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
                 <div className="text-gray-700 font-medium">Satisfaction</div>
               </div>

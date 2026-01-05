@@ -16,9 +16,9 @@ export default function CategoryStatsCards({ stats }: CategoryStatsCardsProps) {
       value: stats.total,
       icon: FolderTree,
       color: 'blue',
-      bgColor: 'bg-blue-500',
-      lightBg: 'bg-blue-50',
-      textColor: 'text-blue-600',
+      bgColor: 'bg-orange-500',
+      lightBg: 'bg-orange-50',
+      textColor: 'text-orange-600',
     },
     {
       title: 'Active Categories',

@@ -282,7 +282,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.name && formik.touched.name ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
@@ -297,7 +297,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.companyName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -315,7 +315,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                         formik.setFieldValue('phone', formatSriLankaPhone(formik.values.phone));
                       }
                     }}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.phone && formik.touched.phone ? 'border-red-500' : 'border-gray-300'
                     }`}
                     required
@@ -335,7 +335,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                         formik.setFieldValue('alternatePhone', formatSriLankaPhone(formik.values.alternatePhone));
                       }
                     }}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.alternatePhone && formik.touched.alternatePhone ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -349,7 +349,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -363,7 +363,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.website}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.website && formik.touched.website ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -376,7 +376,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.supplierType}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.supplierType && formik.touched.supplierType ? 'border-red-500' : 'border-gray-300'
                     }`}
                   >
@@ -396,7 +396,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.status}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.status && formik.touched.status ? 'border-red-500' : 'border-gray-300'
                     }`}
                   >
@@ -417,7 +417,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.rating}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.rating && formik.touched.rating ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -438,7 +438,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.address}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.address && formik.touched.address ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -452,7 +452,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.city}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.city && formik.touched.city ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -466,7 +466,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.state}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.state && formik.touched.state ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -480,7 +480,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.postalCode}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.postalCode && formik.touched.postalCode ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -494,7 +494,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.country}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.country && formik.touched.country ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -517,7 +517,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.taxId}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.taxId && formik.touched.taxId ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -531,7 +531,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.registrationNumber}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.registrationNumber && formik.touched.registrationNumber ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -546,7 +546,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     placeholder="e.g., Net 30"
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.paymentTerms && formik.touched.paymentTerms ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -560,21 +560,21 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.creditDays}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.creditDays && formik.touched.creditDays ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
                   {formik.errors.creditDays && formik.touched.creditDays && <p className="mt-1 text-sm text-red-500">{formik.errors.creditDays}</p>}
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Credit Limit (LKR)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Credit Limit (USD)</label>
                   <input
                     type="number"
                     name="creditLimit"
                     value={formik.values.creditLimit}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.creditLimit && formik.touched.creditLimit ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -595,7 +595,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.bankName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.bankName && formik.touched.bankName ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -609,7 +609,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.accountName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.accountName && formik.touched.accountName ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -623,7 +623,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.accountNumber}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.accountNumber && formik.touched.accountNumber ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -637,7 +637,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.swiftCode}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.swiftCode && formik.touched.swiftCode ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -658,7 +658,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.contactPersonName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.contactPersonName && formik.touched.contactPersonName ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -677,7 +677,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                         formik.setFieldValue('contactPersonPhone', formatSriLankaPhone(formik.values.contactPersonPhone));
                       }
                     }}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.contactPersonPhone && formik.touched.contactPersonPhone ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -691,7 +691,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.contactPersonEmail}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.contactPersonEmail && formik.touched.contactPersonEmail ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -705,7 +705,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                     value={formik.values.contactPersonDesignation}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       formik.errors.contactPersonDesignation && formik.touched.contactPersonDesignation ? 'border-red-500' : 'border-gray-300'
                     }`}
                   />
@@ -723,7 +723,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 rows={3}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.errors.notes && formik.touched.notes ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
@@ -742,7 +742,7 @@ export default function EditSupplierModal({ isOpen, onClose, onSuccess, supplier
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 disabled:opacity-50"
                 disabled={loading}
               >
                 {loading ? 'Updating...' : 'Update Supplier'}

@@ -386,8 +386,8 @@ export default function PaymentsPage() {
                 <p className="text-sm font-medium text-gray-600 mb-1">Total Transactions</p>
                 <p className="text-2xl font-bold text-gray-900">{stats.summary.totalTransactions}</p>
               </div>
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <DollarSign className="w-6 h-6 text-blue-600" />
+              <div className="bg-orange-50 p-3 rounded-lg">
+                <DollarSign className="w-6 h-6 text-orange-600" />
               </div>
             </div>
           </div>
@@ -455,14 +455,14 @@ export default function PaymentsPage() {
             placeholder="Search payments..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           />
 
           {/* Payment Type Filter */}
           <select
             value={selectedPaymentType}
             onChange={(e) => setSelectedPaymentType(e.target.value as '' | 'INCOMING' | 'OUTGOING')}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
             <option value="">All Payment Types</option>
             <option value="INCOMING">Incoming (Revenue)</option>
@@ -473,7 +473,7 @@ export default function PaymentsPage() {
           <select
             value={selectedMethod}
             onChange={(e) => setSelectedMethod(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
             <option value="">All Methods</option>
             <option value="CASH">Cash</option>
@@ -488,7 +488,7 @@ export default function PaymentsPage() {
           <select
             value={dateFilter}
             onChange={(e) => setDateFilter(e.target.value as DateFilter)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
           >
             <option value="today">Today</option>
             <option value="yesterday">Yesterday</option>
@@ -506,14 +506,14 @@ export default function PaymentsPage() {
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
               placeholder="Start Date"
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             />
             <input
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
               placeholder="End Date"
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             />
           </div>
         )}
@@ -596,7 +596,7 @@ export default function PaymentsPage() {
                         )}
                       </span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-orange-600">
                       {payment.paymentNumber || payment.refundNumber}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -619,7 +619,7 @@ export default function PaymentsPage() {
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
+                      <span className="px-2 py-1 text-xs font-medium rounded-full bg-orange-100 text-orange-800">
                         {(payment.paymentMethod || payment.refundMethod || '').replace('_', ' ')}
                       </span>
                     </td>

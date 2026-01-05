@@ -11,7 +11,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
   if (!isOpen || !customer) return null;
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString()}`;
+    return `USD ${amount.toLocaleString()}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -51,14 +51,14 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
       <div className="flex min-h-full items-center justify-center p-4">
         <div className="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-5 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-orange-600 to-orange-700 px-6 py-5 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="bg-white/20 p-2 rounded-lg">
                 <User className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-white">Customer Information</h2>
-                <p className="text-blue-100 text-sm">{customer.customerId}</p>
+                <p className="text-orange-100 text-sm">{customer.customerId}</p>
               </div>
             </div>
             <button
@@ -87,7 +87,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
               {/* Personal Information */}
               <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <User className="w-5 h-5 text-blue-600" />
+                  <User className="w-5 h-5 text-orange-600" />
                   Personal Information
                 </h3>
                 <div className="space-y-3">
@@ -133,7 +133,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
               {/* Location & Address */}
               <div className="bg-gray-50 rounded-lg p-5 border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-orange-600" />
                   Location & Address
                 </h3>
                 <div className="space-y-3">
@@ -184,7 +184,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
                 color="yellow"
               />
               <StatCard
-                icon={<ShoppingBag className="w-6 h-6 text-blue-500" />}
+                icon={<ShoppingBag className="w-6 h-6 text-orange-500" />}
                 label="Total Purchases"
                 value={customer.totalPurchases.toString()}
                 color="blue"
@@ -200,7 +200,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
             {/* Dates */}
             <div className="bg-gray-50 rounded-lg p-5 border border-gray-200 mb-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Calendar className="w-5 h-5 text-blue-600" />
+                <Calendar className="w-5 h-5 text-orange-600" />
                 Important Dates
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -240,7 +240,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
           <div className="bg-gray-50 px-6 py-4 border-t border-gray-200 flex justify-end">
             <button
               onClick={onClose}
-              className="px-6 py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="px-6 py-2.5 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors font-medium"
             >
               Close
             </button>
@@ -260,11 +260,11 @@ interface InfoRowProps {
 
 function InfoRow({ label, value, icon, highlight = false }: InfoRowProps) {
   return (
-    <div className={`flex items-start gap-3 ${highlight ? 'bg-blue-50 -mx-2 px-2 py-2 rounded-md' : ''}`}>
+    <div className={`flex items-start gap-3 ${highlight ? 'bg-orange-50 -mx-2 px-2 py-2 rounded-md' : ''}`}>
       <div className="text-gray-400 mt-0.5">{icon}</div>
       <div className="flex-1 min-w-0">
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wide">{label}</p>
-        <p className={`text-sm ${highlight ? 'font-semibold text-blue-900' : 'text-gray-900'} mt-0.5 break-words`}>
+        <p className={`text-sm ${highlight ? 'font-semibold text-orange-900' : 'text-gray-900'} mt-0.5 break-words`}>
           {value}
         </p>
       </div>
@@ -282,7 +282,7 @@ interface StatCardProps {
 function StatCard({ icon, label, value, color }: StatCardProps) {
   const colorClasses = {
     yellow: 'bg-yellow-50 border-yellow-200',
-    blue: 'bg-blue-50 border-blue-200',
+    blue: 'bg-orange-50 border-orange-200',
     green: 'bg-green-50 border-green-200',
   };
 

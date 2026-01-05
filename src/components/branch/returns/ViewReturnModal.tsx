@@ -17,12 +17,12 @@ export default function ViewReturnModal({
   if (!isOpen || !returnItem) return null;
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const getStatusColor = (status: string) => {
     const colors: Record<string, string> = {
-      RECEIVED: 'bg-blue-100 text-blue-800 border-blue-200',
+      RECEIVED: 'bg-orange-100 text-orange-800 border-orange-200',
       INSPECTING: 'bg-yellow-100 text-yellow-800 border-yellow-200',
       PENDING_APPROVAL: 'bg-orange-100 text-orange-800 border-orange-200',
       APPROVED: 'bg-green-100 text-green-800 border-green-200',
@@ -202,7 +202,7 @@ export default function ViewReturnModal({
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-gray-900">Created</p>
                     <p className="text-sm text-gray-600">{formatDateTime(returnItem.createdAt)}</p>

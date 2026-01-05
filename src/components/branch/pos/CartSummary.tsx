@@ -73,7 +73,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({
               return (
                 <div
                   key={item.id}
-                  className="bg-gray-50 rounded-lg p-3 border border-gray-200 hover:border-blue-300 transition-colors"
+                  className="bg-gray-50 rounded-lg p-3 border border-gray-200 hover:border-orange-300 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex-1">
@@ -124,7 +124,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({
                     </div>
 
                     {/* Item Total */}
-                    <p className="text-sm font-bold text-blue-600">
+                    <p className="text-sm font-bold text-orange-600">
                       {formatCurrency(item.price * item.quantity)}
                     </p>
                   </div>
@@ -142,14 +142,14 @@ const CartSummary: React.FC<CartSummaryProps> = ({
           <div className="space-y-2 mb-4">
             <div className="flex items-center justify-between">
               <span className="text-base font-semibold text-gray-900">Total</span>
-              <span className="text-2xl font-bold text-blue-600">{formatCurrency(total)}</span>
+              <span className="text-2xl font-bold text-orange-600">{formatCurrency(total)}</span>
             </div>
           </div>
 
           {/* Checkout Button */}
           <button
             onClick={onCheckout}
-            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors shadow-sm hover:shadow-md"
+            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-colors shadow-sm hover:shadow-md"
           >
             <CreditCard className="w-5 h-5" />
             Proceed to Payment

@@ -103,7 +103,7 @@ export default function ViewJobSheetModal({
 
   const formatCurrency = (amount: number) => {
     const numAmount = Number(amount) || 0;
-    return `LKR ${numAmount.toFixed(2)}`;
+    return `USD ${numAmount.toFixed(2)}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -131,7 +131,7 @@ export default function ViewJobSheetModal({
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between z-10">
           <div className="flex items-center">
-            <Eye className="w-6 h-6 text-blue-600 mr-2" />
+            <Eye className="w-6 h-6 text-orange-600 mr-2" />
             <div>
               <h2 className="text-xl font-bold text-gray-900">
                 {loading ? 'Loading...' : jobSheet?.jobNumber || 'Job Sheet Details'}
@@ -167,7 +167,7 @@ export default function ViewJobSheetModal({
                   onClick={() => setActiveTab('details')}
                   className={`px-4 py-3 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === 'details'
-                      ? 'border-blue-600 text-blue-600'
+                      ? 'border-orange-600 text-orange-600'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -177,7 +177,7 @@ export default function ViewJobSheetModal({
                   onClick={() => setActiveTab('payments')}
                   className={`px-4 py-3 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === 'payments'
-                      ? 'border-blue-600 text-blue-600'
+                      ? 'border-orange-600 text-orange-600'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -187,7 +187,7 @@ export default function ViewJobSheetModal({
                   onClick={() => setActiveTab('history')}
                   className={`px-4 py-3 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === 'history'
-                      ? 'border-blue-600 text-blue-600'
+                      ? 'border-orange-600 text-orange-600'
                       : 'border-transparent text-gray-600 hover:text-gray-900'
                   }`}
                 >
@@ -301,7 +301,7 @@ export default function ViewJobSheetModal({
                         <label className="block text-sm font-semibold text-gray-900 mb-2">
                           Diagnosis Notes
                         </label>
-                        <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                        <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
                           <p className="text-sm text-gray-900 whitespace-pre-wrap">
                             {jobSheet.diagnosisNotes}
                           </p>
@@ -358,10 +358,10 @@ export default function ViewJobSheetModal({
                     )}
 
                     {jobSheet.deliveredDate && (
-                      <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
+                      <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
                         <div className="flex items-center gap-2 mb-1">
-                          <Package className="w-4 h-4 text-blue-600" />
-                          <p className="text-xs text-blue-600">Delivered</p>
+                          <Package className="w-4 h-4 text-orange-600" />
+                          <p className="text-xs text-orange-600">Delivered</p>
                         </div>
                         <p className="text-sm font-medium text-gray-900">
                           {formatDate(jobSheet.deliveredDate)}
@@ -482,8 +482,8 @@ export default function ViewJobSheetModal({
                       {statusHistory.map((history) => (
                         <div key={history.id} className="relative pl-12 pb-8 last:pb-0">
                           {/* Timeline Dot */}
-                          <div className="absolute left-0 w-8 h-8 bg-white border-2 border-blue-600 rounded-full flex items-center justify-center">
-                            <div className="w-3 h-3 bg-blue-600 rounded-full" />
+                          <div className="absolute left-0 w-8 h-8 bg-white border-2 border-orange-600 rounded-full flex items-center justify-center">
+                            <div className="w-3 h-3 bg-orange-600 rounded-full" />
                           </div>
 
                           {/* Content */}

@@ -469,7 +469,7 @@ export default function SalesPage() {
   };
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   if (initialLoading) {
@@ -533,7 +533,7 @@ export default function SalesPage() {
             onClick={() => setActiveTab('dashboard')}
             className={`${
               activeTab === 'dashboard'
-                ? 'border-blue-500 text-blue-600'
+                ? 'border-orange-500 text-orange-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
           >
@@ -544,7 +544,7 @@ export default function SalesPage() {
             onClick={() => setActiveTab('transactions')}
             className={`${
               activeTab === 'transactions'
-                ? 'border-blue-500 text-blue-600'
+                ? 'border-orange-500 text-orange-600'
                 : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
             } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2`}
           >
@@ -573,7 +573,7 @@ export default function SalesPage() {
                 onClick={() => setPeriod(p)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                   period === p
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-orange-600 text-white'
                     : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
                 }`}
               >
@@ -587,7 +587,7 @@ export default function SalesPage() {
             <button
               onClick={handleRefresh}
               disabled={refreshing}
-              className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
             >
               <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
               Refresh

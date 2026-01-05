@@ -245,7 +245,7 @@ const BranchDashboardPage = () => {
         return 'bg-green-100 text-green-800';
       case 'IN_PROGRESS':
       case 'QUALITY_CHECK':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'PENDING':
         return 'bg-yellow-100 text-yellow-800';
       case 'CANCELLED':
@@ -272,9 +272,9 @@ const BranchDashboardPage = () => {
       change: dashboardData.orders.change,
       trend: dashboardData.orders.change.startsWith('+') ? 'up' : 'down',
       icon: ShoppingBag,
-      bgColor: 'bg-blue-50',
-      iconColor: 'text-blue-600',
-      changeColor: dashboardData.orders.change.startsWith('+') ? 'text-blue-600' : 'text-red-600',
+      bgColor: 'bg-orange-50',
+      iconColor: 'text-orange-600',
+      changeColor: dashboardData.orders.change.startsWith('+') ? 'text-orange-600' : 'text-red-600',
     },
     {
       name: 'Customers',
@@ -459,7 +459,7 @@ const BranchDashboardPage = () => {
                 </div>
                 <button 
                   onClick={() => navigate(`/${branchCode}/system/products`)}
-                  className="w-full mt-4 py-2 text-sm text-[#1e3a8a] border border-[#1e3a8a] rounded-lg hover:bg-blue-50 transition-colors"
+                  className="w-full mt-4 py-2 text-sm text-[#1e3a8a] border border-[#1e3a8a] rounded-lg hover:bg-orange-50 transition-colors"
                 >
                   View All Inventory
                 </button>
@@ -476,10 +476,10 @@ const BranchDashboardPage = () => {
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-lg font-bold text-gray-900 mb-4">Today's Sales Breakdown</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-600 font-semibold">Jobsheet Sales</p>
-                <p className="text-2xl font-bold text-blue-800">{formatCurrency(enhancedDashboardData.todaySales.jobsheetSales)}</p>
-                <p className="text-xs text-blue-600">{enhancedDashboardData.todaySales.jobsheetCount} jobs</p>
+              <div className="text-center p-4 bg-orange-50 rounded-lg">
+                <p className="text-sm text-orange-600 font-semibold">Jobsheet Sales</p>
+                <p className="text-2xl font-bold text-orange-800">{formatCurrency(enhancedDashboardData.todaySales.jobsheetSales)}</p>
+                <p className="text-xs text-orange-600">{enhancedDashboardData.todaySales.jobsheetCount} jobs</p>
               </div>
               <div className="text-center p-4 bg-green-50 rounded-lg">
                 <p className="text-sm text-green-600 font-semibold">POS Sales</p>
@@ -588,26 +588,26 @@ const BranchDashboardPage = () => {
       )}
 
       {/* Branch Performance */}
-      <div className="bg-gradient-to-r from-[#1e3a8a] to-blue-700 rounded-lg shadow-sm border border-gray-200 p-6 text-white">
+      <div className="bg-gradient-to-r from-[#1e3a8a] to-orange-700 rounded-lg shadow-sm border border-gray-200 p-6 text-white">
         <h2 className="text-xl font-bold mb-4">Branch Performance</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div>
-            <p className="text-blue-200 text-sm mb-1">Today</p>
+            <p className="text-orange-200 text-sm mb-1">Today</p>
             <p className="text-2xl font-bold">{formatCurrency(enhancedDashboardData.todaySales.totalSales)}</p>
             <p className="text-sm text-green-300 mt-1">{dashboardData.sales.change} from last month</p>
           </div>
           <div>
-            <p className="text-blue-200 text-sm mb-1">Average Order Value</p>
+            <p className="text-orange-200 text-sm mb-1">Average Order Value</p>
             <p className="text-2xl font-bold">{formatCurrency(dashboardData.avgOrderValue)}</p>
             <p className="text-sm text-green-300 mt-1">Per transaction</p>
           </div>
           <div>
-            <p className="text-blue-200 text-sm mb-1">Total Transactions</p>
+            <p className="text-orange-200 text-sm mb-1">Total Transactions</p>
             <p className="text-2xl font-bold">{dashboardData.totalTransactions}</p>
             <p className="text-sm text-green-300 mt-1">{dashboardData.orders.change} from last month</p>
           </div>
           <div>
-            <p className="text-blue-200 text-sm mb-1">Active Customers</p>
+            <p className="text-orange-200 text-sm mb-1">Active Customers</p>
             <p className="text-2xl font-bold">{dashboardData.customers.total}</p>
             <p className="text-sm text-green-300 mt-1">{dashboardData.customers.change} active</p>
           </div>

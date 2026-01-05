@@ -281,14 +281,14 @@ export default function ShopPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
           </button>
           <button
             onClick={handleAddShop}
-            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
           >
             <Plus className="w-4 h-4 mr-2" />
             Add New Shop
@@ -305,7 +305,7 @@ export default function ShopPage() {
           onClick={() => setSelectedType('all')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             selectedType === 'all'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-orange-600 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -315,7 +315,7 @@ export default function ShopPage() {
           onClick={() => setSelectedType('store')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             selectedType === 'store'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-orange-600 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -325,7 +325,7 @@ export default function ShopPage() {
           onClick={() => setSelectedType('shops')}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             selectedType === 'shops'
-              ? 'bg-blue-600 text-white'
+              ? 'bg-orange-600 text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -344,10 +344,10 @@ export default function ShopPage() {
 
       {/* Action Bar - Shown when shops are selected */}
       {selectedShops.length > 0 && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg shadow-sm p-4">
+        <div className="bg-orange-50 border border-orange-200 rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedShops.length} shop{selectedShops.length > 1 ? 's' : ''} selected
               </span>
             </div>
@@ -356,7 +356,7 @@ export default function ShopPage() {
                 <>
                   <button
                     onClick={() => handleView(selectedShops[0])}
-                    className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     View

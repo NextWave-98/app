@@ -21,7 +21,7 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
         return 'bg-green-100 text-green-800';
       case 'RELEASED':
       case 'IN_TRANSIT':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'APPROVED':
         return 'bg-purple-100 text-purple-800';
       case 'PENDING':
@@ -39,7 +39,7 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
         return <CheckCircle size={20} className="text-green-600" />;
       case 'RELEASED':
       case 'IN_TRANSIT':
-        return <Truck size={20} className="text-blue-600" />;
+        return <Truck size={20} className="text-orange-600" />;
       case 'APPROVED':
         return <CheckCircle size={20} className="text-purple-600" />;
       case 'PENDING':
@@ -69,7 +69,7 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b">
           <div className="flex items-center gap-3">
-            <Package className="text-blue-600" size={28} />
+            <Package className="text-orange-600" size={28} />
             <div>
               <h2 className="text-2xl font-bold text-gray-800">Transfer Details</h2>
               <p className="text-sm text-gray-500">Release #{transfer.releaseNumber}</p>
@@ -100,7 +100,7 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
             {/* Source Branch */}
             <div className="bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
-                <MapPin className="text-blue-600" size={20} />
+                <MapPin className="text-orange-600" size={20} />
                 <h3 className="font-semibold text-gray-800">From</h3>
               </div>
               <p className="text-gray-900 font-medium">{transfer.fromBranch?.name}</p>
@@ -166,7 +166,7 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
 
             {transfer.releasedAt && (
               <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                <Calendar className="text-blue-600" size={20} />
+                <Calendar className="text-orange-600" size={20} />
                 <div>
                   <p className="text-xs text-gray-500">Released</p>
                   <p className="text-sm font-medium text-gray-900">
@@ -257,9 +257,9 @@ const ViewTransferModal: React.FC<ViewTransferModalProps> = ({
 
           {/* Notes */}
           {transfer.notes && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
               <div className="flex items-start gap-3">
-                <FileText className="text-blue-600 flex-shrink-0 mt-0.5" size={20} />
+                <FileText className="text-orange-600 flex-shrink-0 mt-0.5" size={20} />
                 <div>
                   <h4 className="font-semibold text-gray-800 mb-1">Notes</h4>
                   <p className="text-sm text-gray-700 whitespace-pre-wrap">{transfer.notes}</p>

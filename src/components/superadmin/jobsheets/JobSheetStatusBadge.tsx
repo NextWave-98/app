@@ -20,9 +20,9 @@ export default function JobSheetStatusBadge({ status }: JobSheetStatusBadgeProps
         return {
           text: 'In Progress',
           icon: RefreshCw,
-          color: 'text-blue-700',
-          bgColor: 'bg-blue-50',
-          borderColor: 'border-blue-200',
+          color: 'text-orange-700',
+          bgColor: 'bg-orange-50',
+          borderColor: 'border-orange-200',
         };
       case JobSheetStatus.WAITING_FOR_PARTS:
         return {

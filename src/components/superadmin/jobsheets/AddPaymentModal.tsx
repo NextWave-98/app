@@ -65,7 +65,7 @@ export default function AddPaymentModal({
 
     if (formData.amount > parseFloat(String(jobSheet.balanceAmount))) {
       const confirmOverpayment = window.confirm(
-        `Payment amount (LKR ${formData.amount}) exceeds balance (LKR ${parseFloat(String(jobSheet.balanceAmount)).toFixed(2)}). Do you want to proceed?`
+        `Payment amount (USD ${formData.amount}) exceeds balance (USD ${parseFloat(String(jobSheet.balanceAmount)).toFixed(2)}). Do you want to proceed?`
       );
       if (!confirmOverpayment) return;
     }
@@ -106,7 +106,7 @@ export default function AddPaymentModal({
   };
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    return `USD ${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   };
 
   if (!isOpen) return null;
@@ -161,7 +161,7 @@ export default function AddPaymentModal({
           {/* Payment Amount */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Payment Amount (LKR) <span className="text-red-500">*</span>
+              Payment Amount (USD) <span className="text-red-500">*</span>
             </label>
             <input
               type="number"
@@ -187,7 +187,7 @@ export default function AddPaymentModal({
               <button
                 type="button"
                 onClick={() => handleQuickAmount(Math.floor(parseFloat(String(jobSheet.balanceAmount)) / 2))}
-                className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors"
+                className="px-3 py-1 text-xs bg-orange-100 text-orange-700 rounded hover:bg-orange-200 transition-colors"
               >
                 Half
               </button>
@@ -216,8 +216,8 @@ export default function AddPaymentModal({
 
             {/* Remaining Balance Preview */}
             {formData.amount > 0 && formData.amount <= parseFloat(String(jobSheet.balanceAmount)) && (
-              <div className="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                <p className="text-xs text-blue-800">
+              <div className="mt-2 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                <p className="text-xs text-orange-800">
                   Remaining balance after payment: {formatCurrency(parseFloat(String(jobSheet.balanceAmount)) - formData.amount)}
                 </p>
               </div>

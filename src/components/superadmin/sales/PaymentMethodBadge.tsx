@@ -19,8 +19,8 @@ export default function PaymentMethodBadge({ method }: PaymentMethodBadgeProps) 
         return {
           text: 'Card',
           icon: CreditCard,
-          color: 'text-blue-700',
-          bgColor: 'bg-blue-50',
+          color: 'text-orange-700',
+          bgColor: 'bg-orange-50',
         };
       case PaymentMethod.BANK_TRANSFER:
         return {

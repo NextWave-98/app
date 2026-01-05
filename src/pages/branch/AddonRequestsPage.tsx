@@ -57,7 +57,7 @@ const AddonRequestsPage = () => {
       PENDING: { bg: 'bg-yellow-100', text: 'text-yellow-800', icon: Clock },
       APPROVED: { bg: 'bg-green-100', text: 'text-green-800', icon: CheckCircle },
       REJECTED: { bg: 'bg-red-100', text: 'text-red-800', icon: XCircle },
-      COMPLETED: { bg: 'bg-blue-100', text: 'text-blue-800', icon: CheckCircle }
+      COMPLETED: { bg: 'bg-orange-100', text: 'text-orange-800', icon: CheckCircle }
     };
     
     const config = statusConfig[status as keyof typeof statusConfig] || statusConfig.PENDING;
@@ -87,7 +87,7 @@ const AddonRequestsPage = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-orange-600" />
       </div>
     );
   }
@@ -115,7 +115,7 @@ const AddonRequestsPage = () => {
                 onClick={() => setStatusFilter(status)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   statusFilter === status
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-orange-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -134,7 +134,7 @@ const AddonRequestsPage = () => {
               <p className="text-sm text-gray-600">Total Requests</p>
               <p className="text-2xl font-bold text-gray-900">{requests.length}</p>
             </div>
-            <PackagePlus className="w-8 h-8 text-blue-600" />
+            <PackagePlus className="w-8 h-8 text-orange-600" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow p-4">
@@ -163,11 +163,11 @@ const AddonRequestsPage = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Completed</p>
-              <p className="text-2xl font-bold text-blue-600">
+              <p className="text-2xl font-bold text-orange-600">
                 {requests.filter(r => r.status === 'COMPLETED').length}
               </p>
             </div>
-            <CheckCircle className="w-8 h-8 text-blue-600" />
+            <CheckCircle className="w-8 h-8 text-orange-600" />
           </div>
         </div>
       </div>

@@ -231,7 +231,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       name="fromLocationId"
                       value={formData.fromLocationId}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       required
                     >
                       <option value="">Select source branch</option>
@@ -261,7 +261,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       name="toLocationId"
                       value={formData.toLocationId}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       required
                     >
                       <option value="">Select destination branch</option>
@@ -292,7 +292,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search by product code, name, or category..."
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
 
@@ -304,7 +304,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                           key={product.id}
                           type="button"
                           onClick={() => handleAddProduct(product)}
-                          className="w-full text-left px-4 py-2 hover:bg-blue-50 border-b border-gray-100 last:border-0"
+                          className="w-full text-left px-4 py-2 hover:bg-orange-50 border-b border-gray-100 last:border-0"
                         >
                           <div className="flex justify-between items-start">
                             <div>
@@ -365,7 +365,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                                   onChange={(e) =>
                                     handleQuantityChange(product.productId, parseInt(e.target.value) || 1)
                                   }
-                                  className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                  className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                                 />
                               </td>
                               <td className="px-4 py-3 text-center">
@@ -394,14 +394,14 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                     onChange={handleChange}
                     rows={3}
                     placeholder="Add any notes about this transfer..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
 
                 {/* Info Box */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="text-sm font-semibold text-blue-900 mb-2">Transfer Information</h4>
-                  <ul className="text-sm text-blue-800 space-y-1">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <h4 className="text-sm font-semibold text-orange-900 mb-2">Transfer Information</h4>
+                  <ul className="text-sm text-orange-800 space-y-1">
                     <li>• Products will be deducted from the source branch inventory</li>
                     <li>• Products will be added to the destination branch inventory</li>
                     <li>• Stock movements will be recorded for tracking</li>
@@ -425,7 +425,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:bg-blue-300"
+                  className="px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:bg-orange-300"
                   disabled={loading || selectedProducts.length === 0}
                 >
                   {loading ? 'Transferring...' : `Transfer ${selectedProducts.length} Product(s)`}

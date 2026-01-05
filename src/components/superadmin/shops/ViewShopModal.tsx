@@ -63,8 +63,8 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-                <div className="flex-shrink-0 h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-blue-600" />
+                <div className="flex-shrink-0 h-12 w-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-orange-600" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-gray-900">{shopData.name}</h3>
@@ -90,7 +90,7 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
                       onClick={() => setActiveTab(tab.id as 'details' | 'users' | 'stats')}
                       className={`flex items-center py-2 px-1 border-b-2 font-medium text-sm ${
                         activeTab === tab.id
-                          ? 'border-blue-500 text-blue-600'
+                          ? 'border-orange-500 text-orange-600'
                           : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                       }`}
                     >
@@ -208,7 +208,7 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
                     {/* {onAddBranch && (
                       <button
                         onClick={onAddBranch}
-                        className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-blue-600 hover:bg-blue-700"
+                        className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded text-white bg-orange-600 hover:bg-orange-700"
                       >
                         <Plus className="w-3 h-3 mr-1" />
                         Add User
@@ -271,7 +271,7 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
                         <div className="mt-6">
                           <button
                             onClick={onAddBranch}
-                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                            className="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700"
                           >
                             <Plus className="w-4 h-4 mr-2" />
                             Add User
@@ -289,12 +289,12 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
 
                   {shopData._count ? (
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div className="bg-blue-50 rounded-lg p-6">
+                      <div className="bg-orange-50 rounded-lg p-6">
                         <div className="flex items-center">
-                          <Package className="w-8 h-8 text-blue-600" />
+                          <Package className="w-8 h-8 text-orange-600" />
                           <div className="ml-4">
-                            <div className="text-2xl font-bold text-blue-900">{shopData._count.productInventory || 0}</div>
-                            <div className="text-sm text-blue-600">Products in Inventory</div>
+                            <div className="text-2xl font-bold text-orange-900">{shopData._count.productInventory || 0}</div>
+                            <div className="text-sm text-orange-600">Products in Inventory</div>
                           </div>
                         </div>
                       </div>
@@ -336,7 +336,7 @@ export default function ViewShopModal({ isOpen, onClose, shop, onAddBranch, onVi
             <button
               type="button"
               onClick={onClose}
-              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-orange-600 text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:ml-3 sm:w-auto sm:text-sm"
             >
               Close
             </button>

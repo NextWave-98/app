@@ -19,7 +19,7 @@ export default function RecentSalesTable({ sales = [], onViewDetails }: RecentSa
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
@@ -116,7 +116,7 @@ export default function RecentSalesTable({ sales = [], onViewDetails }: RecentSa
               <tr key={sale.id} className="hover:bg-gray-50 transition-colors">
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
-                    <div className="text-sm font-medium text-blue-600">
+                    <div className="text-sm font-medium text-orange-600">
                       {sale.invoiceNumber}
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export default function RecentSalesTable({ sales = [], onViewDetails }: RecentSa
                   {onViewDetails && (
                     <button
                       onClick={() => onViewDetails(sale.id)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition-colors"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 text-orange-600 hover:text-orange-800 hover:bg-orange-50 rounded-lg transition-colors"
                       title="View details"
                     >
                       <Eye className="w-4 h-4" />

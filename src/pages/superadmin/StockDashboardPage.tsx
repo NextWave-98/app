@@ -174,7 +174,7 @@ export default function StockDashboardPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -214,13 +214,13 @@ export default function StockDashboardPage() {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600 mb-1">Total Value</p>
-              <p className="text-2xl font-bold text-blue-600">
-                LKR {(stats.totalValue / 1000000).toFixed(2)}M
+              <p className="text-2xl font-bold text-orange-600">
+                USD {(stats.totalValue / 1000000).toFixed(2)}M
               </p>
               <p className="text-xs text-gray-500 mt-1">Current valuation</p>
             </div>
-            <div className="bg-blue-50 p-3 rounded-lg">
-              <Package className="w-6 h-6 text-blue-600" />
+            <div className="bg-orange-50 p-3 rounded-lg">
+              <Package className="w-6 h-6 text-orange-600" />
             </div>
           </div>
         </div>
@@ -340,10 +340,10 @@ export default function StockDashboardPage() {
                       {product.availableQuantity}
                     </td> */}
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      LKR {product.unitPrice.toLocaleString()}
+                      USD {product.unitPrice.toLocaleString()}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      LKR {product.totalValue.toLocaleString()}
+                      USD {product.totalValue.toLocaleString()}
                     </td>
                   </tr>
                 ))

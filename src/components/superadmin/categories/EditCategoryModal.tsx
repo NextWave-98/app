@@ -138,7 +138,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="Enter category name"
                   />
                   {formik.touched.name && formik.errors.name && (
@@ -155,7 +155,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                     value={formik.values.description}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="Enter category description"
                   />
                 </div>
@@ -170,7 +170,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                     value={formik.values.parentId}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   >
                     <option value="">None (Root Category)</option>
                     {categories.map((cat) => (
@@ -196,7 +196,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                     value={formik.values.displayOrder}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="0"
                   />
                   {formik.touched.displayOrder && formik.errors.displayOrder && (
@@ -215,7 +215,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                     id="isActive"
                     checked={formik.values.isActive}
                     onChange={formik.handleChange}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                   />
                   <label htmlFor="isActive" className="ml-2 block text-sm text-gray-700">
                     Active
@@ -234,7 +234,7 @@ export default function EditCategoryModal({ isOpen, onClose, category, onSuccess
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 disabled:opacity-50"
                   disabled={loading}
                 >
                   {loading ? 'Updating...' : 'Update Category'}

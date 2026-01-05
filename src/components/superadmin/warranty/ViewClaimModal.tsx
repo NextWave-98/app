@@ -22,7 +22,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'SUBMITTED': return 'bg-blue-100 text-blue-800';
+      case 'SUBMITTED': return 'bg-orange-100 text-orange-800';
       case 'UNDER_REVIEW': return 'bg-yellow-100 text-yellow-800';
       case 'APPROVED': return 'bg-green-100 text-green-800';
       case 'REJECTED': return 'bg-red-100 text-red-800';
@@ -36,7 +36,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'LOW': return 'bg-gray-100 text-gray-800';
-      case 'MEDIUM': return 'bg-blue-100 text-blue-800';
+      case 'MEDIUM': return 'bg-orange-100 text-orange-800';
       case 'HIGH': return 'bg-orange-100 text-orange-800';
       case 'URGENT': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -46,7 +46,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
   const getResolutionColor = (type: string) => {
     switch (type) {
       case 'REPAIRED': return 'bg-green-100 text-green-800';
-      case 'REPLACED': return 'bg-blue-100 text-blue-800';
+      case 'REPLACED': return 'bg-orange-100 text-orange-800';
       case 'REFUNDED': return 'bg-purple-100 text-purple-800';
       case 'STORE_CREDIT': return 'bg-yellow-100 text-yellow-800';
       case 'REJECTED': return 'bg-red-100 text-red-800';
@@ -82,8 +82,8 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
           </div>
 
           {/* Claim Number */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4">
-            <div className="flex items-center text-sm text-blue-600 mb-1">
+          <div className="bg-gradient-to-r from-orange-50 to-indigo-50 border border-orange-200 rounded-lg p-4">
+            <div className="flex items-center text-sm text-orange-600 mb-1">
               <FileText className="w-4 h-4 mr-2" />
               Claim Number
             </div>
@@ -118,7 +118,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
           {/* Issue Details */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <Package className="w-4 h-4 mr-2 text-blue-600" />
+              <Package className="w-4 h-4 mr-2 text-orange-600" />
               Issue Details
             </h3>
             <div className="space-y-3">
@@ -136,7 +136,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
           {/* Timeline */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+              <Calendar className="w-4 h-4 mr-2 text-orange-600" />
               Timeline
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -165,26 +165,26 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
           {/* Cost Information */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <DollarSign className="w-4 h-4 mr-2 text-blue-600" />
+              <DollarSign className="w-4 h-4 mr-2 text-orange-600" />
               Cost Information
             </h3>
             <div className="grid grid-cols-3 gap-4">
               {claim.estimatedCost !== null && claim.estimatedCost !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Estimated Cost</p>
-                  <p className="text-sm font-medium text-gray-900">LKR {claim.estimatedCost.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">USD {claim.estimatedCost.toLocaleString()}</p>
                 </div>
               )}
               {claim.actualCost !== null && claim.actualCost !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Actual Cost</p>
-                  <p className="text-sm font-medium text-gray-900">LKR {claim.actualCost.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">USD {claim.actualCost.toLocaleString()}</p>
                 </div>
               )}
               {claim.customerCharge !== null && claim.customerCharge !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Customer Charge</p>
-                  <p className="text-sm font-medium text-gray-900">LKR {claim.customerCharge.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">USD {claim.customerCharge.toLocaleString()}</p>
                 </div>
               )}
             </div>
@@ -225,7 +225,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
           {claim.assignedToId && (
             <div className="border border-gray-200 rounded-lg p-4">
               <h3 className="text-sm font-semibold text-gray-900 mb-2 flex items-center">
-                <User className="w-4 h-4 mr-2 text-blue-600" />
+                <User className="w-4 h-4 mr-2 text-orange-600" />
                 Assignment
               </h3>
               <p className="text-sm text-gray-900">Assigned to Technician ID: {claim.assignedToId}</p>
@@ -249,7 +249,7 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
                   <p className="text-xs text-gray-500 mb-2">Images ({claim.images.length})</p>
                   <div className="flex flex-wrap gap-2">
                     {claim.images.map((img, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                      <span key={idx} className="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">
                         Image {idx + 1}
                       </span>
                     ))}

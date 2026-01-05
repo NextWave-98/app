@@ -91,7 +91,7 @@ const BulkSMSSameModal: React.FC<BulkSMSSameModalProps> = ({
       <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-6">
           <div className="flex items-center gap-3">
-            <Send className="w-6 h-6 text-blue-600" />
+            <Send className="w-6 h-6 text-orange-600" />
             <h2 className="text-xl font-semibold text-gray-900">Send Bulk SMS (Same Message)</h2>
           </div>
           <button
@@ -104,14 +104,14 @@ const BulkSMSSameModal: React.FC<BulkSMSSameModalProps> = ({
 
         <form onSubmit={formik.handleSubmit} className="p-6 space-y-6">
           {/* Selected Customers Summary */}
-          <div className="bg-blue-50 rounded-lg p-4">
+          <div className="bg-orange-50 rounded-lg p-4">
             <div className="flex items-center gap-2 mb-2">
-              <Users className="w-5 h-5 text-blue-600" />
-              <span className="font-medium text-blue-900">
+              <Users className="w-5 h-5 text-orange-600" />
+              <span className="font-medium text-orange-900">
                 {selectedCustomers.length} customer{selectedCustomers.length !== 1 ? 's' : ''} selected
               </span>
             </div>
-            <div className="text-sm text-blue-700">
+            <div className="text-sm text-orange-700">
               Valid phone numbers: {selectedCustomers.filter(c => c.phone && c.phone.trim() !== '').length}
             </div>
           </div>
@@ -125,7 +125,7 @@ const BulkSMSSameModal: React.FC<BulkSMSSameModalProps> = ({
               id="message"
               name="message"
               rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
               placeholder="Enter your message..."
               value={formik.values.message}
               onChange={formik.handleChange}
@@ -150,14 +150,14 @@ const BulkSMSSameModal: React.FC<BulkSMSSameModalProps> = ({
             <button
               type="button"
               onClick={handleClose}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting || selectedCustomers.length === 0}
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Sending...' : 'Send SMS'}
             </button>

@@ -15,7 +15,7 @@ export default function LoadingSpinner({ size = 'md', className = '', fullScreen
 
   const spinner = (
     <div className={`flex items-center justify-center ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
+      <Loader2 className={`${sizeClasses[size]} animate-spin text-orange-600`} />
     </div>
   );
 

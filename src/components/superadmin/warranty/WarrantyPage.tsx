@@ -468,7 +468,7 @@ export default function WarrantyPage() {
               onClick={() => setActiveTab('warranties')}
               className={`px-6 py-3 text-sm font-medium ${
                 activeTab === 'warranties'
-                  ? 'border-b-2 border-blue-500 text-blue-600'
+                  ? 'border-b-2 border-orange-500 text-orange-600'
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >
@@ -478,7 +478,7 @@ export default function WarrantyPage() {
               onClick={() => setActiveTab('claims')}
               className={`px-6 py-3 text-sm font-medium ${
                 activeTab === 'claims'
-                  ? 'border-b-2 border-blue-500 text-blue-600'
+                  ? 'border-b-2 border-orange-500 text-orange-600'
                   : 'text-gray-500 hover:text-gray-700'
               }`}
             >

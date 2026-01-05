@@ -179,7 +179,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.name}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.name && formik.touched.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Enter customer name"
@@ -200,7 +200,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.phone}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.phone && formik.touched.phone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="0771234567"
@@ -219,7 +219,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.alternatePhone}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.alternatePhone && formik.touched.alternatePhone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="0777654321"
@@ -238,7 +238,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="customer@example.com"
@@ -257,7 +257,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.nicNumber}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.nicNumber && formik.touched.nicNumber ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="123456789V or 123456789012"
@@ -276,7 +276,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.city}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Colombo"
                 />
               </div>
@@ -291,7 +291,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   value={formik.values.customerType}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.customerType && formik.touched.customerType ? 'border-red-500' : 'border-gray-300'
                   }`}
                 >
@@ -313,7 +313,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                     value={formik.values.branchId}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   >
                     <option value="">Select branch (optional)</option>
                     {branches.map((branch) => (
@@ -334,7 +334,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   rows={2}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Enter customer address"
                 />
               </div>
@@ -348,7 +348,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Additional notes about the customer"
                 />
               </div>
@@ -361,7 +361,7 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
                     name="isActive"
                     checked={formik.values.isActive}
                     onChange={formik.handleChange}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Active Customer</span>
                 </label>
@@ -375,14 +375,14 @@ export default function AddCustomerModal({ isOpen, onClose, onSubmit, initialPho
               type="button"
               onClick={handleClose}
               disabled={isSubmitting}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
             >
               {isSubmitting ? 'Creating...' : 'Create Customer'}
             </button>

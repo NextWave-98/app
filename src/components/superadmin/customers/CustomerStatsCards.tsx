@@ -27,8 +27,8 @@ export default function CustomerStatsCards({ stats }: CustomerStatsCardsProps) {
       title: 'Total Customers',
       value: stats.total,
       icon: Users,
-      textColor: 'text-blue-600',
-      bgLight: 'bg-blue-50',
+      textColor: 'text-orange-600',
+      bgLight: 'bg-orange-50',
     },
     {
       title: 'Walk-in Customers',
@@ -55,8 +55,8 @@ export default function CustomerStatsCards({ stats }: CustomerStatsCardsProps) {
       title: 'Active Customers',
       value: stats.active,
       icon: UserCheck,
-      textColor: 'text-blue-600',
-      bgLight: 'bg-blue-50',
+      textColor: 'text-orange-600',
+      bgLight: 'bg-orange-50',
     },
     {
       title: 'Inactive Customers',

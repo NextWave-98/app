@@ -223,7 +223,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className={`mt-1 block w-full rounded-md border ${
                     errors.name ? 'border-red-300' : 'border-gray-300'
-                  } px-3 py-2 focus:border-blue-500 focus:ring-blue-500`}
+                  } px-3 py-2 focus:border-orange-500 focus:ring-orange-500`}
                   placeholder="Enter customer name"
                 />
                 {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
@@ -240,7 +240,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   className={`mt-1 block w-full rounded-md border ${
                     errors.phone ? 'border-red-300' : 'border-gray-300'
-                  } px-3 py-2 focus:border-blue-500 focus:ring-blue-500`}
+                  } px-3 py-2 focus:border-orange-500 focus:ring-orange-500`}
                   placeholder="0771234567"
                 />
                 {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
@@ -255,7 +255,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, alternatePhone: e.target.value })}
                   className={`mt-1 block w-full rounded-md border ${
                     errors.alternatePhone ? 'border-red-300' : 'border-gray-300'
-                  } px-3 py-2 focus:border-blue-500 focus:ring-blue-500`}
+                  } px-3 py-2 focus:border-orange-500 focus:ring-orange-500`}
                   placeholder="0777654321"
                 />
                 {errors.alternatePhone && <p className="mt-1 text-sm text-red-600">{errors.alternatePhone}</p>}
@@ -270,7 +270,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className={`mt-1 block w-full rounded-md border ${
                     errors.email ? 'border-red-300' : 'border-gray-300'
-                  } px-3 py-2 focus:border-blue-500 focus:ring-blue-500`}
+                  } px-3 py-2 focus:border-orange-500 focus:ring-orange-500`}
                   placeholder="customer@example.com"
                 />
                 {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
@@ -285,7 +285,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   onChange={(e) => setFormData({ ...formData, nicNumber: e.target.value })}
                   className={`mt-1 block w-full rounded-md border ${
                     errors.nicNumber ? 'border-red-300' : 'border-gray-300'
-                  } px-3 py-2 focus:border-blue-500 focus:ring-blue-500`}
+                  } px-3 py-2 focus:border-orange-500 focus:ring-orange-500`}
                   placeholder="123456789V or 123456789012"
                 />
                 {errors.nicNumber && <p className="mt-1 text-sm text-red-600">{errors.nicNumber}</p>}
@@ -298,7 +298,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   type="text"
                   value={formData.city}
                   onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-orange-500 focus:ring-orange-500"
                   placeholder="Colombo"
                 />
               </div>
@@ -309,7 +309,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                 <select
                   value={formData.customerType}
                   onChange={(e) => setFormData({ ...formData, customerType: e.target.value as 'WALK_IN' | 'REGULAR' | 'VIP' })}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-orange-500 focus:ring-orange-500"
                 >
                   <option value="WALK_IN">Walk-in</option>
                   <option value="REGULAR">Regular</option>
@@ -324,7 +324,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
                   rows={2}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-orange-500 focus:ring-orange-500"
                   placeholder="Enter customer address"
                 />
               </div>
@@ -336,7 +336,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                   rows={3}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-blue-500 focus:ring-blue-500"
+                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-orange-500 focus:ring-orange-500"
                   placeholder="Additional notes about the customer"
                 />
               </div>
@@ -348,7 +348,7 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                     type="checkbox"
                     checked={formData.isActive}
                     onChange={(e) => setFormData({ ...formData, isActive: e.target.checked })}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
                   />
                   <span className="ml-2 text-sm text-gray-700">Active Customer</span>
                 </label>
@@ -361,14 +361,14 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({
                 type="button"
                 onClick={handleClose}
                 disabled={loading}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 {loading ? 'Saving...' : mode === 'create' ? 'Create Customer' : 'Update Customer'}
               </button>

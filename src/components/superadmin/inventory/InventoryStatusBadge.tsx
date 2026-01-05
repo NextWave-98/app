@@ -28,8 +28,8 @@ export default function InventoryStatusBadge({ status }: InventoryStatusBadgePro
         };
       case Status.OVERSTOCKED:
         return {
-          bg: 'bg-blue-100',
-          text: 'text-blue-800',
+          bg: 'bg-orange-100',
+          text: 'text-orange-800',
           label: 'Overstocked',
         };
       default:

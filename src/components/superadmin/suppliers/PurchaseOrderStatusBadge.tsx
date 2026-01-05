@@ -14,7 +14,7 @@ export default function PurchaseOrderStatusBadge({ status }: PurchaseOrderStatus
     },
     CONFIRMED: {
       label: 'Confirmed',
-      className: 'bg-blue-100 text-blue-800',
+      className: 'bg-orange-100 text-orange-800',
     },
     PARTIALLY_RECEIVED: {
       label: 'Partially Received',

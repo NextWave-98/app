@@ -49,7 +49,7 @@ export default function ApproveReturnModal({
   if (!isOpen || !returnItem) return null;
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const resolutionOptions = [
@@ -142,7 +142,7 @@ export default function ApproveReturnModal({
                         value={option.value}
                         checked={formData.resolutionType === option.value}
                         onChange={(e) => setFormData(prev => ({ ...prev, resolutionType: e.target.value as ApproveReturnData['resolutionType'] }))}
-                        className="mt-1 text-blue-600 focus:ring-blue-500"
+                        className="mt-1 text-orange-600 focus:ring-orange-500"
                       />
                       <div className="ml-3">
                         <div className="text-sm font-medium text-gray-900">{option.label}</div>
@@ -162,32 +162,32 @@ export default function ApproveReturnModal({
                   value={formData.notes || ''}
                   onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Add any additional notes about the approval decision..."
                 />
               </div>
 
               {/* Financial Summary */}
               {(formData.resolutionType === 'REFUND_PROCESSED' || formData.resolutionType === 'STORE_CREDIT') && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="text-md font-semibold text-blue-900 flex items-center gap-2 mb-2">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <h4 className="text-md font-semibold text-orange-900 flex items-center gap-2 mb-2">
                     <DollarSign className="w-4 h-4" />
                     Financial Summary
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-blue-800">Product Value</label>
-                      <p className="text-blue-900">{formatCurrency(returnItem.productValue)}</p>
+                      <label className="block text-sm font-medium text-orange-800">Product Value</label>
+                      <p className="text-orange-900">{formatCurrency(returnItem.productValue)}</p>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-blue-800">Refund Amount</label>
-                      <p className="text-blue-900">
+                      <label className="block text-sm font-medium text-orange-800">Refund Amount</label>
+                      <p className="text-orange-900">
                         {returnItem.refundAmount ? formatCurrency(returnItem.refundAmount) : 'Not specified'}
                       </p>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-blue-800">Quantity</label>
-                      <p className="text-blue-900">{returnItem.quantity}</p>
+                      <label className="block text-sm font-medium text-orange-800">Quantity</label>
+                      <p className="text-orange-900">{returnItem.quantity}</p>
                     </div>
                   </div>
                 </div>

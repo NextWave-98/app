@@ -312,7 +312,7 @@ export default function InventoryFormModal({
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onFocus={() => { if (localProducts.length > 0) setShowDropdown(true); }}
                     placeholder={mode === 'edit' ? '' : 'Search products by name, SKU or code...'}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                       errors.productId ? 'border-red-500' : 'border-gray-300'
                     }`}
                     disabled={mode === 'edit'}
@@ -351,7 +351,7 @@ export default function InventoryFormModal({
                   id="branchId"
                   value={formData.branchId}
                   onChange={(e) => handleChange('branchId', e.target.value)}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.branchId ? 'border-red-500' : 'border-gray-300'
                   }`}
                   required
@@ -384,7 +384,7 @@ export default function InventoryFormModal({
                   min="0"
                   value={formData.quantity}
                   onChange={(e) => handleChange('quantity', parseInt(e.target.value) || 0)}
-                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.quantity ? 'border-red-500' : 'border-gray-300'
                   }`}
                   required
@@ -409,7 +409,7 @@ export default function InventoryFormModal({
                       value={formData.minStockLevel || ''}
                       onChange={(e) => handleChange('minStockLevel', e.target.value ? parseInt(e.target.value) : undefined)}
                       placeholder="Optional override"
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                         errors.minStockLevel ? 'border-red-500' : 'border-gray-300'
                       }`}
                     />
@@ -428,7 +428,7 @@ export default function InventoryFormModal({
                       value={formData.maxStockLevel || ''}
                       onChange={(e) => handleChange('maxStockLevel', e.target.value ? parseInt(e.target.value) : undefined)}
                       placeholder="Optional override"
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                         errors.maxStockLevel ? 'border-red-500' : 'border-gray-300'
                       }`}
                     />
@@ -446,7 +446,7 @@ export default function InventoryFormModal({
                       value={formData.location || ''}
                       onChange={(e) => handleChange('location', e.target.value)}
                       placeholder="e.g., Warehouse A, Shelf 5"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
 
@@ -461,7 +461,7 @@ export default function InventoryFormModal({
                       value={formData.zone || ''}
                       onChange={(e) => handleChange('zone', e.target.value)}
                       placeholder="e.g., Zone A, Electronics"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -472,7 +472,7 @@ export default function InventoryFormModal({
                   <div className="flex items-center gap-2 text-xs">
                     <div className="flex-1">
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500"></div>
+                        <div className="h-full bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500"></div>
                       </div>
                       <div className="flex justify-between mt-1 text-xs text-gray-500">
                         <span>Min: {formData.minStockLevel || 0}</span>
@@ -490,14 +490,14 @@ export default function InventoryFormModal({
                 type="button"
                 onClick={handleClose}
                 disabled={loading}
-                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="inline-flex items-center px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 <Save className="w-4 h-4 mr-2" />
                 {loading ? 'Saving...' : mode === 'create' ? 'Create Inventory' : 'Update Inventory'}

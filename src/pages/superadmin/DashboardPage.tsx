@@ -96,7 +96,7 @@ export default function DashboardPage() {
   };
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${(amount / 1000000).toFixed(2)}M`;
+    return `USD ${(amount / 1000000).toFixed(2)}M`;
   };
 
   const getActivityIcon = (type: string) => {
@@ -123,7 +123,7 @@ export default function DashboardPage() {
       case 'error':
         return 'bg-red-100 text-red-600';
       default:
-        return 'bg-blue-100 text-blue-600';
+        return 'bg-orange-100 text-orange-600';
     }
   };
 
@@ -165,7 +165,7 @@ export default function DashboardPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 cursor-pointer"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -175,7 +175,7 @@ export default function DashboardPage() {
         
       </div>
 
-      <div className="mb-6 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg shadow-lg p-6 text-white">
+      <div className="mb-6 bg-gradient-to-r from-orange-500 to-indigo-600 rounded-lg shadow-lg p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-1">SMS Balance</h3>
@@ -185,9 +185,9 @@ export default function DashboardPage() {
               <div>
                 <p className="text-4xl font-bold">
                   {(smsBalance.credits ?? smsBalance.balance ?? smsBalance.data?.credits ?? smsBalance.data?.balance ?? 0).toFixed(2)}
-                  <span className="text-lg ml-2">LKR</span>
+                  <span className="text-lg ml-2">USD</span>
                 </p>
-                <p className="text-sm text-blue-100 mt-1">QuickSend.lk Account</p>
+                <p className="text-sm text-orange-100 mt-1">QuickSend.lk Account</p>
               </div>
             ) : (
               <p className="text-xl">Unable to fetch balance</p>
@@ -196,7 +196,7 @@ export default function DashboardPage() {
           <div className="flex flex-col gap-2">
             <button
               onClick={handleTopUp}
-              className="bg-white cursor-pointer text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold shadow-md transition-all flex items-center gap-2"
+              className="bg-white cursor-pointer text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg font-semibold shadow-md transition-all flex items-center gap-2"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
@@ -206,7 +206,7 @@ export default function DashboardPage() {
             <button
               onClick={loadSMSBalance}
               disabled={balanceLoading}
-              className="bg-blue-400 cursor-pointer hover:bg-blue-300 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 justify-center"
+              className="bg-orange-400 cursor-pointer hover:bg-orange-300 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2 justify-center"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 ${balanceLoading ? 'animate-spin' : ''}`} viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd" />
@@ -240,7 +240,7 @@ export default function DashboardPage() {
 
       {/* Key Metrics - Today's Performance */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg shadow-sm p-6 text-white">
+        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg shadow-sm p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium opacity-90">Today's Sales</h3>
             {stats.salesGrowth > 0 ? (
@@ -305,13 +305,13 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-600 mb-1">Total Shops</p>
-                <p className="text-2xl font-bold text-blue-600">{stats.totalShops}</p>
+                <p className="text-2xl font-bold text-orange-600">{stats.totalShops}</p>
                 <p className="text-xs text-gray-500 mt-1">
                   {stats.activeShops} active, {stats.inactiveShops} inactive
                 </p>
               </div>
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <Store className="w-6 h-6 text-blue-600" />
+              <div className="bg-orange-50 p-3 rounded-lg">
+                <Store className="w-6 h-6 text-orange-600" />
               </div>
             </div>
           </div>
@@ -378,7 +378,7 @@ export default function DashboardPage() {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">Job Sheets</h3>
-            <Link to="/superadmin/job-sheets/monitor" className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center">
+            <Link to="/superadmin/job-sheets/monitor" className="text-sm text-orange-600 hover:text-orange-700 font-medium flex items-center">
               View All
               <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
@@ -393,7 +393,7 @@ export default function DashboardPage() {
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center">
-                <Activity className="w-4 h-4 text-blue-600 mr-2" />
+                <Activity className="w-4 h-4 text-orange-600 mr-2" />
                 <span className="text-sm text-gray-600">In Progress</span>
               </div>
               <span className="text-lg font-semibold text-gray-900">{stats.inProgressJobSheets}</span>
@@ -481,7 +481,7 @@ export default function DashboardPage() {
             to="/superadmin/shops/management"
             className="flex flex-col items-center p-4 rounded-lg hover:bg-gray-50 transition-colors"
           >
-            <Store className="w-8 h-8 text-blue-600 mb-2" />
+            <Store className="w-8 h-8 text-orange-600 mb-2" />
             <span className="text-sm font-medium text-gray-700">Shops</span>
           </Link>
           <Link

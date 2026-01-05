@@ -22,7 +22,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
     switch (status) {
       case 'ACTIVE': return 'bg-green-100 text-green-800';
       case 'EXPIRED': return 'bg-gray-100 text-gray-800';
-      case 'CLAIMED': return 'bg-blue-100 text-blue-800';
+      case 'CLAIMED': return 'bg-orange-100 text-orange-800';
       case 'VOIDED': return 'bg-red-100 text-red-800';
       case 'TRANSFERRED': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
@@ -31,7 +31,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
 
   const getWarrantyTypeColor = (type: string) => {
     switch (type) {
-      case 'STANDARD': return 'bg-blue-100 text-blue-800';
+      case 'STANDARD': return 'bg-orange-100 text-orange-800';
       case 'EXTENDED': return 'bg-purple-100 text-purple-800';
       case 'LIMITED': return 'bg-yellow-100 text-yellow-800';
       case 'LIFETIME': return 'bg-green-100 text-green-800';
@@ -67,8 +67,8 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
           </div>
 
           {/* Warranty Number */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg p-4">
-            <div className="flex items-center text-sm text-blue-600 mb-1">
+          <div className="bg-gradient-to-r from-orange-50 to-indigo-50 border border-orange-200 rounded-lg p-4">
+            <div className="flex items-center text-sm text-orange-600 mb-1">
               <FileText className="w-4 h-4 mr-2" />
               Warranty Number
             </div>
@@ -78,7 +78,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
           {/* Product Information */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <Package className="w-4 h-4 mr-2 text-blue-600" />
+              <Package className="w-4 h-4 mr-2 text-orange-600" />
               Product Information
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -108,7 +108,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
           {/* Customer Information */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <User className="w-4 h-4 mr-2 text-blue-600" />
+              <User className="w-4 h-4 mr-2 text-orange-600" />
               Customer Information
             </h3>
             <div className="grid grid-cols-2 gap-4">
@@ -132,7 +132,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
           {/* Warranty Period */}
           <div className="border border-gray-200 rounded-lg p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-              <Calendar className="w-4 h-4 mr-2 text-blue-600" />
+              <Calendar className="w-4 h-4 mr-2 text-orange-600" />
               Warranty Period
             </h3>
             <div className="grid grid-cols-3 gap-4">
@@ -155,7 +155,7 @@ export default function ViewWarrantyModal({ isOpen, onClose, warranty }: ViewWar
           {(warranty.coverage || warranty.terms || warranty.exclusions) && (
             <div className="border border-gray-200 rounded-lg p-4">
               <h3 className="text-sm font-semibold text-gray-900 mb-3 flex items-center">
-                <Award className="w-4 h-4 mr-2 text-blue-600" />
+                <Award className="w-4 h-4 mr-2 text-orange-600" />
                 Coverage Details
               </h3>
               <div className="space-y-3">

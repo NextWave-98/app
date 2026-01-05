@@ -100,7 +100,7 @@ export default function AddPurchaseOrderPaymentModal({
 
     if (formData.amount > dueNumeric) {
       const confirmOverpayment = window.confirm(
-        `Payment amount (LKR ${formData.amount.toFixed(2)}) exceeds due amount (LKR ${toNumber(dueNumeric).toFixed(2)}). Do you want to proceed?`
+        `Payment amount (USD ${formData.amount.toFixed(2)}) exceeds due amount (USD ${toNumber(dueNumeric).toFixed(2)}). Do you want to proceed?`
       );
       if (!confirmOverpayment) return;
     }
@@ -142,7 +142,7 @@ export default function AddPurchaseOrderPaymentModal({
 
   const formatCurrency = (amount?: number | null) => {
     const num = typeof amount === 'number' && !Number.isNaN(amount) ? amount : 0;
-    return `LKR ${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    return `USD ${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   };
 
   if (!isOpen || !purchaseOrder) return null;
@@ -198,7 +198,7 @@ export default function AddPurchaseOrderPaymentModal({
           {/* Payment Amount */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Payment Amount (LKR) <span className="text-red-500">*</span>
+              Payment Amount (USD) <span className="text-red-500">*</span>
             </label>
             <input
               type="number"
@@ -224,7 +224,7 @@ export default function AddPurchaseOrderPaymentModal({
               <button
                 type="button"
                 onClick={() => handleQuickAmount(Math.floor(dueNumeric / 2))}
-                className="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded hover:bg-blue-200 transition-colors"
+                className="px-3 py-1 text-xs bg-orange-100 text-orange-700 rounded hover:bg-orange-200 transition-colors"
               >
                 50%
               </button>
@@ -253,8 +253,8 @@ export default function AddPurchaseOrderPaymentModal({
 
             {/* Remaining Balance Preview */}
             {formData.amount > 0 && formData.amount <= dueNumeric && (
-              <div className="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                <p className="text-xs text-blue-800">
+              <div className="mt-2 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                <p className="text-xs text-orange-800">
                   Remaining balance after payment: {formatCurrency(dueNumeric - formData.amount)}
                 </p>
               </div>

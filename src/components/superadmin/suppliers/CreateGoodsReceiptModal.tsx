@@ -174,7 +174,7 @@ export default function CreateGoodsReceiptModal({
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b">
           <div className="flex items-center space-x-2">
-            <PackageCheck className="w-6 h-6 text-blue-600" />
+            <PackageCheck className="w-6 h-6 text-orange-600" />
             <div>
               <h2 className="text-xl font-semibold">Create Goods Receipt</h2>
               <p className="text-sm text-gray-600">
@@ -200,7 +200,7 @@ export default function CreateGoodsReceiptModal({
                   type="date"
                   value={receiptDate}
                   onChange={(e) => setReceiptDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                   required
                 />
               </div>
@@ -214,7 +214,7 @@ export default function CreateGoodsReceiptModal({
                   value={invoiceNumber}
                   onChange={(e) => setInvoiceNumber(e.target.value)}
                   placeholder="Enter invoice number"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 />
               </div>
 
@@ -226,7 +226,7 @@ export default function CreateGoodsReceiptModal({
                   type="date"
                   value={invoiceDate}
                   onChange={(e) => setInvoiceDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 />
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function CreateGoodsReceiptModal({
                 onChange={(e) => setNotes(e.target.value)}
                 rows={2}
                 placeholder="Enter any general notes about this receipt"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -277,7 +277,7 @@ export default function CreateGoodsReceiptModal({
                             onChange={(e) => handleItemChange(item.productId, 'receivedQuantity', parseInt(e.target.value) || 0)}
                             min="0"
                             max={item.orderedQuantity}
-                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -287,7 +287,7 @@ export default function CreateGoodsReceiptModal({
                             onChange={(e) => handleItemChange(item.productId, 'acceptedQuantity', parseInt(e.target.value) || 0)}
                             min="0"
                             max={item.receivedQuantity}
-                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -297,7 +297,7 @@ export default function CreateGoodsReceiptModal({
                             onChange={(e) => handleItemChange(item.productId, 'rejectedQuantity', parseInt(e.target.value) || 0)}
                             min="0"
                             max={item.receivedQuantity}
-                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -306,7 +306,7 @@ export default function CreateGoodsReceiptModal({
                             value={item.batchNumber}
                             onChange={(e) => handleItemChange(item.productId, 'batchNumber', e.target.value)}
                             placeholder="Batch"
-                            className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -314,7 +314,7 @@ export default function CreateGoodsReceiptModal({
                             type="date"
                             value={item.expiryDate}
                             onChange={(e) => handleItemChange(item.productId, 'expiryDate', e.target.value)}
-                            className="w-36 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-36 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -323,7 +323,7 @@ export default function CreateGoodsReceiptModal({
                             value={item.notes}
                             onChange={(e) => handleItemChange(item.productId, 'notes', e.target.value)}
                             placeholder="Notes"
-                            className="w-32 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                            className="w-32 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500"
                           />
                         </td>
                       </tr>
@@ -348,7 +348,7 @@ export default function CreateGoodsReceiptModal({
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:bg-gray-400"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:bg-gray-400"
           >
             {loading ? (
               <>

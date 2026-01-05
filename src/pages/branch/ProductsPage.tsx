@@ -283,7 +283,7 @@ export default function ProductsPage() {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <Loader2 className="w-12 h-12 text-blue-600 animate-spin" />
+        <Loader2 className="w-12 h-12 text-orange-600 animate-spin" />
         <p className="mt-4 text-gray-600">Loading products...</p>
       </div>
     );
@@ -303,7 +303,7 @@ export default function ProductsPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -320,8 +320,8 @@ export default function ProductsPage() {
               <p className="text-sm font-medium text-gray-600">Total Products</p>
               <p className="text-2xl font-bold text-gray-900 mt-1">{stats.totalProducts}</p>
             </div>
-            <div className="bg-blue-100 p-3 rounded-lg">
-              <Package2 className="w-6 h-6 text-blue-600" />
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <Package2 className="w-6 h-6 text-orange-600" />
             </div>
           </div>
         </div>
@@ -387,7 +387,7 @@ export default function ProductsPage() {
 
       {/* Action Bar - Shows when products are selected */}
       {selectedProducts.length > 0 && (
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-lg border border-blue-700 p-4">
+        <div className="bg-gradient-to-r from-orange-600 to-indigo-600 rounded-lg shadow-lg border border-orange-700 p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="bg-white/20 rounded-lg px-3 py-1.5">
@@ -406,14 +406,14 @@ export default function ProductsPage() {
                   }
                   setShowAddonModal(true);
                 }}
-                className="inline-flex items-center px-5 py-2.5 bg-white text-blue-600 rounded-lg text-sm font-semibold hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 shadow-md"
+                className="inline-flex items-center px-5 py-2.5 bg-white text-orange-600 rounded-lg text-sm font-semibold hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 shadow-md"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Addon Quantity
               </button>
               <button
                 onClick={() => toast('Return feature coming soon')}
-                className="inline-flex items-center px-5 py-2.5 bg-white text-blue-600 rounded-lg text-sm font-semibold hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 shadow-md"
+                className="inline-flex items-center px-5 py-2.5 bg-white text-orange-600 rounded-lg text-sm font-semibold hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all duration-200 shadow-md"
               >
                 <Undo2 className="w-4 h-4 mr-2" />
                 Return
@@ -445,10 +445,10 @@ export default function ProductsPage() {
 
       {/* Addon Quantity Modal */}
       {showAddonModal && selectedProducts.length > 0 && (
-        <div className="fixed inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh]">
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-2 flex items-center justify-between rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-indigo-600 px-6 py-2 flex items-center justify-between rounded-t-2xl">
               <h2 className="text-xl font-bold text-white">Request Addon Quantity</h2>
               <button
                 onClick={handleCloseModal}
@@ -493,11 +493,11 @@ export default function ProductsPage() {
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
                           Current Quantity
                         </label>
-                        <p className="text-2xl font-bold text-blue-600">{product.quantity}</p>
+                        <p className="text-2xl font-bold text-orange-600">{product.quantity}</p>
                       </div>
 
                       {/* Requested Quantity - Editable */}
-                      <div className="bg-white rounded-lg p-4 border-2 border-blue-200">
+                      <div className="bg-white rounded-lg p-4 border-2 border-orange-200">
                         <label className="block text-sm font-semibold text-gray-700 mb-2">
                           Requested Quantity <span className="text-red-500">*</span>
                         </label>
@@ -507,7 +507,7 @@ export default function ProductsPage() {
                           value={requestedQuantity || ''}
                           onChange={(e) => setRequestedQuantity(parseInt(e.target.value) || 0)}
                           placeholder="Enter quantity needed"
-                          className="w-full px-4 py-3 text-xl font-bold text-green-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                          className="w-full px-4 py-3 text-xl font-bold text-green-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                         />
                         <p className="text-xs text-gray-500 mt-1">Min stock level: {product.minStockLevel}</p>
                       </div>
@@ -523,7 +523,7 @@ export default function ProductsPage() {
                         onChange={(e) => setAddonRemark(e.target.value)}
                         rows={4}
                         placeholder="Enter any remarks or notes for this request..."
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
                       />
                     </div>
                   </>
@@ -542,7 +542,7 @@ export default function ProductsPage() {
               <button
                 onClick={handleAddonRequest}
                 disabled={addonLoading}
-                className="px-6 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200 shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-indigo-600 text-white rounded-lg text-sm font-semibold hover:from-orange-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-200 shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {addonLoading ? (
                   <>

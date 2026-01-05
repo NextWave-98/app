@@ -112,7 +112,7 @@ const AddonRequestsPage = () => {
       PENDING: { bg: 'bg-yellow-100', text: 'text-yellow-800', icon: Clock },
       APPROVED: { bg: 'bg-green-100', text: 'text-green-800', icon: CheckCircle },
       REJECTED: { bg: 'bg-red-100', text: 'text-red-800', icon: XCircle },
-      COMPLETED: { bg: 'bg-blue-100', text: 'text-blue-800', icon: CheckCircle }
+      COMPLETED: { bg: 'bg-orange-100', text: 'text-orange-800', icon: CheckCircle }
     };
     
     const config = statusConfig[status as keyof typeof statusConfig] || statusConfig.PENDING;
@@ -142,7 +142,7 @@ const AddonRequestsPage = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center h-64">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-orange-600" />
       </div>
     );
   }
@@ -167,7 +167,7 @@ const AddonRequestsPage = () => {
               <p className="text-sm text-gray-600">Total Requests</p>
               <p className="text-2xl font-bold text-gray-900">{stats.totalRequests}</p>
             </div>
-            <PackagePlus className="w-8 h-8 text-blue-600" />
+            <PackagePlus className="w-8 h-8 text-orange-600" />
           </div>
         </div>
         <div className="bg-white rounded-lg shadow p-4">
@@ -201,9 +201,9 @@ const AddonRequestsPage = () => {
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm text-gray-600">Completed</p>
-              <p className="text-2xl font-bold text-blue-600">{stats.completedRequests}</p>
+              <p className="text-2xl font-bold text-orange-600">{stats.completedRequests}</p>
             </div>
-            <TrendingUp className="w-8 h-8 text-blue-600" />
+            <TrendingUp className="w-8 h-8 text-orange-600" />
           </div>
         </div>
       </div>
@@ -220,7 +220,7 @@ const AddonRequestsPage = () => {
                 placeholder="Search by product, location, or user..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
               />
             </div>
           </div>
@@ -231,7 +231,7 @@ const AddonRequestsPage = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
             >
               <option value="ALL">All Status</option>
               <option value="PENDING">Pending</option>
@@ -368,7 +368,7 @@ const AddonRequestsPage = () => {
                           <button
                             onClick={() => handleUpdateStatus(request.id, 'COMPLETED')}
                             disabled={updating === request.id}
-                            className="px-3 py-1 bg-blue-600 text-white rounded text-xs font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="px-3 py-1 bg-orange-600 text-white rounded text-xs font-semibold hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed"
                           >
                             {updating === request.id ? <Loader2 className="w-3 h-3 animate-spin" /> : 'Complete'}
                           </button>

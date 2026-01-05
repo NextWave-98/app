@@ -89,10 +89,10 @@ export default function ViewStockModal({ isOpen, onClose, stockItem }: ViewStock
         ) : data ? (
           <div className="p-6 space-y-6">
             {/* Header */}
-            <div className="bg-blue-50 rounded-lg p-6">
+            <div className="bg-orange-50 rounded-lg p-6">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center">
                     <Package className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -163,14 +163,14 @@ export default function ViewStockModal({ isOpen, onClose, stockItem }: ViewStock
                 {data.part?.unitPrice !== undefined && (
                   <div>
                     <label className="text-sm text-gray-600">Unit Price</label>
-                    <p className="text-gray-900 font-medium">LKR {data.part.unitPrice.toLocaleString()}</p>
+                    <p className="text-gray-900 font-medium">USD {data.part.unitPrice.toLocaleString()}</p>
                   </div>
                 )}
                 {data.part?.unitPrice !== undefined && (
                   <div>
                     <label className="text-sm text-gray-600">Total Value</label>
                     <p className="text-gray-900 font-medium">
-                      LKR {(data.part.unitPrice * data.quantity).toLocaleString()}
+                      USD {(data.part.unitPrice * data.quantity).toLocaleString()}
                     </p>
                   </div>
                 )}

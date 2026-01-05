@@ -190,7 +190,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="text"
                   value={formData.name}
                   onChange={(e) => handleChange('name', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Colombo Main Branch"
@@ -208,7 +208,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="text"
                   value={formData.code}
                   onChange={(e) => handleChange('code', e.target.value.toUpperCase())}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent 
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent 
                     border-gray-300 border-dashed text-gray-500 bg-gray-100 cursor-not-allowed
                   `}
                   placeholder="COL0001"
@@ -223,7 +223,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                 <textarea
                   value={formData.address}
                   onChange={(e) => handleChange('address', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.address ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="123 Main Street, Colombo 03"
@@ -242,7 +242,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => handleChange('phone', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.phone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 11 234 5678"
@@ -262,7 +262,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="tel"
                   value={formData.phone2}
                   onChange={(e) => handleChange('phone2', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.phone2 ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 77 123 4567"
@@ -281,7 +281,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="tel"
                   value={formData.phone3}
                   onChange={(e) => handleChange('phone3', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.phone3 ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 76 234 5678"
@@ -298,7 +298,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleChange('email', e.target.value)}
-                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                  className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                     errors.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="colombo@lankatech.lk"
@@ -314,7 +314,7 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                     type="checkbox"
                     checked={formData.isActive}
                     onChange={(e) => handleChange('isActive', e.target.checked)}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
                     disabled={isSubmitting}
                   />
                   <span className="text-sm font-medium text-gray-700">Branch is Active</span>
@@ -328,14 +328,14 @@ export default function EditShopModal({ isOpen, onClose, onSubmit, shop }: EditS
                 type="button"
                 onClick={handleClose}
                 disabled={isSubmitting}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 transition-colors"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 transition-colors"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {isSubmitting ? 'Updating...' : 'Update Branch'}
               </button>

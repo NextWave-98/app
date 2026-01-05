@@ -213,7 +213,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                   value={formik.values.name}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
                 {formik.touched.name && formik.errors.name && (
                   <p className="mt-1 text-sm text-red-600">{formik.errors.name}</p>
@@ -229,7 +229,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                   value={formik.values.description}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
 
@@ -243,7 +243,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                   value={formik.values.categoryId}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 >
                   <option value="">Select category</option>
                   {categories.map((cat) => (
@@ -267,7 +267,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.brand}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -278,7 +278,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.model}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -296,7 +296,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.unitPrice}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                   {formik.touched.unitPrice && formik.errors.unitPrice && (
                     <p className="mt-1 text-sm text-red-600">{formik.errors.unitPrice}</p>
@@ -313,7 +313,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.costPrice}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                   {formik.touched.costPrice && formik.errors.costPrice && (
                     <p className="mt-1 text-sm text-red-600">{formik.errors.costPrice}</p>
@@ -322,7 +322,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
               </div>
 
               {/* Warranty Information */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">Warranty Information</h3>
                 <div className="grid grid-cols-2 gap-4 mb-4">
                   <div>
@@ -334,7 +334,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.warrantyMonths}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       placeholder="0"
                     />
                     <p className="mt-1 text-xs text-gray-500">Set to 0 for no warranty</p>
@@ -346,7 +346,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.warrantyType}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                     >
                       <option value="STANDARD">Standard</option>
                       <option value="EXTENDED">Extended</option>
@@ -366,7 +366,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.terms}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="Enter warranty terms and conditions..."
                   />
                 </div>
@@ -380,7 +380,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.coverage}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="What's covered under warranty..."
                   />
                 </div>
@@ -394,7 +394,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                     value={formik.values.exclusions}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="What's not covered under warranty..."
                   />
                 </div>
@@ -413,7 +413,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.minStockLevel}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                     />
                   </div>
                   <div>
@@ -425,7 +425,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.maxStockLevel}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                     />
                   </div>
                   <div>
@@ -437,7 +437,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.reorderLevel}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                     />
                   </div>
                   <div>
@@ -449,7 +449,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
                       value={formik.values.reorderQuantity}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                     />
                   </div>
                 </div>
@@ -467,7 +467,7 @@ export default function EditStockModal({ isOpen, onClose, onSuccess, stockItem }
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 disabled:opacity-50"
                 disabled={loading}
               >
                 {loading ? 'Updating...' : 'Update Product'}

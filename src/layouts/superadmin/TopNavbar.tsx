@@ -192,14 +192,14 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                                 notificationType === 'warning'
                                   ? 'bg-yellow-100'
                                   : notificationType === 'info'
-                                  ? 'bg-blue-100'
+                                  ? 'bg-orange-100'
                                   : 'bg-green-100'
                               }`}>
                                 <Bell className={`w-5 h-5 ${
                                   notificationType === 'warning'
                                     ? 'text-yellow-600'
                                     : notificationType === 'info'
-                                    ? 'text-blue-600'
+                                    ? 'text-orange-600'
                                     : 'text-green-600'
                                 }`} />
                               </div>
@@ -220,7 +220,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                               {/* Unread indicator */}
                               {(notification.status === 'PENDING' || notification.status === 'SENT') && (
                                 <div className="flex-shrink-0">
-                                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                  <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                                 </div>
                               )}
                             </div>
@@ -235,7 +235,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                     <Link 
                       to="/superadmin/notifications/dashboard"
                       onClick={() => setIsNotificationOpen(false)}
-                      className="block w-full text-center text-sm text-blue-600 hover:text-blue-700 font-medium"
+                      className="block w-full text-center text-sm text-orange-600 hover:text-orange-700 font-medium"
                     >
                       View all notifications
                     </Link>
@@ -250,7 +250,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                 onClick={() => setIsProfileOpen(!isProfileOpen)}
                 className="flex items-center space-x-3 p-2 bg-gray-100 rounded-lg transition-colors cursor-pointer"
               >
-                <div className="w-8 h-8 bg-blue-950 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 bg-orange-950 rounded-full flex items-center justify-center">
                   <User className="w-5 h-5 text-white" />
                 </div>
                 <div className="hidden sm:block text-left">

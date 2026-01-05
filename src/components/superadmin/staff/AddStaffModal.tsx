@@ -179,7 +179,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.name}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.name && formik.touched.name ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="e.g., Saman Kumara"
@@ -197,7 +197,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.email && formik.touched.email ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="staff@lankatech.lk"
@@ -215,7 +215,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.password}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.password && formik.touched.password ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="Minimum 6 characters"
@@ -233,7 +233,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.nicNumber}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.nicNumber && formik.touched.nicNumber ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="123456789V or 199012345678"
@@ -250,7 +250,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.roleId}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.roleId && formik.touched.roleId ? 'border-red-500' : 'border-gray-300'
                   }`}
                 >
@@ -273,7 +273,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.locationId}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 >
                   <option value="">Select branch (optional)</option>
                   {branches.map((branch) => (
@@ -294,7 +294,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.dateOfBirth}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
 
@@ -308,7 +308,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.joiningDate}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 />
               </div>
             </div>
@@ -323,7 +323,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Full address"
               />
             </div>
@@ -344,7 +344,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.phoneNumber}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.phoneNumber && formik.touched.phoneNumber ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 77 123 4567 or 0771234567"
@@ -362,7 +362,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.additionalPhone}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.additionalPhone && formik.touched.additionalPhone ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 77 123 4567 or 0771234567"
@@ -387,7 +387,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.emergencyName}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="e.g., Nimal Kumara"
                 />
               </div>
@@ -402,7 +402,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.emergencyRelation}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="e.g., Brother, Father"
                 />
               </div>
@@ -417,7 +417,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   value={formik.values.emergencyContact}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.emergencyContact && formik.touched.emergencyContact ? 'border-red-500' : 'border-gray-300'
                   }`}
                   placeholder="+94 77 123 4567 or 0771234567"
@@ -442,7 +442,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Educational qualifications and certifications"
                 />
               </div>
@@ -457,7 +457,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Previous work experience"
                 />
               </div>
@@ -473,7 +473,7 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Any additional notes"
               />
             </div>
@@ -485,14 +485,14 @@ export default function AddStaffModal({ isOpen, onClose, onSubmit }: AddStaffMod
               type="button"
               onClick={handleClose}
               disabled={isSubmitting}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+              className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
             >
               {isSubmitting ? 'Adding...' : 'Add Staff Member'}
             </button>

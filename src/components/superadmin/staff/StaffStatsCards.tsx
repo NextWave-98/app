@@ -11,9 +11,9 @@ export default function StaffStatsCards({ stats }: StaffStatsCardsProps) {
       title: 'Total Staff',
       value: stats.totalStaff,
       icon: Users,
-      color: 'bg-blue-500',
-      textColor: 'text-blue-600',
-      bgLight: 'bg-blue-50',
+      color: 'bg-orange-500',
+      textColor: 'text-orange-600',
+      bgLight: 'bg-orange-50',
     },
     {
       title: 'Active Staff',

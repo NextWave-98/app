@@ -30,8 +30,8 @@ const TransferStatsCards: React.FC<TransferStatsCardsProps> = ({ stats, loading 
       value: stats.totalTransfers,
       icon: Package,
       color: 'blue',
-      bgColor: 'bg-blue-100',
-      iconColor: 'text-blue-600',
+      bgColor: 'bg-orange-100',
+      iconColor: 'text-orange-600',
     },
     {
       title: 'Pending Approval',

@@ -19,8 +19,8 @@ export default function JobSheetPriorityBadge({ priority }: JobSheetPriorityBadg
         return {
           text: 'Medium',
           icon: AlertCircle,
-          color: 'text-blue-700',
-          bgColor: 'bg-blue-50',
+          color: 'text-orange-700',
+          bgColor: 'bg-orange-50',
         };
       case JobPriority.HIGH:
         return {

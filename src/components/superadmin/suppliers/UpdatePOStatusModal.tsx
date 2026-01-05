@@ -94,14 +94,14 @@ export default function UpdatePOStatusModal({
         <form onSubmit={handleSubmit} className="p-6">
           <div className="space-y-6">
             {/* Current Status */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h3 className="text-sm font-semibold text-blue-900 mb-1">Current Status</h3>
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h3 className="text-sm font-semibold text-orange-900 mb-1">Current Status</h3>
               <div className="flex items-center gap-2">
-                <span className="text-lg font-medium text-blue-900">
+                <span className="text-lg font-medium text-orange-900">
                   {currentStatusOption?.label || purchaseOrder.status}
                 </span>
                 {currentStatusOption && (
-                  <span className="text-sm text-blue-700">
+                  <span className="text-sm text-orange-700">
                     - {currentStatusOption.description}
                   </span>
                 )}
@@ -122,10 +122,10 @@ export default function UpdatePOStatusModal({
                     disabled={option.value === purchaseOrder.status}
                     className={`text-left p-4 border-2 rounded-lg transition-all ${
                       selectedStatus === option.value
-                        ? 'border-blue-500 bg-blue-50'
+                        ? 'border-orange-500 bg-orange-50'
                         : option.value === purchaseOrder.status
                         ? 'border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed'
-                        : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+                        : 'border-gray-200 hover:border-orange-300 hover:bg-gray-50'
                     }`}
                   >
                     <div className="font-medium text-gray-900 mb-1">{option.label}</div>
@@ -148,7 +148,7 @@ export default function UpdatePOStatusModal({
                 onChange={(e) => setNotes(e.target.value)}
                 rows={3}
                 placeholder="Add any notes about this status change..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
             </div>
 
@@ -176,7 +176,7 @@ export default function UpdatePOStatusModal({
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:bg-blue-300"
+              className="px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:bg-orange-300"
               disabled={loading || !selectedStatus || selectedStatus === purchaseOrder.status}
             >
               {loading ? 'Updating...' : 'Update Status'}

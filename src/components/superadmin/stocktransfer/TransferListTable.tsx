@@ -51,7 +51,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
         return 'bg-green-100 text-green-800';
       case 'RELEASED':
       case 'IN_TRANSIT':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'APPROVED':
         return 'bg-purple-100 text-purple-800';
       case 'PENDING':
@@ -137,7 +137,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
   if (loading) {
     return (
       <div className="bg-white rounded-lg shadow-md p-8 text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto"></div>
         <p className="mt-4 text-gray-600">Loading transfers...</p>
       </div>
     );
@@ -156,7 +156,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
               placeholder="Search by release number or branch..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
           </div>
 
@@ -179,7 +179,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               >
                 <option value="ALL">All Statuses</option>
                 <option value="PENDING">Pending</option>
@@ -196,7 +196,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'status' | 'source' | 'destination')}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               >
                 <option value="date">Date</option>
                 <option value="status">Status</option>
@@ -210,7 +210,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
               <select
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value as 'asc' | 'desc')}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               >
                 <option value="desc">Descending</option>
                 <option value="asc">Ascending</option>
@@ -266,7 +266,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
               {paginatedTransfers.map((transfer) => (
                 <tr key={transfer.id} className="hover:bg-gray-50 transition-colors">
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="text-sm font-medium text-blue-600">
+                    <span className="text-sm font-medium text-orange-600">
                       {transfer.releaseNumber}
                     </span>
                   </td>
@@ -293,7 +293,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
                     <div className="flex items-center justify-end gap-2">
                       <button
                         onClick={() => onViewTransfer(transfer)}
-                        className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        className="p-2 text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
                         title="View Details"
                       >
                         <Eye size={18} />
@@ -322,7 +322,7 @@ const TransferListTable: React.FC<TransferListTableProps> = (props) => {
                       {onReceiveTransfer && canReceive(transfer) && (
                         <button
                           onClick={() => onReceiveTransfer(transfer.id)}
-                          className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                          className="p-2 text-orange-600 hover:bg-orange-50 rounded-lg transition-colors"
                           title="Receive Stock"
                         >
                           <Package size={18} />

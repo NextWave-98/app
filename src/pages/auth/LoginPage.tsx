@@ -31,7 +31,7 @@ const LoginPage = () => {
         } else if (user.locationCode) {
           navigate(`/${user.locationCode}/system/dashboard`);
         } else {
-          navigate('/ditech/login');
+          navigate('/login');
         }
       }
     } catch (error) {
@@ -49,9 +49,18 @@ const LoginPage = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+        <div>
+          <img
+            src="/1.png"
+            alt="GadgetChain Manager Logo"
+            width={160}
+            height={120}
+            className="mx-auto mb-4"
+          />
+        </div>
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-            Lanka Tech Solutions
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+            GadgetChain Manager
           </h1>
           <p className="text-gray-600 mt-2">Sign in to your account</p>
         </div>
@@ -71,7 +80,7 @@ const LoginPage = () => {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none transition"
               placeholder="admin@example.com"
               required
             />
@@ -86,7 +95,7 @@ const LoginPage = () => {
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent outline-none transition"
                 placeholder="Enter your password"
                 required
               />
@@ -103,7 +112,7 @@ const LoginPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full cursor-pointer bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full cursor-pointer bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-orange-400 transform hover:scale-105 transition duration-300 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
@@ -111,7 +120,7 @@ const LoginPage = () => {
 
         <div className="mt-4 flex items-center justify-center gap-2 text-md text-gray-600">
           <CircleCheckBig size={16} className="text-green-500" />
-          <span>Secured by Ditech</span>
+          <span>Secured by Software Waves</span>
         </div>
       </div>
     </div>

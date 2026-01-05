@@ -426,7 +426,7 @@ export default function BranchJobSheetsPage() {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
         <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-blue-600 mx-auto mb-4" />
+          <Loader2 className="w-12 h-12 animate-spin text-orange-600 mx-auto mb-4" />
           <p className="text-gray-600">Loading job sheets...</p>
         </div>
       </div>
@@ -467,7 +467,7 @@ export default function BranchJobSheetsPage() {
             </button>
             <button
               onClick={() => setShowAddJobSheet(true)}
-              className="flex items-center gap-2 px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+              className="flex items-center gap-2 px-4 py-2 text-white bg-orange-600 rounded-lg hover:bg-orange-700"
             >
               <Plus className="w-4 h-4" />
               New Job Sheet

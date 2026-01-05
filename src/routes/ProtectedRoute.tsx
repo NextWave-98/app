@@ -12,7 +12,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute = ({
   children,
-  redirectTo = '/ditech/login',
+  redirectTo = '/login',
   allowedRoles,
   unauthorizedRedirect = '/unauthorized'
 }: ProtectedRouteProps) => {

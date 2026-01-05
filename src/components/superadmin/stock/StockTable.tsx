@@ -24,7 +24,7 @@ export default function StockTable({ items, onEdit, onDelete, onView, onRestock,
 
   const formatCurrency = (amount: number) => {
     console.log('Formatting amount:', amount);
-    return `LKR ${amount}`;
+    return `USD ${amount}`;
   };
 
   const toggleMenu = (itemId: string) => {
@@ -99,15 +99,15 @@ export default function StockTable({ items, onEdit, onDelete, onView, onRestock,
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       {/* Action Menu - Shows when rows are selected */}
       {hasSelection && (
-        <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+        <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedRows.size} {selectedRows.size === 1 ? 'item' : 'items'} selected
               </span>
               <button
                 onClick={clearSelection}
-                className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                className="text-sm text-orange-600 hover:text-orange-800 font-medium"
               >
                 Clear selection
               </button>
@@ -163,7 +163,7 @@ export default function StockTable({ items, onEdit, onDelete, onView, onRestock,
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -198,13 +198,13 @@ export default function StockTable({ items, onEdit, onDelete, onView, onRestock,
                     type="checkbox"
                     checked={selectedRows.has(item.id)}
                     onChange={(e) => handleSelectRow(item.id, e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                   />
                 </td>
                 <td className="px-6 py-4">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Package className="h-5 w-5 text-blue-600" />
+                    <div className="flex-shrink-0 h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <Package className="h-5 w-5 text-orange-600" />
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-medium text-gray-900">{item.name}</div>
@@ -255,7 +255,7 @@ export default function StockTable({ items, onEdit, onDelete, onView, onRestock,
                               onRestock(item);
                               setActiveMenu(null);
                             }}
-                            className="flex items-center w-full px-4 py-2 text-sm text-blue-600 hover:bg-blue-50"
+                            className="flex items-center w-full px-4 py-2 text-sm text-orange-600 hover:bg-orange-50"
                           >
                             <Package className="w-4 h-4 mr-2" />
                             Restock Item

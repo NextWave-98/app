@@ -68,8 +68,8 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
         <form onSubmit={formik.handleSubmit}>
           <div className="p-6 space-y-6">
             {/* Claim Info */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-              <p className="text-xs text-blue-600 mb-1">Claim Number</p>
+            <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+              <p className="text-xs text-orange-600 mb-1">Claim Number</p>
               <p className="text-lg font-semibold text-gray-900">{claim.claimNumber}</p>
               <div className="grid grid-cols-2 gap-4 mt-3">
                 <div>
@@ -90,7 +90,7 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
               </label>
               <select
                 {...formik.getFieldProps('status')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.status && formik.errors.status ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -115,7 +115,7 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
               <textarea
                 {...formik.getFieldProps('notes')}
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Add notes about this status change (e.g., reason for rejection, next steps, etc.)"
               />
             </div>
@@ -146,7 +146,7 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 flex items-center gap-2"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 flex items-center gap-2"
               disabled={loading}
             >
               <Edit className="w-4 h-4" />

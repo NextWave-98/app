@@ -95,9 +95,9 @@ export default function ReportsPage() {
               <div>
                 <h4 className="text-md font-semibold text-gray-900 mb-3">Summary</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Sales</p>
-                    <p className="text-2xl font-bold text-blue-600">{data.summary.totalSales}</p>
+                    <p className="text-2xl font-bold text-orange-600">{data.summary.totalSales}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
@@ -473,9 +473,9 @@ export default function ReportsPage() {
               <div>
                 <h4 className="text-md font-semibold text-gray-900 mb-3">Inventory Summary</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Items</p>
-                    <p className="text-2xl font-bold text-blue-600">{data.summary.totalItems}</p>
+                    <p className="text-2xl font-bold text-orange-600">{data.summary.totalItems}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Value</p>
@@ -1049,9 +1049,9 @@ export default function ReportsPage() {
               <div>
                 <h4 className="text-md font-semibold text-gray-900 mb-3">Profit & Loss Summary</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
-                    <p className="text-2xl font-bold text-blue-600">{formatCurrency(data.summary?.totalRevenue)}</p>
+                    <p className="text-2xl font-bold text-orange-600">{formatCurrency(data.summary?.totalRevenue)}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Gross Profit</p>
@@ -1149,9 +1149,9 @@ export default function ReportsPage() {
                     <p className="text-sm text-gray-600">Marketing</p>
                     <p className="text-2xl font-bold text-green-600">Rs. {data.operatingExpenses.marketing?.toFixed(2)}</p>
                   </div> */}
-                  {/* <div className="bg-blue-50 p-4 rounded-lg">
+                  {/* <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Other</p>
-                    <p className="text-2xl font-bold text-blue-600">Rs. {data.operatingExpenses.other?.toFixed(2)}</p>
+                    <p className="text-2xl font-bold text-orange-600">Rs. {data.operatingExpenses.other?.toFixed(2)}</p>
                   </div> */}
                   <div className="bg-gray-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total</p>
@@ -1223,9 +1223,9 @@ export default function ReportsPage() {
               <div>
                 <h4 className="text-md font-semibold text-gray-900 mb-3">Jobsheets Summary</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
-                    <p className="text-2xl font-bold text-blue-600">{formatCurrency(data.jobsheets?.total)}</p>
+                    <p className="text-2xl font-bold text-orange-600">{formatCurrency(data.jobsheets?.total)}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Count</p>
@@ -1506,7 +1506,7 @@ export default function ReportsPage() {
           <select
             value={downloadFormat}
             onChange={(e) => setDownloadFormat(e.target.value as 'json' | 'pdf' | 'excel' | 'csv')}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
           >
             <option value="excel">Excel (.xlsx)</option>
             <option value="pdf">PDF (.pdf)</option>
@@ -1535,12 +1535,12 @@ export default function ReportsPage() {
                 key={report.type}
                 onClick={() => setSelectedReport(report.type)}
                 className={`p-4 rounded-lg border-2 transition-all ${selectedReport === report.type
-                  ? 'border-blue-500 bg-blue-50'
+                  ? 'border-orange-500 bg-orange-50'
                   : 'border-gray-200 hover:border-gray-300'
                   }`}
               >
                 <div className="flex justify-center mb-2">
-                  <Icon className={`w-8 h-8 ${selectedReport === report.type ? 'text-blue-600' : 'text-gray-600'
+                  <Icon className={`w-8 h-8 ${selectedReport === report.type ? 'text-orange-600' : 'text-gray-600'
                     }`} />
                 </div>
                 <div className="text-sm font-medium text-gray-900">{report.label}</div>
@@ -1559,7 +1559,7 @@ export default function ReportsPage() {
               key={period.period}
               onClick={() => setSelectedPeriod(period.period)}
               className={`px-4 py-3 rounded-lg border-2 transition-all ${selectedPeriod === period.period
-                ? 'border-blue-500 bg-blue-50 text-blue-700'
+                ? 'border-orange-500 bg-orange-50 text-orange-700'
                 : 'border-gray-200 hover:border-gray-300'
                 }`}
             >
@@ -1574,7 +1574,7 @@ export default function ReportsPage() {
         <button
           onClick={handleGenerateReport}
           disabled={loading}
-          className="inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 text-lg font-medium"
+          className="inline-flex items-center px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50 text-lg font-medium"
         >
           <FileText className="w-5 h-5 mr-2" />
           Generate Report
@@ -1592,9 +1592,9 @@ export default function ReportsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {selectedReport === 'sales' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Sales</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalSales}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalSales}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
@@ -1630,9 +1630,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'inventory' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Items</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalItems}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalItems}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Value</p>
@@ -1660,9 +1660,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'staff_performance' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Staff</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalStaff}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalStaff}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Active Staff</p>
@@ -1684,9 +1684,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'customer_analysis' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Customers</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalCustomers}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalCustomers}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">New Customers</p>
@@ -1708,9 +1708,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'shop_performance' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Locations</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalLocations}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalLocations}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
@@ -1728,9 +1728,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'profit_loss' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Revenue</p>
-                    <p className="text-2xl font-bold text-blue-600">
+                    <p className="text-2xl font-bold text-orange-600">
                       {formatCurrency(reportData.summary?.totalRevenue)}
                     </p>
                   </div>
@@ -1750,9 +1750,9 @@ export default function ReportsPage() {
               )}
               {selectedReport === 'jobsheet' && reportData.summary && (
                 <>
-                  <div className="bg-blue-50 p-4 rounded-lg">
+                  <div className="bg-orange-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Total Jobsheets</p>
-                    <p className="text-2xl font-bold text-blue-600">{reportData.summary.totalJobsheets}</p>
+                    <p className="text-2xl font-bold text-orange-600">{reportData.summary.totalJobsheets}</p>
                   </div>
                   {/* <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm text-gray-600">Completion Rate</p>

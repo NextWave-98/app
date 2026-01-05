@@ -24,8 +24,8 @@ interface ProductReturnStatsCardsProps {
 
 export default function ProductReturnStatsCards({ stats }: ProductReturnStatsCardsProps) {
   const formatCurrency = (amount: number | undefined) => {
-    if (amount == null) return 'LKR 0';
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    if (amount == null) return 'USD 0';
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const formatTime = (hours: number) => {
@@ -43,9 +43,9 @@ export default function ProductReturnStatsCards({ stats }: ProductReturnStatsCar
       value: stats.totalReturns,
       icon: Package,
       color: 'blue',
-      bgColor: 'bg-blue-50',
-      textColor: 'text-blue-600',
-      borderColor: 'border-blue-200',
+      bgColor: 'bg-orange-50',
+      textColor: 'text-orange-600',
+      borderColor: 'border-orange-200',
     },
     {
       title: 'Pending',

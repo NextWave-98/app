@@ -21,7 +21,7 @@ interface AddJobSheetModalProps {
 
 const PRIORITY_OPTIONS = [
   { value: 'LOW', label: 'Low', color: 'text-gray-600' },
-  { value: 'MEDIUM', label: 'Medium', color: 'text-blue-600' },
+  { value: 'MEDIUM', label: 'Medium', color: 'text-orange-600' },
   { value: 'HIGH', label: 'High', color: 'text-orange-600' },
   { value: 'URGENT', label: 'Urgent', color: 'text-red-600' },
 ];
@@ -305,19 +305,19 @@ export default function AddJobSheetModal({
           {/* Header */}
           <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
             <div className="flex items-center">
-              <ClipboardList className="w-6 h-6 text-blue-600 mr-2" />
+              <ClipboardList className="w-6 h-6 text-orange-600 mr-2" />
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Create New Job Sheet</h2>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className={`text-sm ${step >= 1 ? 'text-blue-600 font-medium' : 'text-gray-400'}`}>
+                  <span className={`text-sm ${step >= 1 ? 'text-orange-600 font-medium' : 'text-gray-400'}`}>
                     1. Customer
                   </span>
                   <span className="text-gray-400">→</span>
-                  <span className={`text-sm ${step >= 2 ? 'text-blue-600 font-medium' : 'text-gray-400'}`}>
+                  <span className={`text-sm ${step >= 2 ? 'text-orange-600 font-medium' : 'text-gray-400'}`}>
                     2. Device
                   </span>
                   <span className="text-gray-400">→</span>
-                  <span className={`text-sm ${step >= 3 ? 'text-blue-600 font-medium' : 'text-gray-400'}`}>
+                  <span className={`text-sm ${step >= 3 ? 'text-orange-600 font-medium' : 'text-gray-400'}`}>
                     3. Job Details
                   </span>
                 </div>
@@ -347,7 +347,7 @@ export default function AddJobSheetModal({
                       value={customerSearch}
                       onChange={(e) => setCustomerSearch(e.target.value)}
                       placeholder="Search by name, phone, email, NIC..."
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                       disabled={!!selectedCustomer}
                     />
                   </div>
@@ -383,7 +383,7 @@ export default function AddJobSheetModal({
                       <button
                         type="button"
                         onClick={() => setShowAddCustomer(true)}
-                        className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
                       >
                         <Plus className="w-4 h-4 mr-2" />
                         Create New Customer
@@ -393,7 +393,7 @@ export default function AddJobSheetModal({
 
                   {/* Selected Customer */}
                   {selectedCustomer && (
-                    <div className="mt-2 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="mt-2 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                       <div className="flex items-start justify-between">
                         <div>
                           <p className="font-medium text-gray-900">{selectedCustomer.name}</p>
@@ -406,7 +406,7 @@ export default function AddJobSheetModal({
                             setSelectedCustomer(null);
                             setFormData((prev) => ({ ...prev, customerId: '' }));
                           }}
-                          className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                          className="text-orange-600 hover:text-orange-800 text-sm font-medium"
                         >
                           Change
                         </button>
@@ -420,7 +420,7 @@ export default function AddJobSheetModal({
                     type="button"
                     onClick={() => setStep(2)}
                     disabled={!canProceedToStep2}
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     Next: Select Device
                   </button>
@@ -440,7 +440,7 @@ export default function AddJobSheetModal({
                   <button
                     type="button"
                     onClick={() => setStep(1)}
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                    className="text-orange-600 hover:text-orange-800 text-sm font-medium"
                   >
                     Back
                   </button>
@@ -455,7 +455,7 @@ export default function AddJobSheetModal({
                     <button
                       type="button"
                       onClick={() => setShowAddDevice(true)}
-                      className="inline-flex items-center text-sm text-blue-600 hover:text-blue-800 font-medium"
+                      className="inline-flex items-center text-sm text-orange-600 hover:text-orange-800 font-medium"
                     >
                       <Plus className="w-4 h-4 mr-1" />
                       Add New Device
@@ -474,7 +474,7 @@ export default function AddJobSheetModal({
                       <button
                         type="button"
                         onClick={() => setShowAddDevice(true)}
-                        className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                        className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700"
                       >
                         <Plus className="w-4 h-4 mr-2" />
                         Register First Device
@@ -496,7 +496,7 @@ export default function AddJobSheetModal({
                               !isAvailable
                                 ? 'border-red-200 bg-red-50 opacity-60 cursor-not-allowed'
                                 : selectedDevice?.id === device.id
-                                ? 'border-blue-500 bg-blue-50'
+                                ? 'border-orange-500 bg-orange-50'
                                 : 'border-gray-200 hover:border-gray-300'
                             }`}
                           >
@@ -548,7 +548,7 @@ export default function AddJobSheetModal({
                       setStep(3);
                     }}
                     disabled={!canProceedToStep3 || loadingBranches}
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loadingBranches ? 'Loading...' : 'Next: Job Details'}
                   </button>
@@ -584,7 +584,7 @@ export default function AddJobSheetModal({
                       value={formData.locationId}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     >
                       <option value="">Select Location</option>
                       {branches.map((branch) => (
@@ -604,7 +604,7 @@ export default function AddJobSheetModal({
                       value={formData.priority}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     >
                       {PRIORITY_OPTIONS.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -627,7 +627,7 @@ export default function AddJobSheetModal({
                     required
                     rows={4}
                     placeholder="Describe the problem in detail (min 10 characters)..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
                   />
                   <p className="text-xs text-gray-500 mt-1">
                     {formData.issueDescription.length} / 10 minimum characters
@@ -645,7 +645,7 @@ export default function AddJobSheetModal({
                     onChange={handleChange}
                     rows={3}
                     placeholder="List accessories received with the device..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
                   />
                 </div>
 
@@ -653,7 +653,7 @@ export default function AddJobSheetModal({
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Labour Cost (LKR)
+                      Labour Cost (USD)
                     </label>
                     <input
                       type="number"
@@ -662,13 +662,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Parts Cost (LKR)
+                      Parts Cost (USD)
                     </label>
                     <input
                       type="number"
@@ -677,13 +677,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Discount (LKR)
+                      Discount (USD)
                     </label>
                     <input
                       type="number"
@@ -692,13 +692,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Advance Payment (LKR)
+                      Advance Payment (USD)
                     </label>
                     <input
                       type="number"
@@ -707,7 +707,7 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
                 </div>
@@ -724,7 +724,7 @@ export default function AddJobSheetModal({
                       value={formData.warrantyPeriod}
                       onChange={handleNumberChange}
                       min="0"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
@@ -739,7 +739,7 @@ export default function AddJobSheetModal({
                       onChange={handleChange}
                       min={new Date().toISOString().split('T')[0]}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
                 </div>
@@ -775,7 +775,7 @@ export default function AddJobSheetModal({
                   <button
                     type="submit"
                     disabled={loading || !canSubmit}
-                    className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? 'Creating...' : 'Create Job Sheet'}
                   </button>

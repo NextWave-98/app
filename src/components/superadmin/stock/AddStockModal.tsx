@@ -178,7 +178,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                     value={formik.values.name}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="Enter product name"
                   />
                   {formik.touched.name && formik.errors.name && (
@@ -195,7 +195,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                     value={formik.values.description}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     placeholder="Enter product description"
                   />
                 </div>
@@ -210,7 +210,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                     value={formik.values.categoryId}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   >
                     <option value="">Select category</option>
                     {categories.map((cat) => (
@@ -234,7 +234,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.brand}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="e.g., HP, Dell, Samsung"
                     />
                   </div>
@@ -246,7 +246,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.model}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="Model number"
                     />
                   </div>
@@ -262,7 +262,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.sku}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="Stock keeping unit"
                     />
                   </div>
@@ -274,7 +274,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.barcode}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="Product barcode"
                     />
                   </div>
@@ -293,7 +293,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.unitPrice}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="0.00"
                     />
                     {formik.touched.unitPrice && formik.errors.unitPrice && (
@@ -311,7 +311,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.costPrice}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="0.00"
                     />
                     {formik.touched.costPrice && formik.errors.costPrice && (
@@ -321,7 +321,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                 </div>
 
                 {/* Warranty Information */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                   <h3 className="text-sm font-semibold text-gray-900 mb-3">Warranty Information</h3>
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div>
@@ -333,7 +333,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.warrantyMonths}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                         placeholder="0"
                       />
                       <p className="mt-1 text-xs text-gray-500">Set to 0 for no warranty</p>
@@ -345,7 +345,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.warrantyType}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       >
                         <option value="STANDARD">Standard</option>
                         <option value="EXTENDED">Extended</option>
@@ -365,7 +365,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.terms}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="Enter warranty terms and conditions..."
                     />
                   </div>
@@ -379,7 +379,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.coverage}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="What's covered under warranty..."
                     />
                   </div>
@@ -393,7 +393,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                       value={formik.values.exclusions}
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="What's not covered under warranty..."
                     />
                   </div>
@@ -412,7 +412,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.minStockLevel}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       />
                     </div>
                     <div>
@@ -424,7 +424,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.maxStockLevel}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       />
                     </div>
                     <div>
@@ -436,7 +436,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.reorderLevel}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       />
                     </div>
                     <div>
@@ -448,7 +448,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                         value={formik.values.reorderQuantity}
                         onChange={formik.handleChange}
                         onBlur={formik.handleBlur}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white"
                       />
                     </div>
                   </div>
@@ -466,7 +466,7 @@ export default function AddStockModal({ isOpen, onClose, onSuccess }: AddStockMo
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 disabled:opacity-50"
                   disabled={loading}
                 >
                   {loading ? 'Adding...' : 'Add Product'}

@@ -67,8 +67,8 @@ export default function TransferWarrantyModal({ isOpen, onClose, warranty, onSuc
         <form onSubmit={formik.handleSubmit}>
           <div className="p-6 space-y-6">
             {/* Current Warranty Info */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-              <p className="text-xs text-blue-600 mb-1">Current Warranty</p>
+            <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+              <p className="text-xs text-orange-600 mb-1">Current Warranty</p>
               <p className="text-lg font-semibold text-gray-900">{warranty.warrantyNumber}</p>
               <div className="grid grid-cols-2 gap-4 mt-3">
                 <div>
@@ -98,7 +98,7 @@ export default function TransferWarrantyModal({ isOpen, onClose, warranty, onSuc
               <input
                 type="text"
                 {...formik.getFieldProps('transferredTo')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.transferredTo && formik.errors.transferredTo ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Enter new owner's full name"
@@ -117,7 +117,7 @@ export default function TransferWarrantyModal({ isOpen, onClose, warranty, onSuc
               <input
                 type="text"
                 {...formik.getFieldProps('transferredPhone')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.transferredPhone && formik.errors.transferredPhone ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="0771234567"
@@ -136,7 +136,7 @@ export default function TransferWarrantyModal({ isOpen, onClose, warranty, onSuc
               <textarea
                 {...formik.getFieldProps('transferNotes')}
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Add any notes about this transfer (e.g., reason for transfer, relationship between parties, etc.)"
               />
             </div>

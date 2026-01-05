@@ -40,7 +40,7 @@ export default function PaymentMethodChart({ data }: PaymentMethodChartProps) {
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       notation: 'compact',
       maximumFractionDigits: 1,
     }).format(value);

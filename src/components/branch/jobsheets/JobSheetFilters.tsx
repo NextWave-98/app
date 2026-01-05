@@ -45,7 +45,7 @@ export default function JobSheetFilters({
         {hasActiveFilters && onReset && (
           <button
             onClick={onReset}
-            className="ml-auto text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1"
+            className="ml-auto text-sm text-orange-600 hover:text-orange-700 flex items-center gap-1"
           >
             <X className="w-4 h-4" />
             Clear All
@@ -64,7 +64,7 @@ export default function JobSheetFilters({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search job, customer..."
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function JobSheetFilters({
           <select
             value={selectedStatus}
             onChange={(e) => onStatusChange(e.target.value as JobSheetStatus | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Status</option>
             <option value="PENDING">Pending</option>
@@ -91,7 +91,7 @@ export default function JobSheetFilters({
           <select
             value={selectedPriority}
             onChange={(e) => onPriorityChange(e.target.value as JobPriority | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Priorities</option>
             <option value="LOW">Low</option>
@@ -106,7 +106,7 @@ export default function JobSheetFilters({
           <select
             value={dateFilter}
             onChange={(e) => onDateFilterChange(e.target.value as DateFilter)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="today">Today</option>
             <option value="yesterday">Yesterday</option>
@@ -127,7 +127,7 @@ export default function JobSheetFilters({
                 type="date"
                 value={startDate}
                 onChange={(e) => onStartDateChange(e.target.value)}
-                className="block w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="block w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
                 placeholder="Start Date"
               />
             </div>
@@ -139,7 +139,7 @@ export default function JobSheetFilters({
                 type="date"
                 value={endDate}
                 onChange={(e) => onEndDateChange(e.target.value)}
-                className="block w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="block w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
                 placeholder="End Date"
               />
             </div>

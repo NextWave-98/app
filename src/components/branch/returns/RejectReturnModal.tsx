@@ -101,7 +101,7 @@ export default function RejectReturnModal({
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-red-800">Value</label>
-                  <p className="text-red-900">LKR {returnItem.productValue.toLocaleString('en-US')}</p>
+                  <p className="text-red-900">USD {returnItem.productValue.toLocaleString('en-US')}</p>
                   <p className="text-sm text-red-700">Quantity: {returnItem.quantity}</p>
                 </div>
               </div>

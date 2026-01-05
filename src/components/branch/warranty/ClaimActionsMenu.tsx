@@ -22,10 +22,10 @@ export default function ClaimActionsMenu({
   if (selectedCount === 0) return null;
 
   return (
-    <div className="bg-blue-50 border-b border-blue-200 px-4 py-3">
+    <div className="bg-orange-50 border-b border-orange-200 px-4 py-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <span className="text-sm font-medium text-blue-900">
+          <span className="text-sm font-medium text-orange-900">
             {selectedCount} {selectedCount === 1 ? 'claim' : 'claims'} selected
           </span>
           <div className="flex items-center space-x-2">
@@ -33,21 +33,21 @@ export default function ClaimActionsMenu({
               <>
                 <button
                   onClick={onViewClaim}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                 >
                   <FileText className="w-4 h-4 mr-1.5" />
                   View Details
                 </button>
                 <button
                   onClick={onUpdateStatus}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                 >
                   <Edit className="w-4 h-4 mr-1.5" />
                   Update Status
                 </button>
                 <button
                   onClick={onAssignTechnician}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                 >
                   <Users className="w-4 h-4 mr-1.5" />
                   Assign Technician
@@ -72,7 +72,7 @@ export default function ClaimActionsMenu({
         </div>
         <button
           onClick={onClearSelection}
-          className="text-blue-600 hover:text-blue-800"
+          className="text-orange-600 hover:text-orange-800"
         >
           <X className="w-5 h-5" />
         </button>

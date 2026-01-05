@@ -81,8 +81,8 @@ const useFetch = <T = unknown>(
       message?.toLowerCase().includes('account has been deactivated')) {
       Cookies.remove('accessToken');
       alert.error('Your account has been deactivated. Please contact an administrator.');
-      if (location.pathname !== '/ditech/login') {
-      window.location.href = '/ditech/login';
+      if (location.pathname !== '/login') {
+      window.location.href = '/login';
       }
       return;
     }
@@ -92,9 +92,9 @@ const useFetch = <T = unknown>(
       message?.toLowerCase().includes('invalid token') ||
       message?.toLowerCase().includes('please log in again')) {
       Cookies.remove('accessToken');
-      if (location.pathname !== '/ditech/login') {
+      if (location.pathname !== '/login') {
        
-          window.location.href = '/ditech/login';
+          window.location.href = '/login';
        
       }
       return;
@@ -102,7 +102,7 @@ const useFetch = <T = unknown>(
 
     if (code === 401) {
       Cookies.remove('accessToken');
-      if (location.pathname !== '/ditech/login') {
+      if (location.pathname !== '/login') {
       window.location.reload();
       }
     } else {
@@ -249,21 +249,21 @@ const useFetch = <T = unknown>(
             responseData.message.toLowerCase().includes('please log in again'))) {
           if (!noRedirect) {
             Cookies.remove('accessToken');
-            if (location.pathname !== '/ditech/login') {
-            window.location.href = '/ditech/login';}
+            if (location.pathname !== '/login') {
+            window.location.href = '/login';}
           }
           return responseData;
         }
 
         if (responseData.code === 401) {
           if (!noRedirect) {
-            window.location.href = '/ditech/login';
+            window.location.href = '/login';
           }
           return responseData;
         } else if (responseData.code === 403) {
           if (!noRedirect) {
             Cookies.remove('accessToken');
-            window.location.href = '/ditech/login';
+            window.location.href = '/login';
           }
           return responseData;
         } else {
@@ -296,8 +296,8 @@ const useFetch = <T = unknown>(
       if (statusCode === 401 || finalErrorMessage.toLowerCase().includes('invalid token')) {
         if (!noRedirect) {
           Cookies.remove('accessToken');
-          if (location.pathname !== '/ditech/login') {
-            window.location.href = '/ditech/login';
+          if (location.pathname !== '/login') {
+            window.location.href = '/login';
           }
         }
       }

@@ -43,7 +43,7 @@ const BranchNavbar = () => {
 
   const handleLogout = () => {
     logout();
-    navigate('/ditech/login');
+    navigate('/login');
   };
 
   const toggleFullscreen = () => {
@@ -104,7 +104,7 @@ const BranchNavbar = () => {
             {/* Quick POS Link */}
             <Link
               to={`/${branchCode}/system/pos`}
-              className="flex items-center space-x-2 px-4 py-2 bg-[#1e3a8a] text-white rounded-lg hover:bg-blue-800 transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 bg-[#1e3a8a] text-white rounded-lg hover:bg-orange-800 transition-colors"
             >
               <ShoppingCart className="w-4 h-4" />
               <span className="hidden sm:inline font-medium">Quick PoS</span>

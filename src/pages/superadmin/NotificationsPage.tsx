@@ -70,7 +70,7 @@ export default function NotificationsPage() {
       case NotificationType.SUCCESS:
         return <CheckCircle className="w-5 h-5 text-green-600" />;
       default:
-        return <Info className="w-5 h-5 text-blue-600" />;
+        return <Info className="w-5 h-5 text-orange-600" />;
     }
   };
 
@@ -85,7 +85,7 @@ export default function NotificationsPage() {
       case NotificationType.SUCCESS:
         return 'bg-green-50 border-l-4 border-green-500';
       default:
-        return 'bg-blue-50 border-l-4 border-blue-500';
+        return 'bg-orange-50 border-l-4 border-orange-500';
     }
   };
 
@@ -117,7 +117,7 @@ export default function NotificationsPage() {
             <CheckCheck className="w-4 h-4 mr-2" />
             Mark All Read
           </button>
-          <button className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 cursor-pointer">
+          <button className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 cursor-pointer">
             <Settings className="w-4 h-4 mr-2" />
             Settings
           </button>
@@ -140,9 +140,9 @@ export default function NotificationsPage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Unread</p>
-                <p className="text-2xl font-bold text-blue-600">{stats.unreadNotifications}</p>
+                <p className="text-2xl font-bold text-orange-600">{stats.unreadNotifications}</p>
               </div>
-              <BellOff className="w-8 h-8 text-blue-400" />
+              <BellOff className="w-8 h-8 text-orange-400" />
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-sm p-6">
@@ -172,7 +172,7 @@ export default function NotificationsPage() {
             <button
               onClick={() => setFilter('all')}
               className={`px-4 py-2 rounded-lg ${
-                filter === 'all' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-100'
+                filter === 'all' ? 'bg-orange-100 text-orange-700' : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
               All ({notifications.length})
@@ -180,7 +180,7 @@ export default function NotificationsPage() {
             <button
               onClick={() => setFilter('unread')}
               className={`px-4 py-2 rounded-lg ${
-                filter === 'unread' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-100'
+                filter === 'unread' ? 'bg-orange-100 text-orange-700' : 'text-gray-600 hover:bg-gray-100'
               }`}
             >
               Unread ({stats?.unreadNotifications || 0})
@@ -226,7 +226,7 @@ export default function NotificationsPage() {
                         {!notification.isRead && (
                           <button
                             onClick={() => handleMarkAsRead(notification.id)}
-                            className="p-1 text-gray-400 hover:text-blue-600"
+                            className="p-1 text-gray-400 hover:text-orange-600"
                             title="Mark as read"
                           >
                             <Check className="w-4 h-4" />

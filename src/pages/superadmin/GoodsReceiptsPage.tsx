@@ -166,7 +166,7 @@ export default function GoodsReceiptsPage() {
         </div>
         <button
           onClick={() => loadReceipts()}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
         >
           <RefreshCw className="w-5 h-5" />
           Refresh
@@ -181,8 +181,8 @@ export default function GoodsReceiptsPage() {
               <p className="text-gray-600 text-sm">Total Receipts</p>
               <p className="text-3xl font-bold text-gray-900 mt-2">{stats.total}</p>
             </div>
-            <div className="bg-blue-100 p-3 rounded-lg">
-              <PackageCheck className="w-8 h-8 text-blue-600" />
+            <div className="bg-orange-100 p-3 rounded-lg">
+              <PackageCheck className="w-8 h-8 text-orange-600" />
             </div>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function GoodsReceiptsPage() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function GoodsReceiptsPage() {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             >
               <option value="ALL">All Status</option>
               <option value="PENDING_QC">Pending QC</option>
@@ -256,7 +256,7 @@ export default function GoodsReceiptsPage() {
 
             <button
               onClick={handleSearch}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
             >
               Search
             </button>
@@ -278,7 +278,7 @@ export default function GoodsReceiptsPage() {
               </label>
               <input
                 type="date"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
             <div>
@@ -287,14 +287,14 @@ export default function GoodsReceiptsPage() {
               </label>
               <input
                 type="date"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Sort By
               </label>
-              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
                 <option value="receiptDate">Receipt Date</option>
                 <option value="receiptNumber">Receipt Number</option>
                 <option value="status">Status</option>
@@ -306,10 +306,10 @@ export default function GoodsReceiptsPage() {
 
       {/* Action Bar - Shown when goods receipts are selected */}
       {selectedReceipts.length > 0 && (
-        <div className="bg-blue-50 border border-blue-200 rounded-lg shadow-sm p-4">
+        <div className="bg-orange-50 border border-orange-200 rounded-lg shadow-sm p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedReceipts.length} receipt{selectedReceipts.length > 1 ? 's' : ''} selected
               </span>
             </div>
@@ -321,7 +321,7 @@ export default function GoodsReceiptsPage() {
                     onClick={() => {
                       handleView(selectedReceipts[0]);
                     }}
-                    className="inline-flex items-center px-3 py-1.5 border border-transparent rounded-lg text-xs font-medium text-white bg-blue-600 hover:bg-blue-700"
+                    className="inline-flex items-center px-3 py-1.5 border border-transparent rounded-lg text-xs font-medium text-white bg-orange-600 hover:bg-orange-700"
                   >
                     <Eye className="w-3.5 h-3.5 mr-1.5" />
                     View Details

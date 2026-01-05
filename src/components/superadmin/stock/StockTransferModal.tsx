@@ -158,7 +158,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="partId"
                     value={formData.partId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     required
                   >
                     <option value="">Select a part</option>
@@ -180,7 +180,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="fromBranchId"
                     value={formData.fromBranchId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     required
                   >
                     <option value="">Select source branch</option>
@@ -202,7 +202,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="toBranchId"
                     value={formData.toBranchId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     required
                   >
                     <option value="">Select destination branch</option>
@@ -230,7 +230,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     value={formData.quantity}
                     onChange={handleChange}
                     placeholder="Enter quantity to transfer"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     required
                   />
                 </div>
@@ -244,14 +244,14 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     onChange={handleChange}
                     rows={3}
                     placeholder="Add any notes about this transfer..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   />
                 </div>
 
                 {/* Info Box */}
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                  <h4 className="text-sm font-semibold text-blue-900 mb-2">Transfer Process</h4>
-                  <ul className="text-sm text-blue-800 space-y-1 list-disc list-inside">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                  <h4 className="text-sm font-semibold text-orange-900 mb-2">Transfer Process</h4>
+                  <ul className="text-sm text-orange-800 space-y-1 list-disc list-inside">
                     <li>Stock will be deducted from the source branch</li>
                     <li>Stock will be added to the destination branch</li>
                     <li>A stock movement record will be created for tracking</li>
@@ -271,7 +271,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 disabled:opacity-50"
+                  className="px-4 py-2 bg-orange-600 text-white rounded-lg text-sm font-medium hover:bg-orange-700 disabled:opacity-50"
                   disabled={loading}
                 >
                   {loading ? 'Transferring...' : 'Transfer Stock'}

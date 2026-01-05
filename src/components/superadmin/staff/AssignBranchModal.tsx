@@ -119,7 +119,7 @@ export default function AssignBranchModal({
         {/* Header */}
         <div className="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
           <div className="flex items-center">
-            <Building2 className="w-6 h-6 text-blue-600 mr-3" />
+            <Building2 className="w-6 h-6 text-orange-600 mr-3" />
             <div>
               <h2 className="text-xl font-semibold text-gray-900">Assign Branch</h2>
               <p className="text-sm text-gray-600 mt-0.5">{staffName}</p>
@@ -136,21 +136,21 @@ export default function AssignBranchModal({
 
         {loading ? (
           <div className="p-12 text-center">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
             <p className="mt-2 text-gray-600">Loading branches...</p>
           </div>
         ) : (
           <form onSubmit={formik.handleSubmit} className="p-6 space-y-6">
             {/* Current Branch Info */}
             {currentBranch && (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                 <div className="flex items-start">
-                  <AlertCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5" />
+                  <AlertCircle className="w-5 h-5 text-orange-600 mr-3 mt-0.5" />
                   <div>
-                    <h4 className="text-sm font-semibold text-blue-900">
+                    <h4 className="text-sm font-semibold text-orange-900">
                       Currently Assigned
                     </h4>
-                    <p className="text-sm text-blue-700 mt-1">
+                    <p className="text-sm text-orange-700 mt-1">
                       {currentBranch.name} ({currentBranch.branchCode || currentBranch.locationCode})
                     </p>
                   </div>
@@ -170,7 +170,7 @@ export default function AssignBranchModal({
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   disabled={branches.length === 0}
-                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 ${
                     formik.errors.branchId && formik.touched.branchId
                       ? 'border-red-500'
                       : 'border-gray-300'
@@ -219,14 +219,14 @@ export default function AssignBranchModal({
                 type="button"
                 onClick={handleClose}
                 disabled={isSubmitting}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting || branches.length === 0}
-                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 {isSubmitting
                   ? 'Assigning...'

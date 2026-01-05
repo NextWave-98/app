@@ -150,10 +150,10 @@ const NotificationSettingsPage: React.FC = () => {
 
       {/* Recipients Summary */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-          <h3 className="font-semibold text-blue-900 mb-2">Admin Recipients</h3>
-          <p className="text-2xl font-bold text-blue-700">{adminRecipients.length}</p>
-          <p className="text-sm text-blue-600">
+        <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+          <h3 className="font-semibold text-orange-900 mb-2">Admin Recipients</h3>
+          <p className="text-2xl font-bold text-orange-700">{adminRecipients.length}</p>
+          <p className="text-sm text-orange-600">
             {adminRecipients.map(a => a.name).join(', ') || 'No admins configured'}
           </p>
         </div>
@@ -174,7 +174,7 @@ const NotificationSettingsPage: React.FC = () => {
             onClick={() => setSelectedCategory(cat)}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               selectedCategory === cat
-                ? 'bg-blue-600 text-white'
+                ? 'bg-orange-600 text-white'
                 : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
@@ -190,7 +190,7 @@ const NotificationSettingsPage: React.FC = () => {
           <button
             onClick={handleSaveChanges}
             disabled={loading}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+            className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 disabled:opacity-50"
           >
             {loading ? 'Saving...' : 'Save All Changes'}
           </button>
@@ -259,7 +259,7 @@ const NotificationSettingsPage: React.FC = () => {
                         type="checkbox"
                         checked={isEnabled}
                         onChange={(e) => handleSettingChange(config.type, 'enabled', e.target.checked)}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                       />
                     </td>
                     <td className="px-6 py-4 text-center">
@@ -295,7 +295,7 @@ const NotificationSettingsPage: React.FC = () => {
                         checked={getSettingValue(config.type, 'smsEnabled') as boolean}
                         onChange={(e) => handleSettingChange(config.type, 'smsEnabled', e.target.checked)}
                         disabled={!isEnabled}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:opacity-50"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded disabled:opacity-50"
                       />
                     </td>
                     <td className="px-6 py-4 text-center">
@@ -335,7 +335,7 @@ const NotificationSettingsPage: React.FC = () => {
                         checked={getSettingValue(config.type, 'autoSend') as boolean}
                         onChange={(e) => handleSettingChange(config.type, 'autoSend', e.target.checked)}
                         disabled={!isEnabled}
-                        className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded disabled:opacity-50"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded disabled:opacity-50"
                       />
                     </td>
                   </tr>

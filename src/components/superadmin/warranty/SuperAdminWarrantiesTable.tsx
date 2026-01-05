@@ -46,7 +46,7 @@ export default function SuperAdminWarrantiesTable({
                   }
                 }}
                 onChange={(e) => handleSelectAll(e.target.checked)}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
               />
             </th>
             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase bg-gray-50">
@@ -76,7 +76,7 @@ export default function SuperAdminWarrantiesTable({
               <tr
                 key={warranty.id}
                 className={`${
-                  isSelected ? 'bg-blue-50' : 'hover:bg-gray-50'
+                  isSelected ? 'bg-orange-50' : 'hover:bg-gray-50'
                 } cursor-pointer`}
                 onClick={() => handleSelectOne(warranty.id, !isSelected)}
               >
@@ -85,7 +85,7 @@ export default function SuperAdminWarrantiesTable({
                     type="checkbox"
                     checked={isSelected}
                     onChange={(e) => handleSelectOne(warranty.id, e.target.checked)}
-                    className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
                   />
                 </td>
                 <td className="px-4 py-3 text-sm font-medium text-gray-900">
@@ -94,7 +94,7 @@ export default function SuperAdminWarrantiesTable({
                 <td className="px-4 py-3 text-sm text-gray-900">{warranty.customerName}</td>
                 <td className="px-4 py-3 text-sm text-gray-900">{warranty.productName}</td>
                 <td className="px-4 py-3 text-sm">
-                  <span className="px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-700">
+                  <span className="px-2 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-700">
                     {warranty.warrantyType}
                   </span>
                 </td>

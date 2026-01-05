@@ -371,7 +371,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 disabled={!canEdit}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 disabled:bg-gray-100"
               >
                 <option value="">Select Supplier</option>
                 {suppliers.map(supplier => (
@@ -396,7 +396,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 disabled={!canEdit}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 disabled:bg-gray-100"
               />
             </div>
 
@@ -407,7 +407,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 name="expectedDate"
                 value={formik.values.expectedDate}
                 onChange={formik.handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -417,7 +417,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 name="priority"
                 value={formik.values.priority}
                 onChange={formik.handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               >
                 <option value="LOW">Low</option>
                 <option value="NORMAL">Normal</option>
@@ -433,7 +433,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 name="paymentTerms"
                 value={formik.values.paymentTerms}
                 onChange={formik.handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -444,7 +444,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 name="shippingMethod"
                 value={formik.values.shippingMethod}
                 onChange={formik.handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -455,7 +455,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 value={formik.values.shippingAddress}
                 onChange={formik.handleChange}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                     <select
                       value={currentItem.productId}
                       onChange={(e) => handleProductChange(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                     >
                       <option value="">Select Product</option>
                       {products.map(product => (
@@ -490,7 +490,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                       min="1"
                       value={currentItem.quantity}
                       onChange={(e) => setCurrentItem({ ...currentItem, quantity: parseInt(e.target.value) || 0 })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
@@ -502,7 +502,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                       step="0.01"
                       value={currentItem.unitPrice}
                       onChange={(e) => setCurrentItem({ ...currentItem, unitPrice: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
@@ -515,7 +515,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                       step="0.01"
                       value={currentItem.discountPercent}
                       onChange={(e) => setCurrentItem({ ...currentItem, discountPercent: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
 
@@ -528,7 +528,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                       step="0.01"
                       value={currentItem.taxPercent}
                       onChange={(e) => setCurrentItem({ ...currentItem, taxPercent: parseFloat(e.target.value) || 0 })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                     />
                   </div>
                 </div>
@@ -536,7 +536,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                 <button
                   type="button"
                   onClick={handleAddItem}
-                  className="mt-3 inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  className="mt-3 inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700"
                 >
                   <Plus className="w-4 h-4 mr-2" />
                   Add Item
@@ -604,7 +604,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                   step="0.01"
                   value={formik.values.shippingCost}
                   onChange={formik.handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 />
               </div>
 
@@ -617,7 +617,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                   step="0.01"
                   value={formik.values.discountAmount}
                   onChange={formik.handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 />
               </div>
 
@@ -630,7 +630,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
                   step="0.01"
                   value={formik.values.taxAmount}
                   onChange={formik.handleChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 />
               </div>
             </div>
@@ -638,7 +638,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
             <div className="mt-4 flex justify-end">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <div className="text-lg font-semibold">
-                  Total Amount: <span className="text-blue-600">Rs. {calculateOrderTotal()}</span>
+                  Total Amount: <span className="text-orange-600">Rs. {calculateOrderTotal()}</span>
                 </div>
               </div>
             </div>
@@ -652,7 +652,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
               value={formik.values.notes}
               onChange={formik.handleChange}
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
             />
           </div>
 
@@ -669,7 +669,7 @@ export default function EditPurchaseOrderModal({ isOpen, onClose, onSuccess, pur
             <button
               type="submit"
               disabled={loading}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Updating...' : 'Update Purchase Order'}
             </button>

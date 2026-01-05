@@ -271,7 +271,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
               <select
                 value={sourceBranchId}
                 onChange={(e) => setSourceBranchId(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 required
                 disabled={loading}
               >
@@ -296,7 +296,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
               <select
                 value={destinationBranchId}
                 onChange={(e) => setDestinationBranchId(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 required
                 disabled={loading}
               >
@@ -329,7 +329,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
                     <select
                       value={selectedProductId}
                       onChange={(e) => setSelectedProductId(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       disabled={loading}
                     >
                       <option value="">Choose a product</option>
@@ -351,13 +351,13 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
                         min="1"
                         value={quantity}
                         onChange={(e) => setQuantity(parseInt(e.target.value) || 1)}
-                        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                         disabled={loading}
                       />
                       <button
                         type="button"
                         onClick={handleAddItem}
-                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2 disabled:bg-gray-400"
+                        className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors flex items-center gap-2 disabled:bg-gray-400"
                         disabled={loading || !selectedProductId}
                       >
                         <Plus size={20} />
@@ -420,7 +420,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
                                 parseInt(e.target.value) || 1
                               )
                             }
-                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             disabled={loading}
                           />
                         </td>
@@ -454,7 +454,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
               placeholder="Add any additional notes or comments..."
               disabled={loading}
             />
@@ -483,7 +483,7 @@ const CreateTransferModal: React.FC<CreateTransferModalProps> = ({
             <button
               type="submit"
               onClick={handleSubmit}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+              className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
               disabled={loading || transferItems.length === 0}
             >
               {loading ? 'Creating...' : 'Create Transfer'}

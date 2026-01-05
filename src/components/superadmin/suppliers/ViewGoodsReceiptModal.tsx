@@ -10,7 +10,7 @@ interface ViewGoodsReceiptModalProps {
 const GoodsReceiptStatusBadge = ({ status }: { status: string }) => {
   const statusConfig: Record<string, { bg: string; text: string; label: string }> = {
     PENDING_QC: { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'Pending QC' },
-    APPROVED: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Approved' },
+    APPROVED: { bg: 'bg-orange-100', text: 'text-orange-800', label: 'Approved' },
     COMPLETED: { bg: 'bg-green-100', text: 'text-green-800', label: 'Completed' },
     REJECTED: { bg: 'bg-red-100', text: 'text-red-800', label: 'Rejected' },
   };
@@ -90,9 +90,9 @@ export default function ViewGoodsReceiptModal({ isOpen, onClose, receipt }: View
               <div className="text-sm text-gray-500 mb-1">Status</div>
               <GoodsReceiptStatusBadge status={receipt.status} />
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg">
+            <div className="bg-orange-50 p-4 rounded-lg">
               <div className="text-sm text-gray-500 mb-1">Total Received</div>
-              <div className="text-2xl font-bold text-blue-600">{getTotalReceived()}</div>
+              <div className="text-2xl font-bold text-orange-600">{getTotalReceived()}</div>
             </div>
             <div className="bg-green-50 p-4 rounded-lg">
               <div className="text-sm text-gray-500 mb-1">Accepted</div>
@@ -254,7 +254,7 @@ export default function ViewGoodsReceiptModal({ isOpen, onClose, receipt }: View
 
           {/* Quality Check Notes */}
           {receipt.qualityCheckNotes && (
-            <div className="mt-6 bg-blue-50 p-4 rounded-lg">
+            <div className="mt-6 bg-orange-50 p-4 rounded-lg">
               <h4 className="text-sm font-semibold text-gray-900 mb-2">Quality Check Notes</h4>
               <p className="text-sm text-gray-700">{receipt.qualityCheckNotes}</p>
             </div>

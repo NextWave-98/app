@@ -99,7 +99,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               </label>
               <select
                 {...formik.getFieldProps('warrantyType')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.warrantyType && formik.errors.warrantyType ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -122,7 +122,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               <input
                 type="number"
                 {...formik.getFieldProps('warrantyMonths')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                   formik.touched.warrantyMonths && formik.errors.warrantyMonths ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="12"
@@ -140,7 +140,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               <textarea
                 {...formik.getFieldProps('coverage')}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Describe what is covered under this warranty..."
               />
             </div>
@@ -153,7 +153,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               <textarea
                 {...formik.getFieldProps('terms')}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Enter warranty terms and conditions..."
               />
             </div>
@@ -166,7 +166,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               <textarea
                 {...formik.getFieldProps('exclusions')}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="List what is NOT covered..."
               />
             </div>
@@ -179,7 +179,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
               <textarea
                 {...formik.getFieldProps('notes')}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 placeholder="Add any internal notes..."
               />
             </div>
@@ -197,7 +197,7 @@ export default function EditWarrantyModal({ isOpen, onClose, warranty, onSuccess
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50"
+              className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors disabled:opacity-50"
               disabled={loading}
             >
               {loading ? 'Updating...' : 'Update Warranty'}

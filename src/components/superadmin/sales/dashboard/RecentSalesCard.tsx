@@ -21,7 +21,7 @@ export default function RecentSalesCard({ sales = [], maxItems = 5 }: RecentSale
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
@@ -98,7 +98,7 @@ export default function RecentSalesCard({ sales = [], maxItems = 5 }: RecentSale
           <p className="text-sm text-gray-500 mt-0.5">Latest transactions</p>
         </div>
         {sales.length > maxItems && (
-          <button className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1">
+          <button className="text-sm text-orange-600 hover:text-orange-700 font-medium flex items-center gap-1">
             View All
             <ArrowRight className="w-4 h-4" />
           </button>
@@ -111,7 +111,7 @@ export default function RecentSalesCard({ sales = [], maxItems = 5 }: RecentSale
             <div className="flex items-start justify-between mb-2">
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="text-sm font-semibold text-blue-600">
+                  <span className="text-sm font-semibold text-orange-600">
                     {sale.invoiceNumber}
                   </span>
                   <span

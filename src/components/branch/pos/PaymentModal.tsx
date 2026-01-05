@@ -94,10 +94,10 @@ const paymentMethods = [
     name: 'Credit/Debit Card',
     description: 'Pay with card',
     icon: CreditCard,
-    color: 'bg-blue-50',
-    textColor: 'text-blue-600',
-    borderColor: 'border-blue-200',
-    hoverColor: 'hover:bg-blue-100'
+    color: 'bg-orange-50',
+    textColor: 'text-orange-600',
+    borderColor: 'border-orange-200',
+    hoverColor: 'hover:bg-orange-100'
   }
 ];
 
@@ -619,7 +619,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity"
         onClick={handleClose}
       ></div>
 
@@ -629,13 +629,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
           {/* Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
               <div className="flex items-center gap-3">
-              <div className="bg-blue-50 p-2 rounded-lg">
+              <div className="bg-orange-50 p-2 rounded-lg">
                 {currentStep === 'customer_details' ? (
-                  <User className="w-6 h-6 text-blue-600" />
+                  <User className="w-6 h-6 text-orange-600" />
                 ) : currentStep === 'device_details' ? (
-                  <Phone className="w-6 h-6 text-blue-600" />
+                  <Phone className="w-6 h-6 text-orange-600" />
                 ) : (
-                  <CreditCard className="w-6 h-6 text-blue-600" />
+                  <CreditCard className="w-6 h-6 text-orange-600" />
                 )}
               </div>
               <h2 className="text-2xl font-bold text-gray-900">
@@ -686,7 +686,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                   <div className="border-t border-gray-300 pt-3">
                     <div className="flex items-center justify-between">
                       <span className="text-lg font-semibold text-gray-900">Total</span>
-                      <span className="text-2xl font-bold text-blue-600">{formatCurrency(total)}</span>
+                      <span className="text-2xl font-bold text-orange-600">{formatCurrency(total)}</span>
                     </div>
                   </div>
                 </div>
@@ -711,13 +711,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         onFocus={() => searchResults.length > 0 && setShowDropdown(true)}
                         placeholder="Search by phone (min 3 digits) or enter new"
                         disabled={!!selectedCustomer}
-                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${
+                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${
                           customerErrors.phone ? 'border-red-500' : 'border-gray-300'
                         }`}
                       />
                       {isSearching && (
                         <div className="absolute right-3 top-11">
-                          <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
+                          <Loader2 className="w-5 h-5 text-orange-500 animate-spin" />
                         </div>
                       )}
                       {customerErrors.phone && (
@@ -739,7 +739,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                                   key={customer.id}
                                   type="button"
                                   onClick={() => handleCustomerSelect(customer)}
-                                  className="w-full text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 last:border-b-0 transition-colors"
+                                  className="w-full text-left px-4 py-3 hover:bg-orange-50 border-b border-gray-100 last:border-b-0 transition-colors"
                                 >
                                   <div className="flex items-center justify-between">
                                     <div className="flex-1">
@@ -749,7 +749,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                                         <p className="text-xs text-gray-500 mt-0.5">{customer.email}</p>
                                       )}
                                     </div>
-                                    <span className="text-xs px-2 py-1 rounded bg-blue-100 text-blue-700 font-medium ml-2">
+                                    <span className="text-xs px-2 py-1 rounded bg-orange-100 text-orange-700 font-medium ml-2">
                                       {customer.customerType}
                                     </span>
                                   </div>
@@ -762,7 +762,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                               <button
                                 type="button"
                                 onClick={() => setIsAddModalOpen(true)}
-                                className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                                className="px-4 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors"
                               >
                                 + Create New Customer
                               </button>
@@ -785,7 +785,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                               {selectedCustomer.email && (
                                 <p className="text-xs text-gray-500 mt-0.5">{selectedCustomer.email}</p>
                               )}
-                              <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-blue-100 text-blue-700 font-medium">
+                              <span className="inline-block mt-1 text-xs px-2 py-0.5 rounded bg-orange-100 text-orange-700 font-medium">
                                 {selectedCustomer.customerType}
                               </span>
                             </div>
@@ -819,7 +819,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                           <button
                             type="button"
                             onClick={() => setIsAddModalOpen(true)}
-                            className="w-full px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                            className="w-full px-3 py-2 bg-orange-600 text-white text-sm font-medium rounded-lg hover:bg-orange-700 transition-colors"
                           >
                             + Create New Customer Profile
                           </button>
@@ -844,7 +844,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         }}
                         placeholder="Enter customer name"
                         disabled={!!selectedCustomer}
-                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${
+                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed ${
                           customerErrors.name ? 'border-red-500' : 'border-gray-300'
                         }`}
                       />
@@ -864,13 +864,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         onChange={(e) => setCustomerEmail(e.target.value)}
                         placeholder="customer@example.com"
                         disabled={!!selectedCustomer}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                       />
                     </div>
 
                     {/* Info Note */}
-                    <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
-                      <p className="text-sm text-blue-700">
+                    <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                      <p className="text-sm text-orange-700">
                         💡 Start typing phone number to search existing customers, or enter new customer details.
                       </p>
                     </div>
@@ -899,23 +899,23 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                       max="10"
                       value={deviceCount}
                       onChange={(e) => setDeviceCount(parseInt(e.target.value) || 1)}
-                      className="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 text-lg border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       placeholder="1"
                     />
                     <p className="mt-2 text-xs text-gray-500">Maximum 10 devices per sale</p>
                   </div>
 
                   {/* Info Box */}
-                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                     <div className="flex gap-3">
                       <div className="flex-shrink-0">
-                        <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-sm font-medium text-blue-900 mb-1">Why do we need this?</h4>
-                        <p className="text-sm text-blue-700">
+                        <h4 className="text-sm font-medium text-orange-900 mb-1">Why do we need this?</h4>
+                        <p className="text-sm text-orange-700">
                           Each device gets its own job sheet for tracking repairs and services.
                           You'll enter details for each device separately in the next step.
                         </p>
@@ -974,7 +974,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                   <div className="border-t border-gray-300 pt-3">
                     <div className="flex items-center justify-between">
                       <span className="text-lg font-semibold text-gray-900">Total</span>
-                      <span className="text-2xl font-bold text-blue-600">${total}</span>
+                      <span className="text-2xl font-bold text-orange-600">${total}</span>
                     </div>
                   </div>
                 </div>
@@ -994,7 +994,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                               idx < currentDeviceIndex
                                 ? 'bg-green-500'
                                 : idx === currentDeviceIndex
-                                ? 'bg-blue-500'
+                                ? 'bg-orange-500'
                                 : 'bg-gray-300'
                             }`}
                           />
@@ -1005,10 +1005,10 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
 
                   {/* Show loading state while fetching devices */}
                   {loadingDevices && (
-                    <div className="mb-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="mb-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                       <div className="flex items-center gap-2">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                        <p className="text-sm text-blue-700">Checking for existing devices...</p>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-orange-600"></div>
+                        <p className="text-sm text-orange-700">Checking for existing devices...</p>
                       </div>
                     </div>
                   )}
@@ -1077,7 +1077,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                               setDeviceModel(suggestedDevice.model);
                             }
                           }}
-                          className="w-full text-center p-2 text-sm text-blue-600 hover:text-blue-700 font-medium"
+                          className="w-full text-center p-2 text-sm text-orange-600 hover:text-orange-700 font-medium"
                         >
                           + Create New Device Instead
                         </button>
@@ -1094,7 +1094,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                       <select
                         value={deviceType}
                         onChange={(e) => setDeviceType(e.target.value as 'MOBILE' | 'TABLET' | 'LAPTOP' | 'DESKTOP' | 'SMARTWATCH' | 'OTHER')}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       >
                         <option value="MOBILE">Mobile Phone</option>
                         <option value="TABLET">Tablet</option>
@@ -1118,7 +1118,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                           setDeviceErrors({ ...deviceErrors, brand: undefined });
                         }}
                         placeholder="e.g., Samsung, Apple, HP"
-                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                           deviceErrors.brand ? 'border-red-500' : 'border-gray-300'
                         }`}
                       />
@@ -1140,7 +1140,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                           setDeviceErrors({ ...deviceErrors, model: undefined });
                         }}
                         placeholder="e.g., Galaxy S21, iPhone 13, ThinkPad"
-                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                        className={`w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
                           deviceErrors.model ? 'border-red-500' : 'border-gray-300'
                         }`}
                       />
@@ -1159,7 +1159,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         value={deviceSerial}
                         onChange={(e) => setDeviceSerial(e.target.value)}
                         placeholder="Device serial number"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                       />
                     </div>
 
@@ -1174,14 +1174,14 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                           value={deviceIMEI}
                           onChange={(e) => setDeviceIMEI(e.target.value)}
                           placeholder="15-digit IMEI number"
-                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                         />
                       </div>
                     )}
 
                     {/* Info Note */}
-                    <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
-                      <p className="text-sm text-blue-700">
+                    <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                      <p className="text-sm text-orange-700">
                         📱 Device information helps track warranty and service history.
                       </p>
                     </div>
@@ -1247,7 +1247,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                     )}
                     <div className="flex items-center justify-between">
                       <span className="text-lg font-semibold text-gray-900">Total</span>
-                      <span className="text-2xl font-bold text-blue-600">{formatCurrency(calculateDiscountedTotal())}</span>
+                      <span className="text-2xl font-bold text-orange-600">{formatCurrency(calculateDiscountedTotal())}</span>
                     </div>
                   </div>
                 </div>
@@ -1267,7 +1267,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                         disabled={isProcessing}
                       >
-                        <option value="FIXED">Fixed Amount (LKR)</option>
+                        <option value="FIXED">Fixed Amount (USD)</option>
                         <option value="PERCENTAGE">Percentage (%)</option>
                       </select>
                     </div>
@@ -1321,7 +1321,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                           disabled={isProcessing}
                           className={`p-4 rounded-lg border-2 transition-all ${
                             isSelected
-                              ? `${method.color} ${method.borderColor} ring-2 ring-offset-2 ring-blue-500`
+                              ? `${method.color} ${method.borderColor} ring-2 ring-offset-2 ring-orange-500`
                               : 'border-gray-200 hover:border-gray-300 bg-white'
                           } disabled:opacity-50 disabled:cursor-not-allowed`}
                         >
@@ -1334,7 +1334,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                               <p className="text-xs text-gray-500">{method.description}</p>
                             </div>
                             {isSelected && (
-                              <CheckCircle className="w-5 h-5 text-blue-600" />
+                              <CheckCircle className="w-5 h-5 text-orange-600" />
                             )}
                           </div>
                         </button>
@@ -1372,7 +1372,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                   )}
 
                   {selectedPaymentMethod === 'card' && (
-                    <div className="bg-blue-50 rounded-lg p-4 border border-blue-200 mb-4">
+                    <div className="bg-orange-50 rounded-lg p-4 border border-orange-200 mb-4">
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Card Number <span className="text-red-500">*</span>
                       </label>
@@ -1381,7 +1381,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                         value={cardNumber}
                         onChange={(e) => setCardNumber(formatCardNumber(e.target.value))}
                         placeholder="1234 5678 9012 3456"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg font-mono"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg font-mono"
                         disabled={isProcessing}
                         maxLength={19}
                       />
@@ -1397,13 +1397,13 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
             <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 bg-gray-50">
               <button
                 onClick={handleClose}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Cancel
               </button>
               <button
                 onClick={handleProceedToDeviceCount}
-                className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Continue
               </button>
@@ -1414,20 +1414,20 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
             <div className="flex items-center justify-between gap-3 px-6 py-4 border-t border-gray-200 bg-gray-50">
               <button
                 onClick={() => setCurrentStep('customer_details')}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Back
               </button>
               <div className="flex gap-3">
                 <button
                   onClick={handleClose}
-                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleProceedToDevice}
-                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                   Continue to Devices
                 </button>
@@ -1439,20 +1439,20 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
             <div className="flex items-center justify-between gap-3 px-6 py-4 border-t border-gray-200 bg-gray-50">
               <button
                 onClick={() => deviceCount > 1 ? setCurrentStep('device_count') : setCurrentStep('customer_details')}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Back
               </button>
               <div className="flex gap-3">
                 <button
                   onClick={handleClose}
-                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSaveDevice}
-                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                   {currentDeviceIndex + 1 < deviceCount ? `Save & Next Device (${currentDeviceIndex + 2}/${deviceCount})` : 'Continue to Payment'}
                 </button>
@@ -1465,7 +1465,7 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
               <button
                 onClick={() => setCurrentStep('customer_details')}
                 disabled={isProcessing}
-                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Back
               </button>
@@ -1473,14 +1473,14 @@ const PaymentModal: React.FC<PaymentModalProps> = ({
                 <button
                   onClick={handleClose}
                   disabled={isProcessing}
-                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-6 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handlePayment}
                   disabled={isProcessing}
-                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-2 px-6 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isProcessing ? (
                     <>

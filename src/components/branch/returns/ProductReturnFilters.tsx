@@ -45,7 +45,7 @@ export default function ProductReturnFilters({
         {hasActiveFilters && onReset && (
           <button
             onClick={onReset}
-            className="ml-auto text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1"
+            className="ml-auto text-sm text-orange-600 hover:text-orange-700 flex items-center gap-1"
           >
             <X className="w-4 h-4" />
             Clear All
@@ -64,7 +64,7 @@ export default function ProductReturnFilters({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search return, customer..."
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           />
         </div>
 
@@ -73,7 +73,7 @@ export default function ProductReturnFilters({
           <select
             value={selectedStatus}
             onChange={(e) => onStatusChange(e.target.value as ProductReturnStatus | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Status</option>
             <option value="RECEIVED">Received</option>
@@ -93,7 +93,7 @@ export default function ProductReturnFilters({
           <select
             value={selectedCategory}
             onChange={(e) => onCategoryChange(e.target.value as ProductReturnCategory | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Categories</option>
             <option value="CUSTOMER_RETURN">Customer Return</option>
@@ -111,7 +111,7 @@ export default function ProductReturnFilters({
           <select
             value={selectedSourceType}
             onChange={(e) => onSourceTypeChange(e.target.value as ProductReturnSourceType | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
           >
             <option value="">All Sources</option>
             <option value="SALE">Sale</option>
@@ -132,7 +132,7 @@ export default function ProductReturnFilters({
             type="date"
             value={startDate}
             onChange={(e) => onStartDateChange(e.target.value)}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             placeholder="Start Date"
           />
         </div>
@@ -146,7 +146,7 @@ export default function ProductReturnFilters({
             type="date"
             value={endDate}
             onChange={(e) => onEndDateChange(e.target.value)}
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             placeholder="End Date"
           />
         </div>

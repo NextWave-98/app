@@ -90,8 +90,8 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
         <form onSubmit={formik.handleSubmit}>
           <div className="p-6 space-y-6">
             {/* Claim Info */}
-            <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
-              <p className="text-xs text-blue-600 mb-1">Claim Number</p>
+            <div className="bg-orange-50 rounded-lg p-4 border border-orange-200">
+              <p className="text-xs text-orange-600 mb-1">Claim Number</p>
               <p className="text-lg font-semibold text-gray-900">{claim.claimNumber}</p>
               <div className="grid grid-cols-2 gap-4 mt-3">
                 <div>
@@ -170,7 +170,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Estimated Cost (Read-only) */}
                 {claim.estimatedCost !== null && claim.estimatedCost !== undefined && (
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Estimated Cost (LKR)</p>
+                    <p className="text-xs text-gray-500 mb-1">Estimated Cost (USD)</p>
                     <p className="text-sm font-medium text-gray-900 bg-gray-50 px-3 py-2 rounded border border-gray-200">
                       {claim.estimatedCost.toLocaleString()}
                     </p>
@@ -180,7 +180,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Actual Cost */}
                 <div>
                   <label className="block text-xs text-gray-500 mb-1">
-                    Actual Cost (LKR)
+                    Actual Cost (USD)
                   </label>
                   <input
                     type="number"
@@ -199,7 +199,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Customer Charge */}
                 <div>
                   <label className="block text-xs text-gray-500 mb-1">
-                    Customer Charge (LKR)
+                    Customer Charge (USD)
                   </label>
                   <input
                     type="number"

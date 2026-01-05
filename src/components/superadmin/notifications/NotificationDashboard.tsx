@@ -112,7 +112,7 @@ const NotificationDashboard: React.FC = () => {
       case 'SENT':
         return 'bg-green-100 text-green-800';
       case 'DELIVERED':
-        return 'bg-blue-100 text-blue-800';
+        return 'bg-orange-100 text-orange-800';
       case 'FAILED':
         return 'bg-red-100 text-red-800';
       case 'PENDING':
@@ -146,7 +146,7 @@ const NotificationDashboard: React.FC = () => {
         </div>
         <button
           onClick={() => navigate('/superadmin/notifications/settings')}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-950 text-white rounded-lg hover:bg-blue-900 transition-colors cursor-pointer"
+          className="flex items-center gap-2 px-4 py-2 bg-orange-950 text-white rounded-lg hover:bg-orange-900 transition-colors cursor-pointer"
           title="Notification Settings"
         >
           <Settings className="w-5 h-5" />
@@ -318,7 +318,7 @@ const NotificationDashboard: React.FC = () => {
                         {notification.status === 'FAILED' && (
                           <button
                             onClick={() => handleRetry(notification.id)}
-                            className="text-blue-600 hover:text-blue-900 text-xs"
+                            className="text-orange-600 hover:text-orange-900 text-xs"
                             title="Retry"
                           >
                             ↻ Retry

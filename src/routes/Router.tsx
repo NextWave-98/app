@@ -50,7 +50,7 @@ const AppRouter = () => (
       </Route>
 
       {/* Auth Routes */}
-      <Route path="/ditech/login" element={<LoginPage />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
 
       {/* Super Admin Routes - Protected (Only Super Admins can access) */}

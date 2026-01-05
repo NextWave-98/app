@@ -119,7 +119,7 @@ export default function ShopTable({ shops, onEdit, onDelete, onView, pagination,
                     type="checkbox"
                     checked={selectedShops.length === paginatedShops.length && paginatedShops.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -160,7 +160,7 @@ export default function ShopTable({ shops, onEdit, onDelete, onView, pagination,
                           type="checkbox"
                           checked={isSelected(shop)}
                           onChange={() => handleSelectShop(shop)}
-                          className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                          className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                         />
                       </td>
                     )}
@@ -178,8 +178,8 @@ export default function ShopTable({ shops, onEdit, onDelete, onView, pagination,
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                          <MapPin className="h-5 w-5 text-blue-600" />
+                        <div className="flex-shrink-0 h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                          <MapPin className="h-5 w-5 text-orange-600" />
                         </div>
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">{shop.name}</div>

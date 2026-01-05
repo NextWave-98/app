@@ -212,7 +212,7 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
                 <Activity className="w-5 h-5 text-white" />
               </div>
               <div>
-                <h1 className="text-lg font-bold text-gray-900">LT Solutions</h1>
+                <h1 className="text-lg font-bold text-gray-900">GC Manager</h1>
                 <p className="text-xs text-gray-500">Super Admin</p>
               </div>
             </div>
@@ -249,7 +249,7 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
                   <button
                     type="button"
                     onClick={() => toggleExpand(item.id)}
-                    className={`w-full flex items-center px-3 py-3 rounded-lg transition-all duration-200 ${isActive ? 'bg-blue-950 text-white shadow-lg' : 'text-gray-900 hover:bg-gray-200'
+                    className={`w-full flex items-center px-3 py-3 rounded-lg transition-all duration-200 ${isActive ? 'bg-orange-950 text-white shadow-lg' : 'text-gray-900 hover:bg-gray-200'
                       }`}
                   >
                     <div className="flex items-center min-w-0 flex-1">
@@ -282,7 +282,7 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
                           <Link
                             key={child.id}
                             to={child.path}
-                            className={`flex items-center px-3 py-2 rounded-lg transition-all duration-150 ${childActive ? 'bg-blue-800 text-white' : 'text-gray-800 hover:bg-gray-100'
+                            className={`flex items-center px-3 py-2 rounded-lg transition-all duration-150 ${childActive ? 'bg-orange-800 text-white' : 'text-gray-800 hover:bg-gray-100'
                               }`}
                           >
                             <ChildIcon className="w-4 h-4 flex-shrink-0 mr-3 text-gray-600" />
@@ -308,7 +308,7 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
               <Link
                 key={item.id}
                 to={item.path}
-                className={`flex items-center px-3 py-3 rounded-lg transition-all duration-200 group relative ${isActive ? 'bg-blue-950 text-white shadow-lg' : 'text-gray-900 hover:bg-gray-200'
+                className={`flex items-center px-3 py-3 rounded-lg transition-all duration-200 group relative ${isActive ? 'bg-orange-950 text-white shadow-lg' : 'text-gray-900 hover:bg-gray-200'
                   }`}
               >
                 <div className="flex items-center min-w-0 flex-1">
@@ -351,7 +351,7 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
         {!isCollapsed && (
           <div className="mt-4 pt-4 border-t border-gray-200">
             <div className="text-xs text-gray-800">
-              <p>Lanka Tech Solutions</p>
+              <p>GC Manager</p>
               <p>v1.0.0</p>
             </div>
           </div>

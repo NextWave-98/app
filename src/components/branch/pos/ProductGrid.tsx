@@ -120,13 +120,13 @@ const ProductGrid: React.FC<ProductGridProps> = ({
                   className={`bg-white border rounded-lg p-4 hover:shadow-md transition-all ${
                     isOutOfStock
                       ? 'border-red-200 bg-gray-50 opacity-60'
-                      : 'border-gray-200 cursor-pointer hover:border-blue-300'
+                      : 'border-gray-200 cursor-pointer hover:border-orange-300'
                   }`}
                   onClick={() => !isOutOfStock && onAddToCart(product)}
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className={`${isOutOfStock ? 'bg-gray-200' : 'bg-blue-100'} p-3 rounded-lg`}>
+                      <div className={`${isOutOfStock ? 'bg-gray-200' : 'bg-orange-100'} p-3 rounded-lg`}>
                         <Package className={`w-6 h-6 ${isOutOfStock ? 'text-gray-400' : 'text-[#1e3a8a]'}`} />
                       </div>
                       <div>
@@ -162,7 +162,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({
                       className={`p-2 rounded-lg transition-all ${
                         isOutOfStock
                           ? 'bg-gray-200 cursor-not-allowed'
-                          : 'bg-[#1e3a8a] hover:bg-blue-700 text-white shadow-sm hover:shadow-md'
+                          : 'bg-[#1e3a8a] hover:bg-orange-700 text-white shadow-sm hover:shadow-md'
                       }`}
                     >
                       <Plus className="w-5 h-5" />

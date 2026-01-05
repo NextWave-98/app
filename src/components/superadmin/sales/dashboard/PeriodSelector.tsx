@@ -23,7 +23,7 @@ export default function PeriodSelector({
             const value = e.target.value as 'today' | 'yesterday' | 'week' | 'month' | 'year' | 'custom';
             onPeriodChange(value);
           }}
-          className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
         >
           <option value="today">Today</option>
           <option value="yesterday">Yesterday</option>
@@ -42,7 +42,7 @@ export default function PeriodSelector({
             onChange={(e) =>
               onCustomDateChange({ ...customDateRange, start: e.target.value })
             }
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
           <span className="text-gray-500">to</span>
           <input
@@ -51,7 +51,7 @@ export default function PeriodSelector({
             onChange={(e) =>
               onCustomDateChange({ ...customDateRange, end: e.target.value })
             }
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
           />
         </div>
       )}

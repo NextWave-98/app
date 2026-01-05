@@ -67,7 +67,7 @@ export default function StockAdjustmentModal({
   const movementOptions = [
     { value: 'IN', label: 'Stock In', icon: TrendingUp, color: 'text-green-600', bg: 'bg-green-100' },
     { value: 'OUT', label: 'Stock Out', icon: TrendingDown, color: 'text-red-600', bg: 'bg-red-100' },
-    { value: 'ADJUSTMENT', label: 'Adjustment', icon: RefreshCw, color: 'text-blue-600', bg: 'bg-blue-100' },
+    { value: 'ADJUSTMENT', label: 'Adjustment', icon: RefreshCw, color: 'text-orange-600', bg: 'bg-orange-100' },
     { value: 'RETURN', label: 'Return', icon: RotateCcw, color: 'text-indigo-600', bg: 'bg-indigo-100' },
     { value: 'DAMAGED', label: 'Damaged', icon: PackageX, color: 'text-orange-600', bg: 'bg-orange-100' },
   ];
@@ -79,7 +79,7 @@ export default function StockAdjustmentModal({
         {/* Modal panel */}
         <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4">
+          <div className="bg-gradient-to-r from-orange-600 to-indigo-600 px-6 py-4">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold text-white">Adjust Stock</h3>
               <button
@@ -141,7 +141,7 @@ export default function StockAdjustmentModal({
                         onClick={() => setMovementType(option.value as 'IN' | 'OUT' | 'ADJUSTMENT' | 'RETURN' | 'DAMAGED')}
                         className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all ${
                           isSelected
-                            ? `border-blue-500 ${option.bg}`
+                            ? `border-orange-500 ${option.bg}`
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -166,7 +166,7 @@ export default function StockAdjustmentModal({
                   min="1"
                   value={quantity || ''}
                   onChange={(e) => setQuantity(parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   placeholder="Enter quantity"
                   required
                 />
@@ -174,7 +174,7 @@ export default function StockAdjustmentModal({
 
               {/* Stock Preview */}
               {quantity > 0 && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-sm text-gray-600">Current Stock</p>
@@ -206,7 +206,7 @@ export default function StockAdjustmentModal({
                   rows={3}
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
                   placeholder="Add notes about this adjustment..."
                 />
               </div>
@@ -218,14 +218,14 @@ export default function StockAdjustmentModal({
                 type="button"
                 onClick={handleClose}
                 disabled={loading}
-                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading || quantity <= 0 || (movementType !== 'IN' && movementType !== 'RETURN' && quantity > currentStock)}
-                className="px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Processing...' : 'Adjust Stock'}
               </button>

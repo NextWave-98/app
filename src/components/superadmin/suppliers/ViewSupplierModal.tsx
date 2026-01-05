@@ -207,10 +207,10 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
         ) : data ? (
           <div className="p-6 space-y-6">
             {/* Header Section */}
-            <div className="bg-blue-50 rounded-lg p-6">
+            <div className="bg-orange-50 rounded-lg p-6">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center">
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
                   <div>
@@ -266,7 +266,7 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
                   {data.website && (
                     <div>
                       <label className="text-sm text-gray-600">Website : </label>
-                      <a href={data.website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                      <a href={data.website} target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:underline">
                         {data.website}
                       </a>
                     </div>
@@ -358,7 +358,7 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
                 {data.creditLimit && (
                   <div>
                     <label className="text-sm text-gray-600">Credit Limit</label>
-                    <p className="text-gray-900">LKR {data.creditLimit.toLocaleString()}</p>
+                    <p className="text-gray-900">USD {data.creditLimit.toLocaleString()}</p>
                   </div>
                 )}
               </div>
@@ -477,7 +477,7 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
                             <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
                               order.status === 'CONFIRMED' ? 'bg-green-100 text-green-800' :
                               order.status === 'SUBMITTED' ? 'bg-yellow-100 text-yellow-800' :
-                              order.status === 'RECEIVED' ? 'bg-blue-100 text-blue-800' :
+                              order.status === 'RECEIVED' ? 'bg-orange-100 text-orange-800' :
                               order.status === 'CANCELLED' ? 'bg-red-100 text-red-800' :
                               'bg-gray-100 text-gray-800'
                             }`}>
@@ -494,7 +494,7 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
                             <div className="flex space-x-2">
                               <button
                                 onClick={() => handleViewPurchaseOrder(order)}
-                                className="text-blue-600 hover:text-blue-900"
+                                className="text-orange-600 hover:text-orange-900"
                                 title="View Purchase Order"
                               >
                                 <Eye className="w-4 h-4" />

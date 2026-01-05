@@ -21,7 +21,7 @@ export default function RevenueChart({ trends }: RevenueChartProps) {
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       notation: 'compact',
       maximumFractionDigits: 1,
     }).format(value);
@@ -31,7 +31,7 @@ export default function RevenueChart({ trends }: RevenueChartProps) {
     return (
       <div className="bg-white rounded-lg shadow-md p-6">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-          <TrendingUp className="w-5 h-5 text-blue-600" />
+          <TrendingUp className="w-5 h-5 text-orange-600" />
           Revenue Trend
         </h3>
         <div className="flex items-center justify-center h-64 text-gray-500">
@@ -44,7 +44,7 @@ export default function RevenueChart({ trends }: RevenueChartProps) {
   return (
     <div className="bg-white rounded-lg shadow-md p-6">
       <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-        <TrendingUp className="w-5 h-5 text-blue-600" />
+        <TrendingUp className="w-5 h-5 text-orange-600" />
         Revenue Trend
       </h3>
       

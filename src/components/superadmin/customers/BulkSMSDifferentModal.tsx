@@ -108,7 +108,7 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
       <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between p-6">
           <div className="flex items-center gap-3">
-            <Send className="w-6 h-6 text-blue-600" />
+            <Send className="w-6 h-6 text-orange-600" />
             <h2 className="text-xl font-semibold text-gray-900">Send Bulk SMS (Different Messages)</h2>
           </div>
           <button
@@ -122,14 +122,14 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
         <FormikProvider value={formik}>
           <form onSubmit={formik.handleSubmit} className="p-6 space-y-6">
             {/* Selected Customers Summary */}
-            <div className="bg-blue-50 rounded-lg p-4">
+            <div className="bg-orange-50 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-blue-600" />
-                <span className="font-medium text-blue-900">
+                <Users className="w-5 h-5 text-orange-600" />
+                <span className="font-medium text-orange-900">
                   {selectedCustomers.length} customer{selectedCustomers.length !== 1 ? 's' : ''} selected
                 </span>
               </div>
-              <div className="text-sm text-blue-700">
+              <div className="text-sm text-orange-700">
                 Messages to create: {initialMessages.length}
               </div>
             </div>
@@ -143,7 +143,7 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
                     <button
                       type="button"
                       onClick={() => push({ to: '', msg: '', customerName: '' })}
-                      className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-blue-600 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100"
+                      className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-orange-600 bg-orange-50 border border-orange-200 rounded-lg hover:bg-orange-100"
                     >
                       <Plus className="w-4 h-4 mr-1" />
                       Add Message
@@ -181,7 +181,7 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
                           </label>
                           <input
                             type="text"
-                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                             {...formik.getFieldProps(`messages.${index}.to`)}
                           />
                           {formik.touched.messages?.[index]?.to && typeof formik.errors.messages?.[index] === 'object' && (formik.errors.messages[index] as FormikErrors<MessageItem>).to && (
@@ -210,7 +210,7 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
                         </label>
                         <textarea
                           rows={3}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
                           placeholder="Enter message..."
                           {...formik.getFieldProps(`messages.${index}.msg`)}
                         />
@@ -236,14 +236,14 @@ const BulkSMSDifferentModal: React.FC<BulkSMSDifferentModalProps> = ({
               <button
                 type="button"
                 onClick={handleClose}
-                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting || formik.values.messages.length === 0}
-                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 text-sm font-medium text-white bg-orange-600 border border-transparent rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? 'Sending...' : 'Send SMS'}
               </button>

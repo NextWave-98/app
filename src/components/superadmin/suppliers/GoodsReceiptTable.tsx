@@ -25,8 +25,8 @@ interface GoodsReceiptTableProps {
 const GoodsReceiptStatusBadge = ({ status }: { status: string }) => {
   const statusConfig: Record<string, { bg: string; text: string; label: string }> = {
     PENDING_QC: { bg: 'bg-yellow-100', text: 'text-yellow-800', label: 'Pending QC' },
-    QC_PASSED: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Approved' },
-    APPROVED: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Approved' },
+    QC_PASSED: { bg: 'bg-orange-100', text: 'text-orange-800', label: 'Approved' },
+    APPROVED: { bg: 'bg-orange-100', text: 'text-orange-800', label: 'Approved' },
     COMPLETED: { bg: 'bg-green-100', text: 'text-green-800', label: 'Completed' },
     REJECTED: { bg: 'bg-red-100', text: 'text-red-800', label: 'Rejected' },
   };
@@ -108,7 +108,7 @@ export default function GoodsReceiptTable({
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
       </div>
     );
   }
@@ -138,7 +138,7 @@ export default function GoodsReceiptTable({
                   type="checkbox"
                   checked={selectedReceipts.length === receipts.length && receipts.length > 0}
                   onChange={handleSelectAll}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                 />
               </th>
             )}
@@ -171,7 +171,7 @@ export default function GoodsReceiptTable({
                     type="checkbox"
                     checked={isSelected(receipt)}
                     onChange={() => handleSelectReceipt(receipt)}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                   />
                 </td>
               )}

@@ -146,7 +146,7 @@ export default function BulkUploadModal({ isOpen, onClose, onSuccess }: BulkUplo
             <div
               className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${
                 dragActive
-                  ? 'border-blue-400 bg-blue-50'
+                  ? 'border-orange-400 bg-orange-50'
                   : selectedFile
                   ? 'border-green-400 bg-green-50'
                   : 'border-gray-300 hover:border-gray-400'
@@ -177,7 +177,7 @@ export default function BulkUploadModal({ isOpen, onClose, onSuccess }: BulkUplo
                   <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                   <p className="text-sm text-gray-600 mb-2">
                     Drag and drop your file here, or{' '}
-                    <label className="text-blue-600 hover:text-blue-700 cursor-pointer underline">
+                    <label className="text-orange-600 hover:text-orange-700 cursor-pointer underline">
                       browse
                       <input
                         type="file"
@@ -202,7 +202,7 @@ export default function BulkUploadModal({ isOpen, onClose, onSuccess }: BulkUplo
               </div>
               <button
                 onClick={handleDownloadSample}
-                className="text-sm text-blue-600 hover:text-blue-700 underline"
+                className="text-sm text-orange-600 hover:text-orange-700 underline"
               >
                 Download Sample Excel
               </button>
@@ -214,7 +214,7 @@ export default function BulkUploadModal({ isOpen, onClose, onSuccess }: BulkUplo
               type="button"
               onClick={handleSubmit}
               disabled={!selectedFile || loading}
-              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-orange-600 text-base font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 sm:ml-3 sm:w-auto sm:text-sm disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Uploading...' : 'Upload Products'}
             </button>

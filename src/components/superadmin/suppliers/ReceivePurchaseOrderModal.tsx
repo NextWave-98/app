@@ -205,7 +205,7 @@ export default function ReceivePurchaseOrderModal({
                 <select
                   value={locationId}
                   onChange={(e) => setLocationId(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   required
                   disabled={loadingBranches}
                 >
@@ -230,7 +230,7 @@ export default function ReceivePurchaseOrderModal({
                   type="date"
                   value={receivedDate}
                   onChange={(e) => setReceivedDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                   required
                 />
               </div>
@@ -238,11 +238,11 @@ export default function ReceivePurchaseOrderModal({
 
             {/* Location Selection Warning */}
             {locationId && (
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                <p className="text-sm text-blue-900">
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-3">
+                <p className="text-sm text-orange-900">
                   <strong>Stock will be added to:</strong> {branches.find(b => b.id === locationId)?.name} ({branches.find(b => b.id === locationId)?.code})
                 </p>
-                <p className="text-xs text-blue-700 mt-1">
+                <p className="text-xs text-orange-700 mt-1">
                   ⓘ Products will be available for transfer from this location to other locations after receipt.
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default function ReceivePurchaseOrderModal({
                 id="autoUpdateInventory"
                 checked={autoUpdateInventory}
                 onChange={(e) => setAutoUpdateInventory(e.target.checked)}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
               />
               <label htmlFor="autoUpdateInventory" className="text-sm text-gray-700">
                 Automatically update inventory for received items (Recommended)
@@ -306,7 +306,7 @@ export default function ReceivePurchaseOrderModal({
                             onChange={(e) =>
                               handleQuantityChange(item.productId, parseInt(e.target.value) || 0)
                             }
-                            className="w-20 px-2 py-1 border border-gray-300 rounded text-center focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded text-center focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -315,7 +315,7 @@ export default function ReceivePurchaseOrderModal({
                             value={item.notes}
                             onChange={(e) => handleNotesChange(item.productId, e.target.value)}
                             placeholder="Optional notes..."
-                            className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                            className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                           />
                         </td>
                       </tr>
@@ -335,7 +335,7 @@ export default function ReceivePurchaseOrderModal({
                 onChange={(e) => setGeneralNotes(e.target.value)}
                 rows={3}
                 placeholder="Add any general notes about this receipt..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
               />
             </div>
 
@@ -349,7 +349,7 @@ export default function ReceivePurchaseOrderModal({
                 )}
                 <li>• Purchase order status will be updated based on received quantities</li>
                 <li>• Stock movement records will be created for tracking</li>
-                <li className="text-blue-700 font-medium">⚠️ Make sure to receive to the correct location (typically Main Branch for initial stock)</li>
+                <li className="text-orange-700 font-medium">⚠️ Make sure to receive to the correct location (typically Main Branch for initial stock)</li>
               </ul>
             </div>
           </div>

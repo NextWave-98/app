@@ -48,7 +48,7 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
       case 'EXPIRED': return { gradient: 'from-gray-500 to-slate-500', bg: 'bg-gray-500/20', text: 'text-gray-400', border: 'border-gray-500/30' };
       case 'CLAIMED': return { gradient: 'from-amber-500 to-orange-500', bg: 'bg-amber-500/20', text: 'text-amber-400', border: 'border-amber-500/30' };
       case 'VOIDED': return { gradient: 'from-red-500 to-rose-500', bg: 'bg-red-500/20', text: 'text-red-400', border: 'border-red-500/30' };
-      default: return { gradient: 'from-blue-500 to-indigo-500', bg: 'bg-blue-500/20', text: 'text-blue-400', border: 'border-blue-500/30' };
+      default: return { gradient: 'from-orange-500 to-indigo-500', bg: 'bg-orange-500/20', text: 'text-orange-400', border: 'border-orange-500/30' };
     }
   };
 
@@ -74,7 +74,7 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite', animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl" style={{ animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite', animationDelay: '1s' }}></div>
       </div>
 
       <div className="relative w-full max-w-5xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl shadow-2xl border border-purple-500/20 overflow-hidden animate-slide-up">
@@ -157,10 +157,10 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
             </div>
             <p className="text-white font-bold text-lg">{formatDate(warranty.startDate)}</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-500/10 to-transparent p-5 backdrop-blur-sm hover:from-blue-500/20 transition-all duration-300">
+          <div className="bg-gradient-to-br from-orange-500/10 to-transparent p-5 backdrop-blur-sm hover:from-orange-500/20 transition-all duration-300">
             <div className="flex items-center gap-3 mb-2">
-              <Clock className="w-5 h-5 text-blue-400" />
-              <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider">Valid Until</p>
+              <Clock className="w-5 h-5 text-orange-400" />
+              <p className="text-orange-300 text-xs font-semibold uppercase tracking-wider">Valid Until</p>
             </div>
             <p className="text-white font-bold text-lg">{formatDate(warranty.expiryDate)}</p>
           </div>
@@ -223,11 +223,11 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
                     </div>
                   </div>
                   <div className="flex items-start gap-4 group">
-                    <div className="p-3 bg-blue-500/10 rounded-xl group-hover:bg-blue-500/20 transition-all duration-300">
-                      <Phone className="w-5 h-5 text-blue-300" />
+                    <div className="p-3 bg-orange-500/10 rounded-xl group-hover:bg-orange-500/20 transition-all duration-300">
+                      <Phone className="w-5 h-5 text-orange-300" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-blue-300 text-xs font-semibold uppercase tracking-wider mb-1">Phone Number</p>
+                      <p className="text-orange-300 text-xs font-semibold uppercase tracking-wider mb-1">Phone Number</p>
                       <p className="text-white font-semibold text-lg">{warranty.customerPhone}</p>
                     </div>
                   </div>
@@ -246,10 +246,10 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
               </div>
 
               {/* Product Card */}
-              <div className="bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-transparent rounded-2xl p-6 border border-purple-500/30 shadow-lg hover:shadow-blue-500/20 transition-all duration-300">
+              <div className="bg-gradient-to-br from-purple-500/10 via-orange-500/10 to-transparent rounded-2xl p-6 border border-purple-500/30 shadow-lg hover:shadow-orange-500/20 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-5 flex items-center gap-3">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <Package className="w-5 h-5 text-blue-400" />
+                  <div className="p-2 bg-orange-500/20 rounded-lg">
+                    <Package className="w-5 h-5 text-orange-400" />
                   </div>
                   Product Details
                 </h3>
@@ -361,7 +361,7 @@ const PremiumWarrantyCard: React.FC<WarrantyCardProps> = ({
           <div className="flex flex-wrap gap-3">
             <button
               onClick={onDownload}
-              className="flex-1 min-w-[180px] px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group"
+              className="flex-1 min-w-[180px] px-6 py-3 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2 group"
             >
               <Download className="w-5 h-5 group-hover:animate-bounce" />
               Download PDF
@@ -467,7 +467,7 @@ const WarrantyCardDemo = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
+          className="px-8 py-4 bg-gradient-to-r from-purple-500 to-orange-500 text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105"
         >
           Open Warranty Card
         </button>

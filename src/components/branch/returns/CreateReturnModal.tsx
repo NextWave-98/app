@@ -432,7 +432,7 @@ export default function CreateReturnModal({
                         setSelectedProduct('');
                       }
                     }}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   >
                     <option value="SALE">Sale</option>
                     <option value="WARRANTY_CLAIM">Warranty Claim</option>
@@ -454,14 +454,14 @@ export default function CreateReturnModal({
                         type="text"
                         value={saleNumberSearch}
                         onChange={(e) => setSaleNumberSearch(e.target.value)}
-                        className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                         placeholder="Enter sale number (e.g., SAL-2024-000001)"
                       />
                       <button
                         type="button"
                         onClick={handleSearchSale}
                         disabled={isSearchingSale}
-                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {isSearchingSale ? 'Searching...' : 'Search'}
                       </button>
@@ -494,7 +494,7 @@ export default function CreateReturnModal({
                               handleSaleProductSelect(item, product);
                             }
                           }}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                         >
                           <option value="">Select a product</option>
                           {searchedSale.items.map((item: any) => (
@@ -507,12 +507,12 @@ export default function CreateReturnModal({
                     )}
 
                     {searchedSale && selectedSaleProduct && (
-                      <div className="mt-2 p-3 bg-blue-50 border border-blue-200 rounded-md">
-                        <div className="flex items-center gap-2 text-blue-800">
+                      <div className="mt-2 p-3 bg-orange-50 border border-orange-200 rounded-md">
+                        <div className="flex items-center gap-2 text-orange-800">
                           <Package className="w-4 h-4" />
                           <span className="font-medium">Selected Product:</span>
                         </div>
-                        <div className="mt-1 text-sm text-blue-700">
+                        <div className="mt-1 text-sm text-orange-700">
                           <p><strong>Product:</strong> {selectedSaleProduct.productName}</p>
                           <p><strong>Quantity:</strong> {selectedSaleProduct.quantity}</p>
                           <p><strong>Unit Price:</strong> {formatCurrency(parseFloat(selectedSaleProduct.unit_price))}</p>
@@ -562,7 +562,7 @@ export default function CreateReturnModal({
                         setCustomerNotFound(false);
                       }
                     }}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   >
                     <option value="CUSTOMER_RETURN">Customer Return</option>
                     <option value="WARRANTY_RETURN">Warranty Return</option>
@@ -582,7 +582,7 @@ export default function CreateReturnModal({
                     value={formData.returnReason}
                     onChange={(e) => setFormData(prev => ({ ...prev, returnReason: e.target.value }))}
                     rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Describe the reason for the return"
                   />
                 </div>
@@ -595,7 +595,7 @@ export default function CreateReturnModal({
                     value={formData.notes || ''}
                     onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                     rows={2}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Additional notes"
                   />
                 </div>
@@ -633,14 +633,14 @@ export default function CreateReturnModal({
                       type="tel"
                       value={customerPhoneSearch}
                       onChange={(e) => setCustomerPhoneSearch(e.target.value)}
-                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="Enter phone number"
                     />
                     <button
                       type="button"
                       onClick={handleSearchCustomer}
                       disabled={isSearchingCustomer}
-                      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSearchingCustomer ? 'Searching...' : 'Search'}
                     </button>
@@ -690,7 +690,7 @@ export default function CreateReturnModal({
                         type="text"
                         value={formData.customerName || ''}
                         onChange={(e) => setFormData(prev => ({ ...prev, customerName: e.target.value }))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                         placeholder="Enter customer name"
                       />
                     </div>
@@ -702,7 +702,7 @@ export default function CreateReturnModal({
                         type="email"
                         value={formData.customerEmail || ''}
                         onChange={(e) => setFormData(prev => ({ ...prev, customerEmail: e.target.value }))}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                         placeholder="Enter email address"
                       />
                     </div>
@@ -727,7 +727,7 @@ export default function CreateReturnModal({
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-3 py-2 border overflow-y-auto border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 max-h-40"
+                    className="w-full px-3 py-2 border overflow-y-auto border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 max-h-40"
                     disabled={categoriesLoading || isProductFromSale}
                   >
                     <option value="">
@@ -748,7 +748,7 @@ export default function CreateReturnModal({
                   <select
                     value={selectedProduct}
                     onChange={(e) => handleProductChange(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     disabled={productsLoading || isProductFromSale}
                   >
                     <option value="">
@@ -773,13 +773,13 @@ export default function CreateReturnModal({
                     min="1"
                     value={formData.quantity}
                     onChange={(e) => setFormData(prev => ({ ...prev, quantity: parseInt(e.target.value) || 1 }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Product Value (LKR) *
+                    Product Value (USD) *
                   </label>
                   <input
                     type="number"
@@ -787,7 +787,7 @@ export default function CreateReturnModal({
                     step="0.01"
                     value={formData.productValue}
                     onChange={(e) => setFormData(prev => ({ ...prev, productValue: parseFloat(e.target.value) || 0 }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="0.00"
                     disabled={isProductFromSale}
                   />
@@ -795,7 +795,7 @@ export default function CreateReturnModal({
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Refund Amount (LKR) (Optional)
+                    Refund Amount (USD) (Optional)
                   </label>
                   <input
                     type="number"
@@ -803,7 +803,7 @@ export default function CreateReturnModal({
                     step="0.01"
                     value={formData.refundAmount || ''}
                     onChange={(e) => setFormData(prev => ({ ...prev, refundAmount: e.target.value ? parseFloat(e.target.value) : null }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="0.00"
                   />
                 </div>
@@ -816,7 +816,7 @@ export default function CreateReturnModal({
                     type="text"
                     value={formData.productSerialNumber || ''}
                     onChange={(e) => setFormData(prev => ({ ...prev, productSerialNumber: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Enter serial number"
                     disabled={isProductFromSale}
                   />
@@ -830,7 +830,7 @@ export default function CreateReturnModal({
                     type="text"
                     value={formData.productBatchNumber || ''}
                     onChange={(e) => setFormData(prev => ({ ...prev, productBatchNumber: e.target.value }))}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     placeholder="Enter batch number"
                     disabled={isProductFromSale}
                   />
@@ -852,7 +852,7 @@ export default function CreateReturnModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-4 py-2 text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {loading ? 'Creating...' : 'Create Return'}
               </button>

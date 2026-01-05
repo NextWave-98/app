@@ -219,7 +219,7 @@ export default function SuppliersPage() {
         </div>
         <button 
           onClick={() => setIsAddModalOpen(true)}
-          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 cursor-pointer"
+          className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 cursor-pointer"
         >
           <Plus className="w-4 h-4 mr-2" />
           Add Supplier
@@ -237,7 +237,7 @@ export default function SuppliersPage() {
               onClick={() => setActiveTab('suppliers')}
               className={`px-6 py-3 text-sm font-medium cursor-pointer ${
                 activeTab === 'suppliers'
-                  ? 'border-b-2 border-blue-500 text-blue-600'
+                  ? 'border-b-2 border-orange-500 text-orange-600'
                   : 'text-gray-500'
               }`}
             >
@@ -247,7 +247,7 @@ export default function SuppliersPage() {
               onClick={() => setActiveTab('orders')}
               className={`px-6 py-3 text-sm font-medium cursor-pointer ${
                 activeTab === 'orders'
-                  ? 'border-b-2 border-blue-500 text-blue-600'
+                  ? 'border-b-2 border-orange-500 text-orange-600'
                   : 'text-gray-500'
               }`}
             >
@@ -261,10 +261,10 @@ export default function SuppliersPage() {
             <>
               {/* Action Bar - Shown when suppliers are selected */}
               {selectedSuppliers.length > 0 && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg shadow-sm p-4 mb-4">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg shadow-sm p-4 mb-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-blue-900">
+                      <span className="text-sm font-medium text-orange-900">
                         {selectedSuppliers.length} supplier{selectedSuppliers.length > 1 ? 's' : ''} selected
                       </span>
                     </div>
@@ -276,7 +276,7 @@ export default function SuppliersPage() {
                               setSelectedSupplier(selectedSuppliers[0]);
                               setIsViewModalOpen(true);
                             }}
-                            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                           >
                             <Eye className="w-4 h-4 mr-2" />
                             View
@@ -367,10 +367,10 @@ export default function SuppliersPage() {
 
               {/* Action Bar - Shown when purchase orders are selected */}
               {selectedPurchaseOrders.length > 0 && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg shadow-sm p-4 mb-4">
+                <div className="bg-orange-50 border border-orange-200 rounded-lg shadow-sm p-4 mb-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-blue-900">
+                      <span className="text-sm font-medium text-orange-900">
                         {selectedPurchaseOrders.length} order{selectedPurchaseOrders.length > 1 ? 's' : ''} selected
                       </span>
                     </div>
@@ -383,7 +383,7 @@ export default function SuppliersPage() {
                               setSelectedPurchaseOrder(selectedPurchaseOrders[0]);
                               setIsViewPOModalOpen(true);
                             }}
-                            className="inline-flex items-center px-3 py-1.5 border border-transparent rounded-lg text-xs font-medium text-white bg-blue-600 hover:bg-blue-700"
+                            className="inline-flex items-center px-3 py-1.5 border border-transparent rounded-lg text-xs font-medium text-white bg-orange-600 hover:bg-orange-700"
                           >
                             <Eye className="w-3.5 h-3.5 mr-1.5" />
                             View

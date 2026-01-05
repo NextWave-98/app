@@ -26,7 +26,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
   console.log('SalesTable received sales:', sales);
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -128,17 +128,17 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
       {/* Bulk Actions */}
       {selectedSales.size > 0 && (
-        <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+        <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-sm font-medium text-blue-900">
+              <span className="text-sm font-medium text-orange-900">
                 {selectedSales.size} sale{selectedSales.size > 1 ? 's' : ''} selected
               </span>
               <div className="flex items-center gap-2">
                 <button
                   onClick={handleViewSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Eye className="w-4 h-4 mr-1" />
                   View
@@ -146,7 +146,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                 <button
                   onClick={handleDownloadSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download className="w-4 h-4 mr-1" />
                   Download
@@ -154,7 +154,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                 <button
                   onClick={handlePrintSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Printer className="w-4 h-4 mr-1" />
                   Print
@@ -163,7 +163,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
             </div>
             <button
               onClick={clearSelection}
-              className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+              className="text-sm text-orange-600 hover:text-orange-800 font-medium"
             >
               Clear selection
             </button>
@@ -180,7 +180,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                   type="checkbox"
                   checked={selectedSales.size === sales.length && sales.length > 0}
                   onChange={(e) => handleSelectAllSales(e.target.checked)}
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -226,13 +226,13 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                       e.stopPropagation();
                       handleSelectSale(sale.id, e.target.checked);
                     }}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <div className="flex items-center">
-                    <div className="flex-shrink-0 h-10 w-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <Receipt className="h-5 w-5 text-blue-600" />
+                    <div className="flex-shrink-0 h-10 w-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                      <Receipt className="h-5 w-5 text-orange-600" />
                     </div>
                     <div className="ml-4">
                       <div className="text-sm font-medium text-gray-900">{sale.invoiceNumber}</div>

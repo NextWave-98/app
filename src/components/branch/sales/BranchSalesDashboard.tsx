@@ -177,15 +177,15 @@ export default function BranchSalesDashboard() {
   };
 
   const formatCurrency = (amount: number) => {
-    if(amount === null || amount === undefined) {return 'LKR 0';}
+    if(amount === null || amount === undefined) {return 'USD 0';}
     else if (amount >1000000){
-      return `LKR ${(amount / 1000000).toFixed(1)}M`;
+      return `USD ${(amount / 1000000).toFixed(1)}M`;
     }else if (amount >1000){
-      return `LKR ${(amount / 1000).toFixed(1)}K`;}
+      return `USD ${(amount / 1000).toFixed(1)}K`;}
     else{
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       minimumFractionDigits: 0,
     }).format(amount);
   }
@@ -435,7 +435,7 @@ export default function BranchSalesDashboard() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+            className="flex items-center gap-2 px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -451,7 +451,7 @@ export default function BranchSalesDashboard() {
             onClick={() => setPeriod(p)}
             className={`px-4 py-2 rounded-lg font-medium transition-colors ${
               period === p
-                ? 'bg-blue-600 text-white'
+                ? 'bg-orange-600 text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
             }`}
           >
@@ -471,7 +471,7 @@ export default function BranchSalesDashboard() {
                 onClick={() => setViewMode(mode)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                   viewMode === mode
-                    ? 'bg-blue-600 text-white'
+                    ? 'bg-orange-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -528,7 +528,7 @@ export default function BranchSalesDashboard() {
                   </div>
                 )}
               </div>
-              <div className="bg-blue-500 p-3 rounded-lg">
+              <div className="bg-orange-500 p-3 rounded-lg">
                 <ShoppingCart className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -673,15 +673,15 @@ export default function BranchSalesDashboard() {
             <div className="overflow-x-auto">
               {/* Action Menu - Shows when rows are selected */}
               {hasSelection && (
-                <div className="bg-blue-50 border-b border-blue-200 px-6 py-4">
+                <div className="bg-orange-50 border-b border-orange-200 px-6 py-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <span className="text-sm font-medium text-blue-900">
+                      <span className="text-sm font-medium text-orange-900">
                         {selectedSales.size} {selectedSales.size === 1 ? 'sale' : 'sales'} selected
                       </span>
                       <button
                         onClick={clearSelection}
-                        className="text-sm text-blue-600 hover:text-blue-800 font-medium"
+                        className="text-sm text-orange-600 hover:text-orange-800 font-medium"
                       >
                         Clear selection
                       </button>
@@ -699,7 +699,7 @@ export default function BranchSalesDashboard() {
                       {selectedSales.size === 1 && (
                         <button
                           onClick={handleDownloadSelectedSale}
-                          className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                          className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                         >
                           <Download className="w-4 h-4 mr-1.5" />
                           Download
@@ -708,7 +708,7 @@ export default function BranchSalesDashboard() {
                       {selectedSales.size === 1 && (
                         <button
                           onClick={handlePrintSelectedSale}
-                          className="inline-flex items-center px-3 py-1.5 border border-blue-300 rounded-md text-sm font-medium text-blue-700 bg-white hover:bg-blue-50"
+                          className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50"
                         >
                           <Printer className="w-4 h-4 mr-1.5" />
                           Print
@@ -727,7 +727,7 @@ export default function BranchSalesDashboard() {
                         type="checkbox"
                         checked={isAllSelected}
                         onChange={(e) => handleSelectAllSales(e.target.checked)}
-                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                        className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                       />
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -761,7 +761,7 @@ export default function BranchSalesDashboard() {
                           type="checkbox"
                           checked={selectedSales.has(sale.id)}
                           onChange={(e) => handleSelectSale(sale.id, e.target.checked)}
-                          className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
+                          className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
                         />
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -792,7 +792,7 @@ export default function BranchSalesDashboard() {
                         <div className="flex items-center gap-2">
                           <button
                             onClick={() => handleViewBill(sale)}
-                            className="text-blue-600 hover:text-blue-900 p-1"
+                            className="text-orange-600 hover:text-orange-900 p-1"
                             title="View Bill"
                           >
                             <Eye className="w-4 h-4" />

@@ -123,32 +123,32 @@ export default function ProcessReturnModal({
 
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
             {/* Return Summary */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
               <div className="flex items-center gap-2 mb-4">
-                <Cog className="w-5 h-5 text-blue-600" />
-                <h3 className="text-lg font-semibold text-blue-900">Return Processing</h3>
+                <Cog className="w-5 h-5 text-orange-600" />
+                <h3 className="text-lg font-semibold text-orange-900">Return Processing</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-blue-800">Product</label>
-                  <p className="text-blue-900">{returnItem.productName}</p>
-                  <p className="text-sm text-blue-700">{returnItem.productCode}</p>
+                  <label className="block text-sm font-medium text-orange-800">Product</label>
+                  <p className="text-orange-900">{returnItem.productName}</p>
+                  <p className="text-sm text-orange-700">{returnItem.productCode}</p>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-blue-800">Customer</label>
-                  <p className="text-blue-900">{returnItem.customerName || 'N/A'}</p>
-                  <p className="text-sm text-blue-700">{returnItem.customerPhone || ''}</p>
+                  <label className="block text-sm font-medium text-orange-800">Customer</label>
+                  <p className="text-orange-900">{returnItem.customerName || 'N/A'}</p>
+                  <p className="text-sm text-orange-700">{returnItem.customerPhone || ''}</p>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-blue-800">Value</label>
-                  <p className="text-blue-900">LKR {returnItem.productValue.toLocaleString('en-US')}</p>
-                  <p className="text-sm text-blue-700">Quantity: {returnItem.quantity}</p>
+                  <label className="block text-sm font-medium text-orange-800">Value</label>
+                  <p className="text-orange-900">USD {returnItem.productValue.toLocaleString('en-US')}</p>
+                  <p className="text-sm text-orange-700">Quantity: {returnItem.quantity}</p>
                 </div>
               </div>
               {returnItem.notes && (
                 <div className="mt-4">
-                  <label className="block text-sm font-medium text-blue-800">Approval Notes</label>
-                  <p className="text-blue-900">{returnItem.notes}</p>
+                  <label className="block text-sm font-medium text-orange-800">Approval Notes</label>
+                  <p className="text-orange-900">{returnItem.notes}</p>
                 </div>
               )}
             </div>
@@ -170,7 +170,7 @@ export default function ProcessReturnModal({
                       onClick={() => updateFormData({ resolutionType: type.value as ProcessReturnData['resolutionType'] })}
                       className={`p-4 border rounded-lg text-left transition-all ${
                         formData.resolutionType === type.value
-                          ? 'border-blue-500 bg-blue-50 text-blue-900'
+                          ? 'border-orange-500 bg-orange-50 text-orange-900'
                           : 'border-gray-200 hover:border-gray-300 text-gray-700'
                       }`}
                     >
@@ -194,7 +194,7 @@ export default function ProcessReturnModal({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Refund Amount (LKR) *
+                      Refund Amount (USD) *
                     </label>
                     <input
                       type="number"
@@ -211,7 +211,7 @@ export default function ProcessReturnModal({
                         }
                       }}
                       readOnly={returnItem.refundAmount && parseFloat(returnItem.refundAmount) > 0}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 disabled:bg-gray-100 disabled:cursor-not-allowed"
                       placeholder="Enter refund amount"
                     />
                   </div>
@@ -223,7 +223,7 @@ export default function ProcessReturnModal({
                       required
                       value={formData.refundMethod || ''}
                       onChange={(e) => updateFormData({ refundMethod: e.target.value as ProcessReturnData['refundMethod'] })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                     >
                       <option value="">Select method</option>
                       <option value="CASH">Cash</option>
@@ -263,7 +263,7 @@ export default function ProcessReturnModal({
                           reasonDescription: formData.supplierReturnData?.reasonDescription || ''
                         }
                       })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="Enter supplier ID"
                     />
                   </div>
@@ -283,7 +283,7 @@ export default function ProcessReturnModal({
                           reasonDescription: formData.supplierReturnData?.reasonDescription || ''
                         }
                       })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="e.g., Defective product"
                     />
                   </div>
@@ -302,7 +302,7 @@ export default function ProcessReturnModal({
                         }
                       })}
                       rows={2}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="Additional details about the return reason..."
                     />
                   </div>
@@ -311,8 +311,8 @@ export default function ProcessReturnModal({
             )}
 
             {formData.resolutionType === 'TRANSFERRED_WAREHOUSE' && (
-              <div className="space-y-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <h4 className="font-medium text-blue-900">Stock Transfer Details</h4>
+              <div className="space-y-4 p-4 bg-orange-50 border border-orange-200 rounded-lg">
+                <h4 className="font-medium text-orange-900">Stock Transfer Details</h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -323,7 +323,7 @@ export default function ProcessReturnModal({
                       required
                       value={formData.transferToLocationId || ''}
                       onChange={(e) => updateFormData({ transferToLocationId: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="Enter destination location ID"
                     />
                   </div>
@@ -335,7 +335,7 @@ export default function ProcessReturnModal({
                       type="text"
                       value={formData.transferNotes || ''}
                       onChange={(e) => updateFormData({ transferNotes: e.target.value })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                       placeholder="e.g., Return to warehouse"
                     />
                   </div>
@@ -353,7 +353,7 @@ export default function ProcessReturnModal({
                 value={formData.resolutionDetails || ''}
                 onChange={(e) => updateFormData({ resolutionDetails: e.target.value })}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Describe the resolution steps taken..."
               />
             </div>
@@ -367,7 +367,7 @@ export default function ProcessReturnModal({
                 value={formData.notes || ''}
                 onChange={(e) => updateFormData({ notes: e.target.value })}
                 rows={2}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                 placeholder="Additional notes about the processing..."
               />
             </div>
@@ -384,7 +384,7 @@ export default function ProcessReturnModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-4 py-2 text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {loading ? 'Processing...' : 'Process Return'}
               </button>

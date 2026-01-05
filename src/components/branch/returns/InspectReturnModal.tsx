@@ -58,7 +58,7 @@ export default function InspectReturnModal({
   if (!isOpen || !returnItem) return null;
 
   const formatCurrency = (amount: number) => {
-    return `LKR ${amount.toLocaleString('en-US')}`;
+    return `USD ${amount.toLocaleString('en-US')}`;
   };
 
   return (
@@ -151,7 +151,7 @@ export default function InspectReturnModal({
                         value={condition.value}
                         checked={formData.condition === condition.value}
                         onChange={(e) => setFormData(prev => ({ ...prev, condition: e.target.value as InspectReturnData['condition'] }))}
-                        className="text-blue-600 focus:ring-blue-500"
+                        className="text-orange-600 focus:ring-orange-500"
                       />
                       <span className="ml-2 text-sm text-gray-700">{condition.label}</span>
                     </label>
@@ -168,7 +168,7 @@ export default function InspectReturnModal({
                   value={formData.inspectionNotes}
                   onChange={(e) => setFormData(prev => ({ ...prev, inspectionNotes: e.target.value }))}
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="Describe the condition of the product, any defects, functionality tests performed, etc."
                 />
               </div>
@@ -237,7 +237,7 @@ export default function InspectReturnModal({
               <button
                 type="submit"
                 disabled={loading}
-                className="px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="px-4 py-2 text-white bg-orange-600 rounded-lg hover:bg-orange-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 {loading ? 'Submitting...' : 'Submit Inspection'}
               </button>

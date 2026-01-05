@@ -44,7 +44,7 @@ export default function SalesFilters({
         {hasActiveFilters && (
           <button
             onClick={onReset}
-            className="ml-auto text-sm text-blue-600 hover:text-blue-700 flex items-center gap-1"
+            className="ml-auto text-sm text-orange-600 hover:text-orange-700 flex items-center gap-1"
           >
             <X className="w-4 h-4" />
             Clear All
@@ -64,7 +64,7 @@ export default function SalesFilters({
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               placeholder="Search invoice, customer..."
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             />
           </div>
 
@@ -73,7 +73,7 @@ export default function SalesFilters({
             <select
               value={selectedStatus}
               onChange={(e) => onStatusChange(e.target.value as SaleStatus | '')}
-              className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             >
               <option value="">All Status</option>
               <option value={SaleStatus.COMPLETED}>Completed</option>
@@ -88,7 +88,7 @@ export default function SalesFilters({
             <select
               value={selectedPaymentMethod}
               onChange={(e) => onPaymentMethodChange(e.target.value as PaymentMethod | '')}
-              className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             >
               <option value="">All Payments</option>
               <option value={PaymentMethod.CASH}>Cash</option>
@@ -107,7 +107,7 @@ export default function SalesFilters({
             <select
               value={dateFilter}
               onChange={(e) => onDateFilterChange(e.target.value as DateFilterType)}
-              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+              className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
             >
               <option value="all">All Dates</option>
               <option value="today">Today</option>
@@ -121,14 +121,14 @@ export default function SalesFilters({
 
         {/* Custom Date Range Inputs */}
         {dateFilter === 'custom' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 pl-4 border-l-2 border-blue-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 pl-4 border-l-2 border-orange-200">
             <div>
               <label className="block text-xs font-medium text-gray-700 mb-1">Start Date</label>
               <input
                 type="date"
                 value={startDate}
                 onChange={(e) => onStartDateChange(e.target.value)}
-                className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />
             </div>
             <div>
@@ -137,7 +137,7 @@ export default function SalesFilters({
                 type="date"
                 value={endDate}
                 onChange={(e) => onEndDateChange(e.target.value)}
-                className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
               />
             </div>
           </div>

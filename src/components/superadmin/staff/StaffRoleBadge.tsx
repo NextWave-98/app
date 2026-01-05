@@ -28,9 +28,9 @@ export default function StaffRoleBadge({ role }: StaffRoleBadgeProps) {
         return {
           text: 'Manager',
           icon: Briefcase,
-          color: 'text-blue-600',
-          bgColor: 'bg-blue-50',
-          borderColor: 'border-blue-200',
+          color: 'text-orange-600',
+          bgColor: 'bg-orange-50',
+          borderColor: 'border-orange-200',
         };
       case StaffRole.TECHNICIAN:
         return {

@@ -81,7 +81,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'LKR',
+      currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
@@ -121,7 +121,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
         {/* Modal panel */}
         <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
+          <div className="bg-gradient-to-r from-orange-600 to-orange-700 px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <FileText className="w-6 h-6 text-white" />
@@ -130,7 +130,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
                     {loading ? 'Loading...' : `Sale Details - ${saleDetails?.invoiceNumber}`}
                   </h3>
                   {saleDetails && (
-                    <p className="text-sm text-blue-100 mt-0.5">
+                    <p className="text-sm text-orange-100 mt-0.5">
                       {saleDetails.type} Sale • {formatDate(saleDetails.createdAt)}
                     </p>
                   )}
@@ -149,7 +149,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
           <div className="px-6 py-6 max-h-[calc(100vh-200px)] overflow-y-auto">
             {loading ? (
               <div className="flex items-center justify-center py-12">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600"></div>
               </div>
             ) : saleDetails ? (
               <div className="space-y-6">
@@ -312,7 +312,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
                 </div>
 
                 {/* Payment Summary */}
-                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 border border-orange-200">
                   <h4 className="text-sm font-semibold text-gray-700 mb-4 flex items-center gap-2">
                     <DollarSign className="w-4 h-4" />
                     Payment Summary
@@ -336,9 +336,9 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
                         <span className="font-medium text-gray-900">{formatCurrency(saleDetails.tax)}</span>
                       </div>
                     )}
-                    <div className="border-t border-blue-300 pt-3 flex justify-between">
+                    <div className="border-t border-orange-300 pt-3 flex justify-between">
                       <span className="text-base font-semibold text-gray-900">Total Amount:</span>
-                      <span className="text-lg font-bold text-blue-600">
+                      <span className="text-lg font-bold text-orange-600">
                         {formatCurrency(saleDetails.totalAmount)}
                       </span>
                     </div>

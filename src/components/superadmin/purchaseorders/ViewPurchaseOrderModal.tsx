@@ -22,7 +22,7 @@ export default function ViewPurchaseOrderModal({ isOpen, onClose, purchaseOrder 
     const colors: Record<string, string> = {
       DRAFT: 'bg-gray-100 text-gray-800',
       SUBMITTED: 'bg-yellow-100 text-yellow-800',
-      CONFIRMED: 'bg-blue-100 text-blue-800',
+      CONFIRMED: 'bg-orange-100 text-orange-800',
       PARTIALLY_RECEIVED: 'bg-purple-100 text-purple-800',
       RECEIVED: 'bg-teal-100 text-teal-800',
       COMPLETED: 'bg-emerald-100 text-emerald-800',
@@ -34,7 +34,7 @@ export default function ViewPurchaseOrderModal({ isOpen, onClose, purchaseOrder 
 
   const getPriorityColor = (priority: string) => {
     const colors: Record<string, string> = {
-      LOW: 'bg-blue-100 text-blue-800',
+      LOW: 'bg-orange-100 text-orange-800',
       NORMAL: 'bg-gray-100 text-gray-800',
       HIGH: 'bg-orange-100 text-orange-800',
       URGENT: 'bg-red-100 text-red-800',
@@ -201,7 +201,7 @@ export default function ViewPurchaseOrderModal({ isOpen, onClose, purchaseOrder 
               
               <div className="border-t pt-2 flex justify-between">
                 <span className="text-lg font-semibold">Total Amount:</span>
-                <span className="text-lg font-semibold text-blue-600">
+                <span className="text-lg font-semibold text-orange-600">
                   Rs. {purchaseOrder.totalAmount || '0.00'}
                 </span>
               </div>
@@ -252,7 +252,7 @@ export default function ViewPurchaseOrderModal({ isOpen, onClose, purchaseOrder 
         <div className="sticky bottom-0 bg-gray-50 border-t px-6 py-4 flex justify-end">
           <button
             onClick={onClose}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            className="px-6 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700"
           >
             Close
           </button>

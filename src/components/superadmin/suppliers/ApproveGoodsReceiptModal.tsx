@@ -127,8 +127,8 @@ export default function ApproveGoodsReceiptModal({
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-180px)]">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Summary */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-              <h3 className="font-semibold text-blue-900 mb-2">Summary</h3>
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
+              <h3 className="font-semibold text-orange-900 mb-2">Summary</h3>
               <div className="grid grid-cols-3 gap-4 text-sm">
                 <div>
                   <p className="text-gray-600">Total Items</p>
@@ -154,7 +154,7 @@ export default function ApproveGoodsReceiptModal({
               <select
                 value={locationId}
                 onChange={(e) => setLocationId(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
                 required
                 disabled={loadingBranches}
               >
@@ -228,7 +228,7 @@ export default function ApproveGoodsReceiptModal({
                 onChange={(e) => setQualityCheckNotes(e.target.value)}
                 rows={3}
                 placeholder="Enter any quality check notes or observations..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
