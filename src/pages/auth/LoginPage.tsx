@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Eye, EyeOff, CircleCheckBig } from 'lucide-react';
 import toast from 'react-hot-toast';
-import bgImage from '../../assets/images/lanka-tech-solutions-bg.png';
+import bgImage from '../../../public/young-male-technician-using-laptop-workshop_1767885279798_0.webp';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
