@@ -52,7 +52,7 @@ const BillModal: React.FC<BillModalProps> = ({ isOpen, onClose, orderData, respo
     <div className="fixed inset-0 z-50 overflow-y-auto">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity no-print"
+        className="fixed inset-0 bg-gradient-to-br from-orange-400/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity no-print"
         onClick={onClose}
       ></div>
 
@@ -188,7 +188,7 @@ const BillModal: React.FC<BillModalProps> = ({ isOpen, onClose, orderData, respo
               <div className="flex items-center gap-4">
                 <button
                   onClick={handlePrintInvoice}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-colors shadow-sm hover:shadow-md"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-colors shadow-sm hover:shadow-md"
                 >
                   <Printer className="w-5 h-5" />
                   Print Invoice

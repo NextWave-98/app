@@ -136,7 +136,7 @@ export default function AddonRequestsPage() {
         <button
           onClick={() => { loadRequests(); loadStats(); }}
           disabled={loading}
-          className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
+          className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
         >
           <RefreshCw className={`w-4 h-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
           Refresh
@@ -206,7 +206,7 @@ export default function AddonRequestsPage() {
           <select
             value={filters.status || ''}
             onChange={(e) => setFilters({ ...filters, status: (e.target.value || undefined) as AddonRequestStatus | undefined })}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
           >
             <option value="">All Status</option>
             <option value="PENDING">Pending</option>

@@ -33,7 +33,7 @@ export default function Pagination({
         <select
           value={itemsPerPage}
           onChange={(e) => onItemsPerPageChange(Number(e.target.value))}
-          className="border border-gray-300 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500 cursor-pointer"
+          className="border border-gray-300 rounded-md px-3 py-1.5 text-sm focus:outline-none focus:ring-1 focus:ring-orange-400 focus:border-orange-400 cursor-pointer"
         >
           {itemsPerPageOptions.map((opt) => (
             <option key={opt} value={opt}>{opt}</option>

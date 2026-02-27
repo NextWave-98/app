@@ -120,7 +120,7 @@ export default function AssignTechnicianModal({ isOpen, onClose, claim, onSucces
               </label>
               <select
                 {...formik.getFieldProps('technicianId')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.technicianId && formik.errors.technicianId ? 'border-red-500' : 'border-gray-300'
                 }`}
               >

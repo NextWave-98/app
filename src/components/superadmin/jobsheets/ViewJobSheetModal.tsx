@@ -103,7 +103,7 @@ export default function ViewJobSheetModal({
 
   const formatCurrency = (amount: number) => {
     const numAmount = Number(amount) || 0;
-    return `USD ${numAmount.toFixed(2)}`;
+    return `LKR ${numAmount.toFixed(2)}`;
   };
 
   const formatDate = (dateString: string) => {

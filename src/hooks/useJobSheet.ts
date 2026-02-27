@@ -91,7 +91,7 @@ export interface UpdateJobSheetData {
   deliveredDate?: string;
 }
 
-export interface UpdateJobStatusData {
+export interface UpdateJobStatLKRata {
   status: 'PENDING' | 'IN_PROGRESS' | 'WAITING_PARTS' | 'QUALITY_CHECK' | 'COMPLETED' | 'READY_DELIVERY' | 'DELIVERED' | 'CANCELLED' | 'ON_HOLD';
   remarks?: string;
 }
@@ -231,7 +231,7 @@ const useJobSheet = () => {
 
   // Update job status
   const updateJobStatus = useCallback(
-    async (id: string, data: UpdateJobStatusData) => {
+    async (id: string, data: UpdateJobStatLKRata) => {
       return updateJobStatusFetch.fetchData({
         endpoint: `/jobsheets/${id}/status`,
         method: 'PATCH',

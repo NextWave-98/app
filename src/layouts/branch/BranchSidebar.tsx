@@ -11,7 +11,8 @@ import {
   PanelRightOpen,
   Shield,
   RotateCcw,
-  PackagePlus
+  PackagePlus,
+  CreditCard
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -29,6 +30,7 @@ const BranchSidebar = () => {
     { name: 'Job Sheets', path: `/${branchCode}/system/jobsheets`, icon: FileText },
     { name: 'Returns', path: `/${branchCode}/system/returns`, icon: RotateCcw },
     { name: 'Warranty', path: `/${branchCode}/system/warranty`, icon: Shield },
+    { name: 'Installments', path: `/${branchCode}/system/installments`, icon: CreditCard },
     // { name: 'Settings', path: `/${branchCode}/system/settings`, icon: Settings },
   ];
 

@@ -21,7 +21,7 @@ export default function RecentSalesCard({ sales = [], maxItems = 5 }: RecentSale
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'LKR',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);

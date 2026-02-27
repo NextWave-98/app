@@ -12,7 +12,7 @@ export default function SupplierStatsCards({ stats }: SupplierStatsCardsProps) {
       value: stats.totalSuppliers,
       subtitle: `${stats.activeSuppliers} active`,
       icon: Users,
-      color: 'bg-orange-500',
+      color: 'bg-orange-400',
       textColor: 'text-orange-600',
       bgLight: 'bg-orange-50',
     },
@@ -27,7 +27,7 @@ export default function SupplierStatsCards({ stats }: SupplierStatsCardsProps) {
     },
     {
       title: 'Total Purchase Value',
-      value: `USD ${(stats.totalPurchaseValue/1000000 ).toFixed(2)} M`,
+      value: `LKR ${(stats.totalPurchaseValue/1000000 ).toFixed(2)} M`,
       subtitle: 'All time',
       icon: DollarSign,
       color: 'bg-green-500',
@@ -36,7 +36,7 @@ export default function SupplierStatsCards({ stats }: SupplierStatsCardsProps) {
     },
     {
       title: 'Outstanding Payments',
-      value: `USD ${(stats.outstandingPayments/1000000 ).toFixed(2)} M`,
+      value: `LKR ${(stats.outstandingPayments/1000000 ).toFixed(2)} M`,
       subtitle: 'Pending',
       icon: AlertCircle,
       color: 'bg-red-500',

@@ -307,7 +307,7 @@ export default function JobSheetsPage() {
       if (response?.data) {
         const apiData = response.data as any;
         const summary = apiData.summary || {};
-        const statusDist = apiData.statusDistribution || [];
+        const statLKRist = apiData.statLKRistribution || [];
         const priorityDist = apiData.priorityDistribution || [];
 
         setStats(prevStats => ({
@@ -325,13 +325,13 @@ export default function JobSheetsPage() {
           totalBalance: summary.totalDueBalance || 0,
 
           // Status distribution
-          pending: statusDist.find((s: any) => s.status === 'PENDING')?.count || 0,
-          inProgress: statusDist.find((s: any) => s.status === 'IN_PROGRESS')?.count || 0,
-          completed: statusDist.find((s: any) => s.status === 'COMPLETED')?.count || 0,
-          cancelled: statusDist.find((s: any) => s.status === 'CANCELLED')?.count || 0,
-          waitingForParts: statusDist.find((s: any) => s.status === 'WAITING_PARTS')?.count || 0,
-          readyForPickup: statusDist.find((s: any) => s.status === 'READY_DELIVERY')?.count || 0,
-          onHold: statusDist.find((s: any) => s.status === 'ON_HOLD')?.count || 0,
+          pending: statLKRist.find((s: any) => s.status === 'PENDING')?.count || 0,
+          inProgress: statLKRist.find((s: any) => s.status === 'IN_PROGRESS')?.count || 0,
+          completed: statLKRist.find((s: any) => s.status === 'COMPLETED')?.count || 0,
+          cancelled: statLKRist.find((s: any) => s.status === 'CANCELLED')?.count || 0,
+          waitingForParts: statLKRist.find((s: any) => s.status === 'WAITING_PARTS')?.count || 0,
+          readyForPickup: statLKRist.find((s: any) => s.status === 'READY_DELIVERY')?.count || 0,
+          onHold: statLKRist.find((s: any) => s.status === 'ON_HOLD')?.count || 0,
 
           // Priority distribution
           priorityBreakdown: {
@@ -583,7 +583,7 @@ export default function JobSheetsPage() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => setShowAddJobSheet(true)}
-            className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
           >
             <Plus className="w-4 h-4 mr-2" />
             New Job Sheet
@@ -591,7 +591,7 @@ export default function JobSheetsPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh

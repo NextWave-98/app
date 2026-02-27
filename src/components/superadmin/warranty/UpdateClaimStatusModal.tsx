@@ -90,7 +90,7 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
               </label>
               <select
                 {...formik.getFieldProps('status')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.status && formik.errors.status ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -115,7 +115,7 @@ export default function UpdateClaimStatusModal({ isOpen, onClose, claim, onSucce
               <textarea
                 {...formik.getFieldProps('notes')}
                 rows={4}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                 placeholder="Add notes about this status change (e.g., reason for rejection, next steps, etc.)"
               />
             </div>

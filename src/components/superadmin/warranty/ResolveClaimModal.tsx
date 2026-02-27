@@ -170,7 +170,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Estimated Cost (Read-only) */}
                 {claim.estimatedCost !== null && claim.estimatedCost !== undefined && (
                   <div>
-                    <p className="text-xs text-gray-500 mb-1">Estimated Cost (USD)</p>
+                    <p className="text-xs text-gray-500 mb-1">Estimated Cost (LKR)</p>
                     <p className="text-sm font-medium text-gray-900 bg-gray-50 px-3 py-2 rounded border border-gray-200">
                       {claim.estimatedCost.toLocaleString()}
                     </p>
@@ -180,7 +180,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Actual Cost */}
                 <div>
                   <label className="block text-xs text-gray-500 mb-1">
-                    Actual Cost (USD)
+                    Actual Cost (LKR)
                   </label>
                   <input
                     type="number"
@@ -199,7 +199,7 @@ export default function ResolveClaimModal({ isOpen, onClose, claim, onSuccess }:
                 {/* Customer Charge */}
                 <div>
                   <label className="block text-xs text-gray-500 mb-1">
-                    Customer Charge (USD)
+                    Customer Charge (LKR)
                   </label>
                   <input
                     type="number"

@@ -455,14 +455,14 @@ export default function PaymentsPage() {
             placeholder="Search payments..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
           />
 
           {/* Payment Type Filter */}
           <select
             value={selectedPaymentType}
             onChange={(e) => setSelectedPaymentType(e.target.value as '' | 'INCOMING' | 'OUTGOING')}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
           >
             <option value="">All Payment Types</option>
             <option value="INCOMING">Incoming (Revenue)</option>
@@ -473,7 +473,7 @@ export default function PaymentsPage() {
           <select
             value={selectedMethod}
             onChange={(e) => setSelectedMethod(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
           >
             <option value="">All Methods</option>
             <option value="CASH">Cash</option>
@@ -488,7 +488,7 @@ export default function PaymentsPage() {
           <select
             value={dateFilter}
             onChange={(e) => setDateFilter(e.target.value as DateFilter)}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
           >
             <option value="today">Today</option>
             <option value="yesterday">Yesterday</option>
@@ -506,14 +506,14 @@ export default function PaymentsPage() {
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
               placeholder="Start Date"
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
             <input
               type="date"
               value={endDate}
               onChange={(e) => setEndDate(e.target.value)}
               placeholder="End Date"
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
         )}

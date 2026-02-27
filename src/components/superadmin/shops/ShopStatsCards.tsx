@@ -11,7 +11,7 @@ export default function ShopStatsCards({ stats }: ShopStatsCardsProps) {
       title: 'Total Shops',
       value: stats.totalShops,
       icon: Store,
-      color: 'bg-orange-500',
+      color: 'bg-orange-400',
       textColor: 'text-orange-600',
       bgLight: 'bg-orange-50',
     },

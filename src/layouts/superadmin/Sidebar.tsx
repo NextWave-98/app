@@ -81,7 +81,7 @@ const menuItems: MenuItem[] = [
         label: 'Product Management',
         path: '/superadmin/stock/management',
         icon: Package,
-       
+
       },
       {
         id: 'stock-dashboard',
@@ -114,7 +114,7 @@ const menuItems: MenuItem[] = [
     label: 'Job Sheets',
     path: '/superadmin/job-sheets/monitor',
     icon: FileText,
-   
+
   },
   {
     id: 'payments',
@@ -157,9 +157,16 @@ const menuItems: MenuItem[] = [
 interface SidebarProps {
   isCollapsed?: boolean;
   onToggleCollapse?: (collapsed: boolean) => void;
+  isMobileOpen?: boolean;
+  onMobileClose?: () => void;
 }
 
-export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleCollapse }: SidebarProps = {}) {
+export default function Sidebar({
+  isCollapsed: externalIsCollapsed,
+  onToggleCollapse,
+  isMobileOpen = false,
+  onMobileClose
+}: SidebarProps = {}) {
   const [internalIsCollapsed, setInternalIsCollapsed] = useState(false);
   const location = useLocation();
 
@@ -192,6 +199,11 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
       }
     });
     setExpandedMenus(init);
+
+    // Auto-close mobile sidebar on route change
+    if (isMobileOpen && onMobileClose) {
+      onMobileClose();
+    }
   }, [location.pathname]);
 
   const toggleExpand = (id: string) => {
@@ -200,8 +212,10 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
 
   return (
     <div
-      className={`bg-gray-100 transition-all duration-300 ease-in-out ${isCollapsed ? 'w-16' : 'w-64'
-        } h-screen flex flex-col fixed left-0 top-0 z-50 shadow-xl border-r border-gray-200`}
+      className={`bg-gray-100 transition-all duration-300 ease-in-out fixed left-0 top-0 h-screen z-50 shadow-xl border-r border-gray-200 flex flex-col
+        ${isMobileOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+        ${isCollapsed ? 'lg:w-16 w-64' : 'w-64'}
+      `}
     >
       {/* Header */}
       <div className="p-4">
@@ -217,15 +231,25 @@ export default function Sidebar({ isCollapsed: externalIsCollapsed, onToggleColl
               </div>
             </div>
           )}
+
+          {/* Desktop Toggle Button */}
           <button
             onClick={handleToggle}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-gray-700 cursor-pointer"
+            className="hidden lg:block p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 text-gray-700 cursor-pointer"
           >
             {isCollapsed ? (
               <PanelRightClose className="w-5 h-5" />
             ) : (
               <PanelRightOpen className="w-5 h-5" />
             )}
+          </button>
+
+          {/* Mobile Close Button */}
+          <button
+            onClick={onMobileClose}
+            className="lg:hidden p-2 hover:bg-gray-200 rounded-lg transition-colors text-gray-700"
+          >
+            <PanelRightClose className="w-6 h-6" />
           </button>
         </div>
       </div>

@@ -259,7 +259,7 @@ const NotificationSettingsPage: React.FC = () => {
                         type="checkbox"
                         checked={isEnabled}
                         onChange={(e) => handleSettingChange(config.type, 'enabled', e.target.checked)}
-                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                       />
                     </td>
                     <td className="px-6 py-4 text-center">
@@ -295,7 +295,7 @@ const NotificationSettingsPage: React.FC = () => {
                         checked={getSettingValue(config.type, 'smsEnabled') as boolean}
                         onChange={(e) => handleSettingChange(config.type, 'smsEnabled', e.target.checked)}
                         disabled={!isEnabled}
-                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded disabled:opacity-50"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded disabled:opacity-50"
                       />
                     </td>
                     <td className="px-6 py-4 text-center">
@@ -335,7 +335,7 @@ const NotificationSettingsPage: React.FC = () => {
                         checked={getSettingValue(config.type, 'autoSend') as boolean}
                         onChange={(e) => handleSettingChange(config.type, 'autoSend', e.target.checked)}
                         disabled={!isEnabled}
-                        className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded disabled:opacity-50"
+                        className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded disabled:opacity-50"
                       />
                     </td>
                   </tr>

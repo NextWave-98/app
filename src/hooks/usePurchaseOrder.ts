@@ -107,7 +107,7 @@ interface UpdatePurchaseOrderData extends Partial<Omit<CreatePurchaseOrderData, 
   id: string;
 }
 
-interface UpdateStatusData {
+interface UpdateStatLKRata {
   status: 'DRAFT' | 'SUBMITTED' | 'CONFIRMED' | 'PARTIALLY_RECEIVED' | 'RECEIVED' | 'COMPLETED' | 'CANCELLED' | 'ON_HOLD';
   notes?: string;
 }
@@ -216,11 +216,11 @@ export const usePurchaseOrder = () => {
   }, [fetchData]);
 
   // Update purchase order status
-  const updatePurchaseOrderStatus = useCallback(async (id: string, statusData: UpdateStatusData) => {
+  const updatePurchaseOrderStatus = useCallback(async (id: string, statLKRata: UpdateStatLKRata) => {
     return await fetchData({
       endpoint: `/purchaseorders/${id}/status`,
       method: 'PATCH',
-      data: statusData,
+      data: statLKRata,
       successMessage: 'Purchase order status updated successfully',
     });
   }, [fetchData]);

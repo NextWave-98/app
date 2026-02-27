@@ -38,6 +38,11 @@ import BranchJobSheetsPage from '../pages/branch/JobSheetsPage';
 import BranchReturnsPage from '../pages/branch/ReturnsPage';
 import BranchWarrantyPage from '../pages/branch/BranchWarrantyPage';
 import ProfilePage from '../pages/superadmin/ProfilePage';
+import InstallmentsPage from '../pages/branch/InstallmentsPage';
+import CreateInstallmentPlanPage from '../pages/branch/CreateInstallmentPlanPage';
+import InstallmentDetailPage from '../pages/branch/InstallmentDetailPage';
+import EditCustomerFinancialDetailsPage from '../pages/branch/EditCustomerFinancialDetailsPage';
+import AddCustomerFinancialDetailsPage from '../pages/branch/AddCustomerFinancialDetailsPage';
 
 
 
@@ -104,9 +109,14 @@ const AppRouter = () => (
         <Route path="addon-requests" element={<BranchAddonRequestsPage />} />
         <Route path="sales" element={<BranchSalesPage />} />
         <Route path="customers" element={<BranchCustomersPage />} />
+        <Route path="customers/:customerId/financial-details/edit" element={<EditCustomerFinancialDetailsPage />} />
+        <Route path="customers/:customerId/financial-details/add" element={<AddCustomerFinancialDetailsPage />} />
         <Route path="jobsheets" element={<BranchJobSheetsPage />} />
         <Route path="returns" element={<BranchReturnsPage />} />
         <Route path="warranty" element={<BranchWarrantyPage />} />
+        <Route path="installments" element={<InstallmentsPage />} />
+        <Route path="installments/create" element={<CreateInstallmentPlanPage />} />
+        <Route path="installments/:id" element={<InstallmentDetailPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="settings" element={<div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200"><h2 className="text-2xl font-bold text-gray-900">Settings - Coming Soon</h2></div>} />
       </Route>

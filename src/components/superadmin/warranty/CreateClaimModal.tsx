@@ -146,7 +146,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               </label>
               <select
                 {...formik.getFieldProps('issueType')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.issueType && formik.errors.issueType ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -174,7 +174,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               <textarea
                 {...formik.getFieldProps('issueDescription')}
                 rows={4}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.issueDescription && formik.errors.issueDescription ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="Describe the issue in detail (symptoms, when it started, frequency, etc.)"
@@ -191,7 +191,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               </label>
               <select
                 {...formik.getFieldProps('priority')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.priority && formik.errors.priority ? 'border-red-500' : 'border-gray-300'
                 }`}
               >
@@ -208,12 +208,12 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
             {/* Estimated Cost */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Estimated Repair Cost (USD) (Optional)
+                Estimated Repair Cost (LKR) (Optional)
               </label>
               <input
                 type="number"
                 {...formik.getFieldProps('estimatedCost')}
-                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent ${
+                className={`w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent ${
                   formik.touched.estimatedCost && formik.errors.estimatedCost ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="5000"
@@ -232,7 +232,7 @@ export default function CreateClaimModal({ isOpen, onClose, warranty, onSuccess 
               <textarea
                 {...formik.getFieldProps('notes')}
                 rows={3}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                 placeholder="Any additional information that might be helpful..."
               />
             </div>

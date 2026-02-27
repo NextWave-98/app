@@ -22,15 +22,15 @@ export default function SalesOverview({ summary, growth }: SalesOverviewProps) {
   if (!summary) return null;
 
   const formatCurrency = (amount: number) => {
-    if(amount === null || amount === undefined) {return 'USD 0';}
+    if(amount === null || amount === undefined) {return 'LKR 0';}
     else if (amount >1000000){
-      return `USD ${(amount / 1000000).toFixed(1)}M`;
+      return `LKR ${(amount / 1000000).toFixed(1)}M`;
     }else if (amount >1000){
-      return `USD ${(amount / 1000).toFixed(1)}K`;}
+      return `LKR ${(amount / 1000).toFixed(1)}K`;}
     else{
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'LKR',
       minimumFractionDigits: 0,
     }).format(amount);
   }
@@ -42,7 +42,7 @@ export default function SalesOverview({ summary, growth }: SalesOverviewProps) {
         title="Total Sales"
         value={summary.totalSales.toLocaleString()}
         icon={ShoppingCart}
-        iconColor="bg-orange-500"
+        iconColor="bg-orange-400"
         trend={growth?.salesGrowth}
       />
       <QuickStatsCard
@@ -63,7 +63,7 @@ export default function SalesOverview({ summary, growth }: SalesOverviewProps) {
         title="Profit Margin"
         value={`${summary.profitMargin.toFixed(1)}%`}
         icon={Percent}
-        iconColor="bg-orange-500"
+        iconColor="bg-orange-400"
         trend={growth?.profitGrowth}
       />
     </div>

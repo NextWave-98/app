@@ -172,19 +172,19 @@ export default function ViewClaimModal({ isOpen, onClose, claim }: ViewClaimModa
               {claim.estimatedCost !== null && claim.estimatedCost !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Estimated Cost</p>
-                  <p className="text-sm font-medium text-gray-900">USD {claim.estimatedCost.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">LKR {claim.estimatedCost.toLocaleString()}</p>
                 </div>
               )}
               {claim.actualCost !== null && claim.actualCost !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Actual Cost</p>
-                  <p className="text-sm font-medium text-gray-900">USD {claim.actualCost.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">LKR {claim.actualCost.toLocaleString()}</p>
                 </div>
               )}
               {claim.customerCharge !== null && claim.customerCharge !== undefined && (
                 <div>
                   <p className="text-xs text-gray-500">Customer Charge</p>
-                  <p className="text-sm font-medium text-gray-900">USD {claim.customerCharge.toLocaleString()}</p>
+                  <p className="text-sm font-medium text-gray-900">LKR {claim.customerCharge.toLocaleString()}</p>
                 </div>
               )}
             </div>

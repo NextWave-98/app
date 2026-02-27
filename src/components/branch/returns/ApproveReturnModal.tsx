@@ -49,7 +49,7 @@ export default function ApproveReturnModal({
   if (!isOpen || !returnItem) return null;
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US')}`;
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const resolutionOptions = [
@@ -142,7 +142,7 @@ export default function ApproveReturnModal({
                         value={option.value}
                         checked={formData.resolutionType === option.value}
                         onChange={(e) => setFormData(prev => ({ ...prev, resolutionType: e.target.value as ApproveReturnData['resolutionType'] }))}
-                        className="mt-1 text-orange-600 focus:ring-orange-500"
+                        className="mt-1 text-orange-600 focus:ring-orange-400"
                       />
                       <div className="ml-3">
                         <div className="text-sm font-medium text-gray-900">{option.label}</div>
@@ -162,7 +162,7 @@ export default function ApproveReturnModal({
                   value={formData.notes || ''}
                   onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
                   placeholder="Add any additional notes about the approval decision..."
                 />
               </div>

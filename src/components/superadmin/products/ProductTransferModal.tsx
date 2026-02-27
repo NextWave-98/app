@@ -231,7 +231,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       name="fromLocationId"
                       value={formData.fromLocationId}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                       required
                     >
                       <option value="">Select source branch</option>
@@ -261,7 +261,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       name="toLocationId"
                       value={formData.toLocationId}
                       onChange={handleChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                       required
                     >
                       <option value="">Select destination branch</option>
@@ -292,7 +292,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="Search by product code, name, or category..."
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                     />
                   </div>
 
@@ -365,7 +365,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                                   onChange={(e) =>
                                     handleQuantityChange(product.productId, parseInt(e.target.value) || 1)
                                   }
-                                  className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                                  className="w-24 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                                 />
                               </td>
                               <td className="px-4 py-3 text-center">
@@ -394,7 +394,7 @@ export default function ProductTransferModal({ isOpen, onClose, onSuccess, wareh
                     onChange={handleChange}
                     rows={3}
                     placeholder="Add any notes about this transfer..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   />
                 </div>
 

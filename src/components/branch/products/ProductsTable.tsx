@@ -26,7 +26,7 @@ export default function ProductsTable({
   onLimitChange
 }: ProductsTableProps) {
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US')}`;
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const getStatusColor = (status: string) => {
@@ -105,7 +105,7 @@ export default function ProductsTable({
                     }
                   }}
                   onChange={handleSelectAll}
-                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400 focus:ring-2 cursor-pointer"
                 />
               </th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-700 uppercase">
@@ -140,7 +140,7 @@ export default function ProductsTable({
                     checked={selectedProducts.includes(item.id)}
                     onChange={() => handleSelectProduct(item.id)}
                     onClick={(e) => e.stopPropagation()}
-                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 focus:ring-2 cursor-pointer"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400 focus:ring-2 cursor-pointer"
                   />
                 </td>
                 <td className="px-4 py-3">

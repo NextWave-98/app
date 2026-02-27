@@ -130,7 +130,7 @@ handleClose();
                   <div>
                     <p className="text-gray-600">Unit Price</p>
                     <p className="font-medium text-gray-900">
-                      USD {item.product?.unitPrice?.toLocaleString() || 0}
+                      LKR {item.product?.unitPrice?.toLocaleString() || 0}
                     </p>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ handleClose();
               <div className="flex items-center justify-between gap-4 p-4 bg-gray-50 rounded-lg">
                 <div className="flex-1 text-center">
                   <p className="text-sm text-gray-600 mb-1">From</p>
-                  <div className="bg-white rounded-lg p-3 border-2 border-orange-500">
+                  <div className="bg-white rounded-lg p-3 border-2 border-orange-400">
                     <p className="font-semibold text-gray-900">{item.branch?.name}</p>
                     <p className="text-sm text-gray-600">{item.branch?.code}</p>
                     <p className="text-xs text-orange-600 mt-1">{item.quantity} units available</p>
@@ -231,7 +231,7 @@ handleClose();
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-600">Transfer Value</span>
                     <span className="text-lg font-bold text-orange-600">
-                      USD {(quantity * item.product.unitPrice).toLocaleString()}
+                      LKR {(quantity * item.product.unitPrice).toLocaleString()}
                     </span>
                   </div>
                 </div>

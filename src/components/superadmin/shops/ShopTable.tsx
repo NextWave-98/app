@@ -119,7 +119,7 @@ export default function ShopTable({ shops, onEdit, onDelete, onView, pagination,
                     type="checkbox"
                     checked={selectedShops.length === paginatedShops.length && paginatedShops.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -160,7 +160,7 @@ export default function ShopTable({ shops, onEdit, onDelete, onView, pagination,
                           type="checkbox"
                           checked={isSelected(shop)}
                           onChange={() => handleSelectShop(shop)}
-                          className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                          className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                         />
                       </td>
                     )}

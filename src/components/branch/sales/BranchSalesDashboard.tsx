@@ -177,15 +177,15 @@ export default function BranchSalesDashboard() {
   };
 
   const formatCurrency = (amount: number) => {
-    if(amount === null || amount === undefined) {return 'USD 0';}
+    if(amount === null || amount === undefined) {return 'LKR 0';}
     else if (amount >1000000){
-      return `USD ${(amount / 1000000).toFixed(1)}M`;
+      return `LKR ${(amount / 1000000).toFixed(1)}M`;
     }else if (amount >1000){
-      return `USD ${(amount / 1000).toFixed(1)}K`;}
+      return `LKR ${(amount / 1000).toFixed(1)}K`;}
     else{
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'LKR',
       minimumFractionDigits: 0,
     }).format(amount);
   }
@@ -528,7 +528,7 @@ export default function BranchSalesDashboard() {
                   </div>
                 )}
               </div>
-              <div className="bg-orange-500 p-3 rounded-lg">
+              <div className="bg-orange-400 p-3 rounded-lg">
                 <ShoppingCart className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -624,7 +624,7 @@ export default function BranchSalesDashboard() {
                   {dashboardData?.topStaff?.[0]?.salesCount || 0} sales
                 </p>
               </div>
-              <div className="bg-orange-500 p-3 rounded-lg">
+              <div className="bg-orange-400 p-3 rounded-lg">
                 <Users className="w-6 h-6 text-white" />
               </div>
             </div>
@@ -727,7 +727,7 @@ export default function BranchSalesDashboard() {
                         type="checkbox"
                         checked={isAllSelected}
                         onChange={(e) => handleSelectAllSales(e.target.checked)}
-                        className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                        className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                       />
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -761,7 +761,7 @@ export default function BranchSalesDashboard() {
                           type="checkbox"
                           checked={selectedSales.has(sale.id)}
                           onChange={(e) => handleSelectSale(sale.id, e.target.checked)}
-                          className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                          className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                         />
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">

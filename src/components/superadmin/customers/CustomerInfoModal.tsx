@@ -11,7 +11,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
   if (!isOpen || !customer) return null;
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString()}`;
+    return `LKR ${amount.toLocaleString()}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -184,7 +184,7 @@ export default function CustomerInfoModal({ isOpen, onClose, customer }: Custome
                 color="yellow"
               />
               <StatCard
-                icon={<ShoppingBag className="w-6 h-6 text-orange-500" />}
+                icon={<ShoppingBag className="w-6 h-6 text-orange-400" />}
                 label="Total Purchases"
                 value={customer.totalPurchases.toString()}
                 color="blue"

@@ -163,14 +163,14 @@ export default function ViewStockModal({ isOpen, onClose, stockItem }: ViewStock
                 {data.part?.unitPrice !== undefined && (
                   <div>
                     <label className="text-sm text-gray-600">Unit Price</label>
-                    <p className="text-gray-900 font-medium">USD {data.part.unitPrice.toLocaleString()}</p>
+                    <p className="text-gray-900 font-medium">LKR {data.part.unitPrice.toLocaleString()}</p>
                   </div>
                 )}
                 {data.part?.unitPrice !== undefined && (
                   <div>
                     <label className="text-sm text-gray-600">Total Value</label>
                     <p className="text-gray-900 font-medium">
-                      USD {(data.part.unitPrice * data.quantity).toLocaleString()}
+                      LKR {(data.part.unitPrice * data.quantity).toLocaleString()}
                     </p>
                   </div>
                 )}
@@ -195,7 +195,7 @@ export default function ViewStockModal({ isOpen, onClose, stockItem }: ViewStock
                       className={`h-full ${
                         data.quantity === 0 ? 'bg-red-500' :
                         data.quantity <= data.reorderLevel ? 'bg-yellow-500' :
-                        data.quantity >= data.maxStockLevel ? 'bg-orange-500' :
+                        data.quantity >= data.maxStockLevel ? 'bg-orange-400' :
                         'bg-green-500'
                       }`}
                       style={{

@@ -8,14 +8,14 @@ import useNotification, { type Notification as NotificationItem } from '../../ho
 interface TopNavbarProps {
   title: string;
   isSidebarCollapsed?: boolean;
+  onMobileMenuClick?: () => void;
 }
 
-export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavbarProps) {
+export default function TopNavbar({ title, isSidebarCollapsed = false, onMobileMenuClick }: TopNavbarProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { logout, user } = useAuth();
   const { getMyNotifications } = useNotification();
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
@@ -33,7 +33,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const notificationData = (response as any)?.data ? (response as any).data : (Array.isArray(response) ? response : []);
           // Filter to show only unread (PENDING or SENT status)
-          const unreadNotifications = notificationData.filter((n: NotificationItem) => 
+          const unreadNotifications = notificationData.filter((n: NotificationItem) =>
             n.status === 'PENDING' || n.status === 'SENT'
           );
           setNotifications(unreadNotifications);
@@ -51,22 +51,17 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
   const unreadNotifications = notifications.filter(n => n.status === 'PENDING' || n.status === 'SENT').length;
 
   return (
-    <div className={`bg-white transition-all duration-300 ${
-      isSidebarCollapsed ? 'ml-16' : 'ml-64'
-    } fixed top-0 left-0 right-0 z-40 shadow-sm`}>
-      <div className="px-6 py-2">
+    <div className={`bg-white transition-all duration-300 ${isSidebarCollapsed ? 'lg:ml-16' : 'lg:ml-64'
+      } fixed top-0 right-0 left-0 z-30 shadow-sm`}>
+      <div className="px-4 lg:px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Left Section - Title and Mobile Menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3 lg:space-x-4">
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={onMobileMenuClick}
               className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
             >
-              {isMobileMenuOpen ? (
-                <X className="w-5 h-5 text-gray-600" />
-              ) : (
-                <Menu className="w-5 h-5 text-gray-600" />
-              )}
+              <Menu className="w-6 h-6 text-gray-600" />
             </button>
 
             <div>
@@ -102,7 +97,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                     autoFocus
                   />
                   <button
-                    onClick={() => {setIsSearchOpen(false); setSearchQuery('');}}
+                    onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }}
                     className="ml-2 p-2 text-gray-400 hover:text-gray-600 cursor-pointer"
                   >
                     <X className="w-5 h-5" />
@@ -163,12 +158,12 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                     ) : (
                       notifications.map((notification) => {
                         const notificationType = notification.type.includes('SALE') ? 'success' :
-                                               notification.type.includes('RETURN') ? 'warning' :
-                                               notification.type.includes('JOB') ? 'info' : 'info';
+                          notification.type.includes('RETURN') ? 'warning' :
+                            notification.type.includes('JOB') ? 'info' : 'info';
                         const timeAgo = new Date(notification.createdAt).toLocaleDateString() === new Date().toLocaleDateString()
                           ? new Date(notification.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                           : new Date(notification.createdAt).toLocaleDateString();
-                        
+
                         // Determine the route based on notification type
                         let route = '/superadmin/notifications/dashboard'; // default
                         if (notification.saleId) {
@@ -178,7 +173,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                         } else if (notification.jobSheetId) {
                           route = `/superadmin/jobsheets`;
                         }
-                        
+
                         return (
                           <Link
                             key={notification.id}
@@ -188,20 +183,18 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                           >
                             <div className="flex items-start space-x-3">
                               {/* Icon based on type */}
-                              <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${
-                                notificationType === 'warning'
-                                  ? 'bg-yellow-100'
-                                  : notificationType === 'info'
+                              <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${notificationType === 'warning'
+                                ? 'bg-yellow-100'
+                                : notificationType === 'info'
                                   ? 'bg-orange-100'
                                   : 'bg-green-100'
-                              }`}>
-                                <Bell className={`w-5 h-5 ${
-                                  notificationType === 'warning'
-                                    ? 'text-yellow-600'
-                                    : notificationType === 'info'
+                                }`}>
+                                <Bell className={`w-5 h-5 ${notificationType === 'warning'
+                                  ? 'text-yellow-600'
+                                  : notificationType === 'info'
                                     ? 'text-orange-600'
                                     : 'text-green-600'
-                                }`} />
+                                  }`} />
                               </div>
 
                               {/* Content */}
@@ -232,7 +225,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
 
                   {/* Footer */}
                   <div className="px-4 py-3 bg-gray-50 border-t border-gray-200">
-                    <Link 
+                    <Link
                       to="/superadmin/notifications/dashboard"
                       onClick={() => setIsNotificationOpen(false)}
                       className="block w-full text-center text-sm text-orange-600 hover:text-orange-700 font-medium"
@@ -257,9 +250,8 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                   <p className="text-sm font-medium text-black">{user?.name ?? 'Super Admin'}</p>
                   <p className="text-xs text-gray-500">{user?.email ?? 'admin@example.com'}</p>
                 </div>
-                <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${
-                  isProfileOpen ? 'rotate-180' : ''
-                }`} />
+                <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform ${isProfileOpen ? 'rotate-180' : ''
+                  }`} />
               </button>
 
               {/* Profile Dropdown Menu */}
@@ -278,7 +270,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                   </div>
 
                   <div className="py-2">
-                     <Link
+                    <Link
                       to={`/superadmin/profile`}
                       className="w-full px-4 py-2 text-left hover:bg-gray-50 text-sm text-gray-700 flex items-center space-x-3"
                       onClick={() => setIsProfileOpen(false)}
@@ -286,7 +278,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                       <User className="w-4 h-4" />
                       <span>Profile Settings</span>
                     </Link>
-                  
+
                     <Link
                       to={`/superadmin/notifications/settings`}
                       className="w-full px-4 py-2 text-left hover:bg-gray-50 text-sm text-gray-700 flex items-center space-x-3"
@@ -331,7 +323,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
                 autoFocus
               />
               <button
-                onClick={() => {setIsSearchOpen(false); setSearchQuery('');}}
+                onClick={() => { setIsSearchOpen(false); setSearchQuery(''); }}
                 className="ml-2 p-2 text-gray-400 hover:text-gray-600"
               >
                 <X className="w-4 h-4" />
@@ -341,10 +333,7 @@ export default function TopNavbar({ title, isSidebarCollapsed = false }: TopNavb
         )}
       </div>
 
-      {/* Mobile Menu Overlay (if needed for mobile sidebar toggle) */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30" onClick={() => setIsMobileMenuOpen(false)} />
-      )}
+
     </div>
   );
 }

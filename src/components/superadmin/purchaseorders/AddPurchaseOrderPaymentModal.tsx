@@ -100,7 +100,7 @@ export default function AddPurchaseOrderPaymentModal({
 
     if (formData.amount > dueNumeric) {
       const confirmOverpayment = window.confirm(
-        `Payment amount (USD ${formData.amount.toFixed(2)}) exceeds due amount (USD ${toNumber(dueNumeric).toFixed(2)}). Do you want to proceed?`
+        `Payment amount (LKR ${formData.amount.toFixed(2)}) exceeds due amount (LKR ${toNumber(dueNumeric).toFixed(2)}). Do you want to proceed?`
       );
       if (!confirmOverpayment) return;
     }
@@ -142,7 +142,7 @@ export default function AddPurchaseOrderPaymentModal({
 
   const formatCurrency = (amount?: number | null) => {
     const num = typeof amount === 'number' && !Number.isNaN(amount) ? amount : 0;
-    return `USD ${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    return `LKR ${num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   };
 
   if (!isOpen || !purchaseOrder) return null;
@@ -198,7 +198,7 @@ export default function AddPurchaseOrderPaymentModal({
           {/* Payment Amount */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Payment Amount (USD) <span className="text-red-500">*</span>
+              Payment Amount (LKR) <span className="text-red-500">*</span>
             </label>
             <input
               type="number"

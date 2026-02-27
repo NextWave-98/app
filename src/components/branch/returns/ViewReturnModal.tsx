@@ -17,7 +17,7 @@ export default function ViewReturnModal({
   if (!isOpen || !returnItem) return null;
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US')}`;
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const getStatusColor = (status: string) => {
@@ -202,7 +202,7 @@ export default function ViewReturnModal({
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
                   <div className="flex-1">
                     <p className="text-sm font-medium text-gray-900">Created</p>
                     <p className="text-sm text-gray-600">{formatDateTime(returnItem.createdAt)}</p>

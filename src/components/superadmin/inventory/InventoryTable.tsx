@@ -37,8 +37,8 @@ export default function InventoryTable({
   const [selectedRows, setSelectedRows] = useState<Set<string>>(new Set());
 
   const formatCurrency = (amount: number | undefined) => {
-    if (amount === undefined || amount === null) return 'USD 0';
-    return `USD ${amount.toLocaleString('en-US')}`;
+    if (amount === undefined || amount === null) return 'LKR 0';
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const formatDate = (dateString: string | undefined) => {
@@ -80,7 +80,7 @@ export default function InventoryTable({
   const getStockHealthColor = (quantity: number, minStock: number, maxStock: number) => {
     if (quantity === 0) return 'bg-red-500';
     if (quantity < minStock) return 'bg-yellow-500';
-    if (quantity > maxStock) return 'bg-orange-500';
+    if (quantity > maxStock) return 'bg-orange-400';
     return 'bg-green-500';
   };
 
@@ -176,7 +176,7 @@ export default function InventoryTable({
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -214,7 +214,7 @@ export default function InventoryTable({
                     type="checkbox"
                     checked={selectedRows.has(item.id)}
                     onChange={(e) => handleSelectRow(item.id, e.target.checked)}
-                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                   />
                 </td>
                 <td className="px-6 py-4">

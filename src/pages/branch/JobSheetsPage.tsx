@@ -126,7 +126,7 @@ export default function BranchJobSheetsPage() {
       if (response?.data) {
         const apiData = response.data as any;
         const summary = apiData.summary || {};
-        const statusDist = apiData.statusDistribution || [];
+        const statLKRist = apiData.statLKRistribution || [];
         const priorityDist = apiData.priorityDistribution || [];
 
         setStats(prevStats => ({
@@ -139,13 +139,13 @@ export default function BranchJobSheetsPage() {
           averageJobValue: summary.totalJobSheets > 0 ? summary.totalRevenue / summary.totalJobSheets : 0,
 
           // Status distribution
-          pending: statusDist.find((s: any) => s.status === 'PENDING')?.count || 0,
-          inProgress: statusDist.find((s: any) => s.status === 'IN_PROGRESS')?.count || 0,
-          completed: statusDist.find((s: any) => s.status === 'COMPLETED')?.count || 0,
-          cancelled: statusDist.find((s: any) => s.status === 'CANCELLED')?.count || 0,
-          waitingForParts: statusDist.find((s: any) => s.status === 'WAITING_PARTS')?.count || 0,
-          readyForPickup: statusDist.find((s: any) => s.status === 'READY_DELIVERY')?.count || 0,
-          onHold: statusDist.find((s: any) => s.status === 'ON_HOLD')?.count || 0,
+          pending: statLKRist.find((s: any) => s.status === 'PENDING')?.count || 0,
+          inProgress: statLKRist.find((s: any) => s.status === 'IN_PROGRESS')?.count || 0,
+          completed: statLKRist.find((s: any) => s.status === 'COMPLETED')?.count || 0,
+          cancelled: statLKRist.find((s: any) => s.status === 'CANCELLED')?.count || 0,
+          waitingForParts: statLKRist.find((s: any) => s.status === 'WAITING_PARTS')?.count || 0,
+          readyForPickup: statLKRist.find((s: any) => s.status === 'READY_DELIVERY')?.count || 0,
+          onHold: statLKRist.find((s: any) => s.status === 'ON_HOLD')?.count || 0,
         }));
       }
     } catch (err) {

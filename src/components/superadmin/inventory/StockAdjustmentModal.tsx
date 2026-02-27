@@ -141,7 +141,7 @@ export default function StockAdjustmentModal({
                         onClick={() => setMovementType(option.value as 'IN' | 'OUT' | 'ADJUSTMENT' | 'RETURN' | 'DAMAGED')}
                         className={`flex flex-col items-center p-4 rounded-lg border-2 transition-all ${
                           isSelected
-                            ? `border-orange-500 ${option.bg}`
+                            ? `border-orange-400 ${option.bg}`
                             : 'border-gray-200 hover:border-gray-300'
                         }`}
                       >
@@ -166,7 +166,7 @@ export default function StockAdjustmentModal({
                   min="1"
                   value={quantity || ''}
                   onChange={(e) => setQuantity(parseInt(e.target.value) || 0)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   placeholder="Enter quantity"
                   required
                 />
@@ -206,7 +206,7 @@ export default function StockAdjustmentModal({
                   rows={3}
                   value={notes}
                   onChange={(e) => setNotes(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent resize-none"
                   placeholder="Add notes about this adjustment..."
                 />
               </div>
@@ -218,14 +218,14 @@ export default function StockAdjustmentModal({
                 type="button"
                 onClick={handleClose}
                 disabled={loading}
-                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
+                className="px-6 py-2.5 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
               >
                 Cancel
               </button>
               <button
                 type="submit"
                 disabled={loading || quantity <= 0 || (movementType !== 'IN' && movementType !== 'RETURN' && quantity > currentStock)}
-                className="px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-6 py-2.5 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Processing...' : 'Adjust Stock'}
               </button>

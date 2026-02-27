@@ -97,7 +97,7 @@ export default function SupplierTable({ suppliers, onEdit, onDelete, onView, onA
   };
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US')}`;
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const renderRating = (rating: number) => {
@@ -140,7 +140,7 @@ export default function SupplierTable({ suppliers, onEdit, onDelete, onView, onA
                     type="checkbox"
                     checked={selectedSuppliers.length === suppliers.length && suppliers.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -176,7 +176,7 @@ export default function SupplierTable({ suppliers, onEdit, onDelete, onView, onA
                       type="checkbox"
                       checked={isSelected(supplier)}
                       onChange={() => handleSelectSupplier(supplier)}
-                      className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                     />
                   </td>
                 )}

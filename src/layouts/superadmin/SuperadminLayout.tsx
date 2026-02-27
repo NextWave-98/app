@@ -3,8 +3,10 @@ import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import TopNavbar from './TopNavbar';
 
+
 export default function SuperadminLayout() {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const location = useLocation();
 
   // Function to get page title based on current route
@@ -41,35 +43,40 @@ export default function SuperadminLayout() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       {/* Sidebar */}
       <Sidebar
         isCollapsed={isSidebarCollapsed}
         onToggleCollapse={setIsSidebarCollapsed}
+        isMobileOpen={isMobileSidebarOpen}
+        onMobileClose={() => setIsMobileSidebarOpen(false)}
       />
 
       {/* Main Content Area */}
-      <div className={`transition-all duration-300 ${
-        isSidebarCollapsed ? 'ml-16' : 'ml-64'
-      }`}>
+      <div className={`transition-all duration-300 w-full flex-1 flex flex-col ${isSidebarCollapsed ? 'lg:ml-16' : 'lg:ml-64'
+        }`}>
         {/* Top Navigation Bar */}
         <TopNavbar
           title={getPageTitle()}
           isSidebarCollapsed={isSidebarCollapsed}
+          onMobileMenuClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
         />
 
         {/* Page Content */}
-        <main className="pt-20 min-h-screen">
-          <div className="container-fluid">
+        <main className="pt-20 px-4 pb-8 min-h-screen overflow-x-hidden">
+          <div className="container mx-auto max-w-7xl">
             <Outlet />
           </div>
         </main>
       </div>
 
       {/* Mobile Sidebar Overlay */}
-      <div className="lg:hidden">
-        {/* This can be used for mobile sidebar overlay if needed */}
-      </div>
+      {isMobileSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={() => setIsMobileSidebarOpen(false)}
+        />
+      )}
     </div>
   );
 }

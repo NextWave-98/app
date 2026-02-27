@@ -56,7 +56,7 @@ export default function CustomerTable({
   };
 
   const formatCurrency = (amount: number) => {
-    return `USD ${(amount / 1000).toLocaleString()}K`;
+    return `LKR ${(amount / 1000).toLocaleString()}K`;
   };
 
   const isSelected = (customer: Customer) => {
@@ -98,7 +98,7 @@ export default function CustomerTable({
                     type="checkbox"
                     checked={selectedCustomers.length === customers.length && customers.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -126,6 +126,9 @@ export default function CustomerTable({
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Total Spent
               </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Actions
+              </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -137,7 +140,7 @@ export default function CustomerTable({
                       type="checkbox"
                       checked={isSelected(customer)}
                       onChange={() => handleSelectCustomer(customer)}
-                      className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                     />
                   </td>
                 )}
@@ -177,6 +180,31 @@ export default function CustomerTable({
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                   {formatCurrency(customer.totalSpent)}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <div className="flex items-center space-x-2">
+                    <button
+                      onClick={() => onView(customer)}
+                      className="text-blue-600 hover:text-blue-900 p-1 rounded"
+                      title="View"
+                    >
+                      <Eye className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => onEdit(customer)}
+                      className="text-green-600 hover:text-green-900 p-1 rounded"
+                      title="Edit"
+                    >
+                      <Edit className="w-4 h-4" />
+                    </button>
+                    <button
+                      onClick={() => onDelete(customer)}
+                      className="text-red-600 hover:text-red-900 p-1 rounded"
+                      title="Delete"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}

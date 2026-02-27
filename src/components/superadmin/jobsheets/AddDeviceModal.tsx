@@ -117,7 +117,7 @@ export default function AddDeviceModal({
               value={formData.deviceType}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
             >
               {DEVICE_TYPES.map((type) => (
                 <option key={type.value} value={type.value}>
@@ -140,7 +140,7 @@ export default function AddDeviceModal({
                 onChange={handleChange}
                 required
                 placeholder="e.g., Apple, Samsung, HP"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
 
@@ -155,7 +155,7 @@ export default function AddDeviceModal({
                 onChange={handleChange}
                 required
                 placeholder="e.g., iPhone 14 Pro, Galaxy S23"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function AddDeviceModal({
                 value={formData.serialNumber || ''}
                 onChange={handleChange}
                 placeholder="Device serial number"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
 
@@ -186,7 +186,7 @@ export default function AddDeviceModal({
                 value={formData.imei || ''}
                 onChange={handleChange}
                 placeholder="For mobile devices"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
           </div>
@@ -202,7 +202,7 @@ export default function AddDeviceModal({
                 name="purchaseDate"
                 value={formData.purchaseDate || ''}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
 
@@ -215,7 +215,7 @@ export default function AddDeviceModal({
                 name="warrantyExpiry"
                 value={formData.warrantyExpiry || ''}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function AddDeviceModal({
               onChange={handleChange}
               rows={3}
               placeholder="Any additional information about the device..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
             />
           </div>
 

@@ -1506,7 +1506,7 @@ export default function ReportsPage() {
           <select
             value={downloadFormat}
             onChange={(e) => setDownloadFormat(e.target.value as 'json' | 'pdf' | 'excel' | 'csv')}
-            className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            className="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
           >
             <option value="excel">Excel (.xlsx)</option>
             <option value="pdf">PDF (.pdf)</option>
@@ -1535,7 +1535,7 @@ export default function ReportsPage() {
                 key={report.type}
                 onClick={() => setSelectedReport(report.type)}
                 className={`p-4 rounded-lg border-2 transition-all ${selectedReport === report.type
-                  ? 'border-orange-500 bg-orange-50'
+                  ? 'border-orange-400 bg-orange-50'
                   : 'border-gray-200 hover:border-gray-300'
                   }`}
               >
@@ -1559,7 +1559,7 @@ export default function ReportsPage() {
               key={period.period}
               onClick={() => setSelectedPeriod(period.period)}
               className={`px-4 py-3 rounded-lg border-2 transition-all ${selectedPeriod === period.period
-                ? 'border-orange-500 bg-orange-50 text-orange-700'
+                ? 'border-orange-400 bg-orange-50 text-orange-700'
                 : 'border-gray-200 hover:border-gray-300'
                 }`}
             >

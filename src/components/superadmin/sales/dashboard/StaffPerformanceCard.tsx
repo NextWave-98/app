@@ -9,7 +9,7 @@ export default function StaffPerformanceCard({ staff }: StaffPerformanceCardProp
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'LKR',
       notation: 'compact',
       maximumFractionDigits: 1,
     }).format(amount);

@@ -122,7 +122,7 @@ export default function UpdatePOStatusModal({
                     disabled={option.value === purchaseOrder.status}
                     className={`text-left p-4 border-2 rounded-lg transition-all ${
                       selectedStatus === option.value
-                        ? 'border-orange-500 bg-orange-50'
+                        ? 'border-orange-400 bg-orange-50'
                         : option.value === purchaseOrder.status
                         ? 'border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed'
                         : 'border-gray-200 hover:border-orange-300 hover:bg-gray-50'
@@ -148,7 +148,7 @@ export default function UpdatePOStatusModal({
                 onChange={(e) => setNotes(e.target.value)}
                 rows={3}
                 placeholder="Add any notes about this status change..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
               />
             </div>
 

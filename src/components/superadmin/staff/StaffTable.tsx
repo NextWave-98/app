@@ -99,7 +99,7 @@ export default function StaffTable({
                     type="checkbox"
                     checked={selectedStaff.length === staff.length && staff.length > 0}
                     onChange={handleSelectAll}
-                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                   />
                 </th>
               )}
@@ -139,7 +139,7 @@ export default function StaffTable({
                       type="checkbox"
                       checked={isSelected(member)}
                       onChange={() => handleSelectStaff(member)}
-                      className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                     />
                   </td>
                 )}

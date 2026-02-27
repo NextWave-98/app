@@ -80,7 +80,7 @@ const ProfilePage = () => {
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center space-x-2 py-4 px-1 border-b-2 font-medium text-sm ${
                       activeTab === tab.id
-                        ? 'border-orange-500 text-orange-600'
+                        ? 'border-orange-400 text-orange-600'
                         : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                     }`}
                   >
@@ -211,7 +211,7 @@ const GeneralSettingsTab = ({
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your full name"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
 
@@ -225,7 +225,7 @@ const GeneralSettingsTab = ({
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email address"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
 
@@ -239,7 +239,7 @@ const GeneralSettingsTab = ({
               value={formData.phoneNumber}
               onChange={handleChange}
               placeholder="Enter primary phone number"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
 
@@ -251,7 +251,7 @@ const GeneralSettingsTab = ({
               value={formData.additionalPhone}
               onChange={handleChange}
               placeholder="Enter additional phone number"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
         </div>
@@ -270,7 +270,7 @@ const GeneralSettingsTab = ({
               value={formData.nicNumber}
               onChange={handleChange}
               placeholder="Enter NIC number (e.g., 123456789V)"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
 
@@ -281,7 +281,7 @@ const GeneralSettingsTab = ({
               name="dateOfBirth"
               value={formData.dateOfBirth}
               onChange={handleChange}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
 
@@ -293,7 +293,7 @@ const GeneralSettingsTab = ({
               onChange={handleChange}
               rows={3}
               placeholder="Enter your full address"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
         </div>
@@ -311,7 +311,7 @@ const GeneralSettingsTab = ({
               value={formData.emergencyName}
               onChange={handleChange}
               placeholder="Enter emergency contact name"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
           <div>
@@ -322,7 +322,7 @@ const GeneralSettingsTab = ({
               value={formData.emergencyContact}
               onChange={handleChange}
               placeholder="Enter emergency contact number"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
           <div>
@@ -333,7 +333,7 @@ const GeneralSettingsTab = ({
               value={formData.emergencyRelation}
               onChange={handleChange}
               placeholder="Enter relationship (e.g., Parent, Spouse)"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
         </div>
@@ -351,7 +351,7 @@ const GeneralSettingsTab = ({
               onChange={handleChange}
               rows={3}
               placeholder="Enter your educational qualifications"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
           <div>
@@ -362,7 +362,7 @@ const GeneralSettingsTab = ({
               onChange={handleChange}
               rows={3}
               placeholder="Enter your work experience"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
             />
           </div>
         </div>
@@ -374,7 +374,7 @@ const GeneralSettingsTab = ({
             onChange={handleChange}
             rows={3}
             placeholder="Enter any additional notes"
-            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+            className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
           />
         </div>
       </div>
@@ -383,7 +383,7 @@ const GeneralSettingsTab = ({
         <button
           type="submit"
           disabled={updatingProfile}
-          className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {updatingProfile ? 'Saving...' : 'Save Changes'}
         </button>
@@ -456,7 +456,7 @@ const SecurityTab = ({
           value={formData.currentPassword}
           onChange={handleChange}
           placeholder="Enter your current password"
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
           required
         />
       </div>
@@ -469,7 +469,7 @@ const SecurityTab = ({
           value={formData.newPassword}
           onChange={handleChange}
           placeholder="Enter your new password"
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
           required
         />
         {formData.newPassword && (
@@ -498,7 +498,7 @@ const SecurityTab = ({
           value={formData.confirmPassword}
           onChange={handleChange}
           placeholder="Confirm your new password"
-          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
           required
         />
       </div>
@@ -507,7 +507,7 @@ const SecurityTab = ({
         <button
           type="submit"
           disabled={changingPassword}
-          className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {changingPassword ? 'Changing...' : 'Change Password'}
         </button>
@@ -619,7 +619,7 @@ const BusinessProfileTab = ({
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter business name"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
               required
             />
           </div>
@@ -632,7 +632,7 @@ const BusinessProfileTab = ({
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter business email"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
               required
             />
           </div>
@@ -645,7 +645,7 @@ const BusinessProfileTab = ({
               value={formData.telephone}
               onChange={handleChange}
               placeholder="Enter telephone number"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
               required
             />
           </div>
@@ -658,7 +658,7 @@ const BusinessProfileTab = ({
               onChange={handleChange}
               rows={3}
               placeholder="Enter business address"
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-500 focus:border-orange-500"
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-orange-400 focus:border-orange-400"
               required
             />
           </div>
@@ -707,7 +707,7 @@ const BusinessProfileTab = ({
           <button
             type="submit"
             disabled={updatingBusiness}
-            className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {updatingBusiness ? 'Saving...' : 'Save Changes'}
           </button>
@@ -747,7 +747,7 @@ const DataChangeTab = ({
           <button
             onClick={handleExportData}
             disabled={exportingData}
-            className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {exportingData ? 'Exporting...' : 'Export Data'}
           </button>

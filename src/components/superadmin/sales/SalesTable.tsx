@@ -26,7 +26,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
   console.log('SalesTable received sales:', sales);
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US')}`;
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -138,7 +138,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                 <button
                   onClick={handleViewSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Eye className="w-4 h-4 mr-1" />
                   View
@@ -146,7 +146,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                 <button
                   onClick={handleDownloadSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Download className="w-4 h-4 mr-1" />
                   Download
@@ -154,7 +154,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                 <button
                   onClick={handlePrintSelectedSale}
                   disabled={selectedSales.size !== 1}
-                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex items-center px-3 py-1.5 border border-orange-300 rounded-md text-sm font-medium text-orange-700 bg-white hover:bg-orange-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Printer className="w-4 h-4 mr-1" />
                   Print
@@ -180,7 +180,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                   type="checkbox"
                   checked={selectedSales.size === sales.length && sales.length > 0}
                   onChange={(e) => handleSelectAllSales(e.target.checked)}
-                  className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -226,7 +226,7 @@ export default function SalesTable({ sales, onView, onCancel, onRefund, onDownlo
                       e.stopPropagation();
                       handleSelectSale(sale.id, e.target.checked);
                     }}
-                    className="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-orange-600 focus:ring-orange-400 border-gray-300 rounded"
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">

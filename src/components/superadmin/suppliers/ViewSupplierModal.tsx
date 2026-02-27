@@ -358,7 +358,7 @@ export default function ViewSupplierModal({ isOpen, onClose, supplier }: ViewSup
                 {data.creditLimit && (
                   <div>
                     <label className="text-sm text-gray-600">Credit Limit</label>
-                    <p className="text-gray-900">USD {data.creditLimit.toLocaleString()}</p>
+                    <p className="text-gray-900">LKR {data.creditLimit.toLocaleString()}</p>
                   </div>
                 )}
               </div>

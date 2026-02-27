@@ -85,7 +85,7 @@ export default function NotificationsPage() {
       case NotificationType.SUCCESS:
         return 'bg-green-50 border-l-4 border-green-500';
       default:
-        return 'bg-orange-50 border-l-4 border-orange-500';
+        return 'bg-orange-50 border-l-4 border-orange-400';
     }
   };
 

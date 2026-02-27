@@ -216,7 +216,7 @@ export default function EditJobSheetModal({
                 value={formData.status}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               >
                 {STATUS_OPTIONS.map((status) => (
                   <option key={status.value} value={status.value}>
@@ -236,7 +236,7 @@ export default function EditJobSheetModal({
                 value={formData.priority}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               >
                 {PRIORITY_OPTIONS.map((priority) => (
                   <option key={priority.value} value={priority.value}>
@@ -260,7 +260,7 @@ export default function EditJobSheetModal({
               minLength={10}
               rows={3}
               placeholder="Describe the issue with the device..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
             />
             <p className="text-xs text-gray-500 mt-1">
               Minimum 10 characters required
@@ -298,7 +298,7 @@ export default function EditJobSheetModal({
               onChange={handleChange}
               rows={4}
               placeholder="Enter diagnosis notes or use AI to generate suggestions..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
             />
           </div>
 
@@ -333,7 +333,7 @@ export default function EditJobSheetModal({
               onChange={handleChange}
               rows={4}
               placeholder="Enter repair notes or use AI to generate detailed repair documentation..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
             />
           </div>
 
@@ -344,19 +344,19 @@ export default function EditJobSheetModal({
               <div>
                 <label className="block text-xs font-medium text-gray-600 mb-1">Total Amount</label>
                 <div className="text-lg font-bold text-gray-900">
-                  USD {jobSheet.totalAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  LKR {jobSheet.totalAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </div>
               </div>
               <div>
                 <label className="block text-xs font-medium text-gray-600 mb-1">Paid Amount</label>
                 <div className="text-lg font-bold text-green-600">
-                  USD {jobSheet.paidAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  LKR {jobSheet.paidAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </div>
               </div>
               <div>
                 <label className="block text-xs font-medium text-gray-600 mb-1">Balance Amount</label>
                 <div className="text-lg font-bold text-red-600">
-                  USD {jobSheet.balanceAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  LKR {jobSheet.balanceAmount?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </div>
               </div>
             </div>
@@ -370,7 +370,7 @@ export default function EditJobSheetModal({
               {/* Labour Cost */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Labour Cost (USD)
+                  Labour Cost (LKR)
                 </label>
                 <input
                   type="number"
@@ -380,14 +380,14 @@ export default function EditJobSheetModal({
                   min="0"
                   step="0.01"
                   placeholder="0.00"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
 
               {/* Parts Cost */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Parts Cost (USD)
+                  Parts Cost (LKR)
                 </label>
                 <input
                   type="number"
@@ -397,7 +397,7 @@ export default function EditJobSheetModal({
                   min="0"
                   step="0.01"
                   placeholder="0.00"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
             </div>
@@ -417,7 +417,7 @@ export default function EditJobSheetModal({
                 onChange={handleNumberChange}
                 min="0"
                 placeholder="0"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
 
@@ -431,7 +431,7 @@ export default function EditJobSheetModal({
                 name="expectedCompletionDate"
                 value={formData.expectedCompletionDate}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
             </div>
           </div>

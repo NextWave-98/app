@@ -347,7 +347,7 @@ export default function AddJobSheetModal({
                       value={customerSearch}
                       onChange={(e) => setCustomerSearch(e.target.value)}
                       placeholder="Search by name, phone, email, NIC..."
-                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                       disabled={!!selectedCustomer}
                     />
                   </div>
@@ -496,7 +496,7 @@ export default function AddJobSheetModal({
                               !isAvailable
                                 ? 'border-red-200 bg-red-50 opacity-60 cursor-not-allowed'
                                 : selectedDevice?.id === device.id
-                                ? 'border-orange-500 bg-orange-50'
+                                ? 'border-orange-400 bg-orange-50'
                                 : 'border-gray-200 hover:border-gray-300'
                             }`}
                           >
@@ -584,7 +584,7 @@ export default function AddJobSheetModal({
                       value={formData.locationId}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     >
                       <option value="">Select Location</option>
                       {branches.map((branch) => (
@@ -604,7 +604,7 @@ export default function AddJobSheetModal({
                       value={formData.priority}
                       onChange={handleChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     >
                       {PRIORITY_OPTIONS.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -627,7 +627,7 @@ export default function AddJobSheetModal({
                     required
                     rows={4}
                     placeholder="Describe the problem in detail (min 10 characters)..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
                   />
                   <p className="text-xs text-gray-500 mt-1">
                     {formData.issueDescription.length} / 10 minimum characters
@@ -645,7 +645,7 @@ export default function AddJobSheetModal({
                     onChange={handleChange}
                     rows={3}
                     placeholder="List accessories received with the device..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none"
                   />
                 </div>
 
@@ -653,7 +653,7 @@ export default function AddJobSheetModal({
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Labour Cost (USD)
+                      Labour Cost (LKR)
                     </label>
                     <input
                       type="number"
@@ -662,13 +662,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Parts Cost (USD)
+                      Parts Cost (LKR)
                     </label>
                     <input
                       type="number"
@@ -677,13 +677,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Discount (USD)
+                      Discount (LKR)
                     </label>
                     <input
                       type="number"
@@ -692,13 +692,13 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Advance Payment (USD)
+                      Advance Payment (LKR)
                     </label>
                     <input
                       type="number"
@@ -707,7 +707,7 @@ export default function AddJobSheetModal({
                       onChange={handleNumberChange}
                       min="0"
                       step="0.01"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
                 </div>
@@ -724,7 +724,7 @@ export default function AddJobSheetModal({
                       value={formData.warrantyPeriod}
                       onChange={handleNumberChange}
                       min="0"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
 
@@ -739,7 +739,7 @@ export default function AddJobSheetModal({
                       onChange={handleChange}
                       min={new Date().toISOString().split('T')[0]}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                     />
                   </div>
                 </div>

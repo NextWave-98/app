@@ -158,7 +158,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="partId"
                     value={formData.partId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                     required
                   >
                     <option value="">Select a part</option>
@@ -180,7 +180,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="fromBranchId"
                     value={formData.fromBranchId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                     required
                   >
                     <option value="">Select source branch</option>
@@ -202,7 +202,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     name="toBranchId"
                     value={formData.toBranchId}
                     onChange={handleChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                     required
                   >
                     <option value="">Select destination branch</option>
@@ -230,7 +230,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     value={formData.quantity}
                     onChange={handleChange}
                     placeholder="Enter quantity to transfer"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                     required
                   />
                 </div>
@@ -244,7 +244,7 @@ export default function StockTransferModal({ isOpen, onClose, onSuccess }: Stock
                     onChange={handleChange}
                     rows={3}
                     placeholder="Add any notes about this transfer..."
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   />
                 </div>
 

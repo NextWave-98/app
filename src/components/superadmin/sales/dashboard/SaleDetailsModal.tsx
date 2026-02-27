@@ -81,7 +81,7 @@ export default function SaleDetailsModal({ isOpen, onClose, saleDetails, loading
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-LK', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'LKR',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);

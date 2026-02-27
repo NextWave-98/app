@@ -237,7 +237,7 @@ export default function SuppliersPage() {
               onClick={() => setActiveTab('suppliers')}
               className={`px-6 py-3 text-sm font-medium cursor-pointer ${
                 activeTab === 'suppliers'
-                  ? 'border-b-2 border-orange-500 text-orange-600'
+                  ? 'border-b-2 border-orange-400 text-orange-600'
                   : 'text-gray-500'
               }`}
             >
@@ -247,7 +247,7 @@ export default function SuppliersPage() {
               onClick={() => setActiveTab('orders')}
               className={`px-6 py-3 text-sm font-medium cursor-pointer ${
                 activeTab === 'orders'
-                  ? 'border-b-2 border-orange-500 text-orange-600'
+                  ? 'border-b-2 border-orange-400 text-orange-600'
                   : 'text-gray-500'
               }`}
             >
@@ -276,7 +276,7 @@ export default function SuppliersPage() {
                               setSelectedSupplier(selectedSuppliers[0]);
                               setIsViewModalOpen(true);
                             }}
-                            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
                           >
                             <Eye className="w-4 h-4 mr-2" />
                             View

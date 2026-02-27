@@ -46,7 +46,7 @@ export default function SuperAdminWarrantiesTable({
                   }
                 }}
                 onChange={(e) => handleSelectAll(e.target.checked)}
-                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
+                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-400"
               />
             </th>
             <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase bg-gray-50">
@@ -85,7 +85,7 @@ export default function SuperAdminWarrantiesTable({
                     type="checkbox"
                     checked={isSelected}
                     onChange={(e) => handleSelectOne(warranty.id, e.target.checked)}
-                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
+                    className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-400"
                   />
                 </td>
                 <td className="px-4 py-3 text-sm font-medium text-gray-900">

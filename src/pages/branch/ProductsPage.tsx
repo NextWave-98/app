@@ -303,7 +303,7 @@ export default function ProductsPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -445,7 +445,7 @@ export default function ProductsPage() {
 
       {/* Addon Quantity Modal */}
       {showAddonModal && selectedProducts.length > 0 && (
-        <div className="fixed inset-0 bg-gradient-to-br from-orange-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-gradient-to-br from-orange-400/20 via-purple-500/20 to-pink-500/20 backdrop-blur-md transition-opacity flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh]">
             {/* Modal Header */}
             <div className="bg-gradient-to-r from-orange-600 to-indigo-600 px-6 py-2 flex items-center justify-between rounded-t-2xl">
@@ -507,7 +507,7 @@ export default function ProductsPage() {
                           value={requestedQuantity || ''}
                           onChange={(e) => setRequestedQuantity(parseInt(e.target.value) || 0)}
                           placeholder="Enter quantity needed"
-                          className="w-full px-4 py-3 text-xl font-bold text-green-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full px-4 py-3 text-xl font-bold text-green-600 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400"
                         />
                         <p className="text-xs text-gray-500 mt-1">Min stock level: {product.minStockLevel}</p>
                       </div>
@@ -523,7 +523,7 @@ export default function ProductsPage() {
                         onChange={(e) => setAddonRemark(e.target.value)}
                         rows={4}
                         placeholder="Enter any remarks or notes for this request..."
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-orange-400 resize-none"
                       />
                     </div>
                   </>
@@ -542,7 +542,7 @@ export default function ProductsPage() {
               <button
                 onClick={handleAddonRequest}
                 disabled={addonLoading}
-                className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-indigo-600 text-white rounded-lg text-sm font-semibold hover:from-orange-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-200 shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                className="px-6 py-2.5 bg-gradient-to-r from-orange-600 to-indigo-600 text-white rounded-lg text-sm font-semibold hover:from-orange-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-all duration-200 shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
               >
                 {addonLoading ? (
                   <>

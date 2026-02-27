@@ -36,9 +36,9 @@ export default function WarrantyStatsCards({ stats }: WarrantyStatsCardsProps) {
           <div>
             <p className="text-sm font-medium text-gray-600 mb-1">Claim Cost</p>
             <p className="text-2xl font-bold text-red-600">
-              USD {(stats.totalClaimCost / 1000).toFixed(0)}K
+              LKR {(stats.totalClaimCost / 1000).toFixed(0)}K
             </p>
-            <p className="text-xs text-gray-500 mt-1">Avg: USD {(stats.averageClaimCost / 1000).toFixed(0)}K</p>
+            <p className="text-xs text-gray-500 mt-1">Avg: LKR {(stats.averageClaimCost / 1000).toFixed(0)}K</p>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function WarrantyStatsCards({ stats }: WarrantyStatsCardsProps) {
           <div>
             <p className="text-sm font-medium text-gray-600 mb-1">Warranty Revenue</p>
             <p className="text-2xl font-bold text-green-600">
-              USD {(stats.warrantyRevenue / 1000).toFixed(0)}K
+              LKR {(stats.warrantyRevenue / 1000).toFixed(0)}K
             </p>
             <p className="text-xs text-gray-500 mt-1">Claim Rate: {stats.claimRate.toFixed(1)}%</p>
           </div>

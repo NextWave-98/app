@@ -65,7 +65,7 @@ export default function AddPaymentModal({
 
     if (formData.amount > parseFloat(String(jobSheet.balanceAmount))) {
       const confirmOverpayment = window.confirm(
-        `Payment amount (USD ${formData.amount}) exceeds balance (USD ${parseFloat(String(jobSheet.balanceAmount)).toFixed(2)}). Do you want to proceed?`
+        `Payment amount (LKR ${formData.amount}) exceeds balance (LKR ${parseFloat(String(jobSheet.balanceAmount)).toFixed(2)}). Do you want to proceed?`
       );
       if (!confirmOverpayment) return;
     }
@@ -106,7 +106,7 @@ export default function AddPaymentModal({
   };
 
   const formatCurrency = (amount: number) => {
-    return `USD ${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    return `LKR ${amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   };
 
   if (!isOpen) return null;
@@ -161,7 +161,7 @@ export default function AddPaymentModal({
           {/* Payment Amount */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Payment Amount (USD) <span className="text-red-500">*</span>
+              Payment Amount (LKR) <span className="text-red-500">*</span>
             </label>
             <input
               type="number"

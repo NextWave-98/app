@@ -24,8 +24,8 @@ interface ProductReturnStatsCardsProps {
 
 export default function ProductReturnStatsCards({ stats }: ProductReturnStatsCardsProps) {
   const formatCurrency = (amount: number | undefined) => {
-    if (amount == null) return 'USD 0';
-    return `USD ${amount.toLocaleString('en-US')}`;
+    if (amount == null) return 'LKR 0';
+    return `LKR ${amount.toLocaleString('en-US')}`;
   };
 
   const formatTime = (hours: number) => {

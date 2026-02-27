@@ -149,7 +149,7 @@ const CartSummary: React.FC<CartSummaryProps> = ({
           {/* Checkout Button */}
           <button
             onClick={onCheckout}
-            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-colors shadow-sm hover:shadow-md"
+            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 transition-colors shadow-sm hover:shadow-md"
           >
             <CreditCard className="w-5 h-5" />
             Proceed to Payment

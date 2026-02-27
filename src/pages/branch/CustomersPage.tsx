@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Cookies from 'js-cookie';
 import { RefreshCw, UserPlus, Search, Loader2, Eye, Edit, Trash2, MessageSquare } from 'lucide-react';
 import type { Customer, CustomerStats } from '../../types/customer.types';
 import { useAuth } from '../../context/AuthContext';
@@ -15,6 +17,7 @@ import useCustomer, { type Customer as ApiCustomer, type CustomerStats as ApiCus
 
 export default function BranchCustomersPage() {
   const { user } = useAuth();
+  const navigate = useNavigate();
   const {
     getCustomers,
     getCustomerStats,
@@ -230,9 +233,27 @@ export default function BranchCustomersPage() {
     setIsCustomerInfoModalOpen(true);
   };
 
-  const handleEdit = (customer: Customer) => {
-    setSelectedCustomer(customer);
-    setIsEditModalOpen(true);
+  const handleEdit = async (customer: Customer) => {
+    try {
+      // Check if financial details exist
+      const response = await fetch(`${import.meta.env.VITE_BASE_URL}/api/installments/financial-details/${customer.id}`, {
+        headers: {
+          'Authorization': `Bearer ${Cookies.get('accessToken')}`,
+        },
+      });
+      
+      if (response.ok) {
+        // Financial details exist, navigate to edit
+        navigate(`customers/${customer.id}/financial-details/edit`);
+      } else {
+        // Financial details don't exist, navigate to add
+        navigate(`customers/${customer.id}/financial-details/add`);
+      }
+    } catch (error) {
+      console.error('Error checking financial details:', error);
+      // Default to add page if check fails
+      navigate(`customers/${customer.id}/financial-details/add`);
+    }
   };
 
   const handleAddCustomer = () => {
@@ -341,14 +362,14 @@ export default function BranchCustomersPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
           </button>
           <button
             onClick={handleAddCustomer}
-            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+            className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
           >
             <UserPlus className="w-4 h-4 mr-2" />
             Add Customer
@@ -372,7 +393,7 @@ export default function BranchCustomersPage() {
               placeholder="Search by customer ID, name, email, or phone..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
             />
           </div>
         </div>
@@ -392,7 +413,7 @@ export default function BranchCustomersPage() {
                 <>
                   <button
                     onClick={() => handleView(selectedCustomers[0])}
-                    className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                    className="inline-flex items-center px-4 py-2 border border-transparent rounded-lg text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400"
                   >
                     <Eye className="w-4 h-4 mr-2" />
                     View

@@ -215,7 +215,7 @@ export default function StockDashboardPage() {
             <div>
               <p className="text-sm font-medium text-gray-600 mb-1">Total Value</p>
               <p className="text-2xl font-bold text-orange-600">
-                USD {(stats.totalValue / 1000000).toFixed(2)}M
+                LKR {(stats.totalValue / 1000000).toFixed(2)}M
               </p>
               <p className="text-xs text-gray-500 mt-1">Current valuation</p>
             </div>
@@ -340,10 +340,10 @@ export default function StockDashboardPage() {
                       {product.availableQuantity}
                     </td> */}
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      USD {product.unitPrice.toLocaleString()}
+                      LKR {product.unitPrice.toLocaleString()}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      USD {product.totalValue.toLocaleString()}
+                      LKR {product.totalValue.toLocaleString()}
                     </td>
                   </tr>
                 ))

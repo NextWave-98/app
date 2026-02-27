@@ -154,7 +154,7 @@ export default function ApproveGoodsReceiptModal({
               <select
                 value={locationId}
                 onChange={(e) => setLocationId(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400"
                 required
                 disabled={loadingBranches}
               >
@@ -228,7 +228,7 @@ export default function ApproveGoodsReceiptModal({
                 onChange={(e) => setQualityCheckNotes(e.target.value)}
                 rows={3}
                 placeholder="Enter any quality check notes or observations..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400"
               />
             </div>
 

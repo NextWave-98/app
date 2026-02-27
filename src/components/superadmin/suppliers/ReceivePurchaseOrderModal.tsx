@@ -205,7 +205,7 @@ export default function ReceivePurchaseOrderModal({
                 <select
                   value={locationId}
                   onChange={(e) => setLocationId(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   required
                   disabled={loadingBranches}
                 >
@@ -230,7 +230,7 @@ export default function ReceivePurchaseOrderModal({
                   type="date"
                   value={receivedDate}
                   onChange={(e) => setReceivedDate(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                   required
                 />
               </div>
@@ -255,7 +255,7 @@ export default function ReceivePurchaseOrderModal({
                 id="autoUpdateInventory"
                 checked={autoUpdateInventory}
                 onChange={(e) => setAutoUpdateInventory(e.target.checked)}
-                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
+                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-400"
               />
               <label htmlFor="autoUpdateInventory" className="text-sm text-gray-700">
                 Automatically update inventory for received items (Recommended)
@@ -306,7 +306,7 @@ export default function ReceivePurchaseOrderModal({
                             onChange={(e) =>
                               handleQuantityChange(item.productId, parseInt(e.target.value) || 0)
                             }
-                            className="w-20 px-2 py-1 border border-gray-300 rounded text-center focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                            className="w-20 px-2 py-1 border border-gray-300 rounded text-center focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                           />
                         </td>
                         <td className="px-4 py-3">
@@ -315,7 +315,7 @@ export default function ReceivePurchaseOrderModal({
                             value={item.notes}
                             onChange={(e) => handleNotesChange(item.productId, e.target.value)}
                             placeholder="Optional notes..."
-                            className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                            className="w-full px-2 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-orange-400 focus:border-transparent"
                           />
                         </td>
                       </tr>
@@ -335,7 +335,7 @@ export default function ReceivePurchaseOrderModal({
                 onChange={(e) => setGeneralNotes(e.target.value)}
                 rows={3}
                 placeholder="Add any general notes about this receipt..."
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent"
               />
             </div>
 

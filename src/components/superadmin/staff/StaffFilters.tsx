@@ -53,7 +53,7 @@ export default function StaffFilters({
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder="Search name, email, employee ID..."
-            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+            className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent text-sm"
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function StaffFilters({
           <select
             value={selectedRole}
             onChange={(e) => onRoleChange(e.target.value as StaffRole | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent text-sm"
           >
             <option value="">All Roles</option>
             <option value={StaffRole.SUPER_ADMIN}>Super Admin</option>
@@ -80,7 +80,7 @@ export default function StaffFilters({
           <select
             value={selectedDepartment}
             onChange={(e) => onDepartmentChange(e.target.value as Department | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent text-sm"
           >
             <option value="">All Departments</option>
             <option value={Department.MANAGEMENT}>Management</option>
@@ -97,7 +97,7 @@ export default function StaffFilters({
           <select
             value={selectedStatus}
             onChange={(e) => onStatusChange(e.target.value as StaffStatus | '')}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent text-sm"
           >
             <option value="">All Status</option>
             <option value={StaffStatus.ACTIVE}>Active</option>

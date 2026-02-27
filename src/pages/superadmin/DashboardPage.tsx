@@ -96,7 +96,7 @@ export default function DashboardPage() {
   };
 
   const formatCurrency = (amount: number) => {
-    return `USD ${(amount / 1000000).toFixed(2)}M`;
+    return `LKR ${(amount / 1000000).toFixed(2)}M`;
   };
 
   const getActivityIcon = (type: string) => {
@@ -165,7 +165,7 @@ export default function DashboardPage() {
           <button
             onClick={handleRefresh}
             disabled={refreshing}
-            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 disabled:opacity-50 cursor-pointer"
+            className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-400 disabled:opacity-50 cursor-pointer"
           >
             <RefreshCw className={`w-4 h-4 mr-2 ${refreshing ? 'animate-spin' : ''}`} />
             Refresh
@@ -175,7 +175,7 @@ export default function DashboardPage() {
         
       </div>
 
-      <div className="mb-6 bg-gradient-to-r from-orange-500 to-indigo-600 rounded-lg shadow-lg p-6 text-white">
+      <div className="mb-6 bg-gradient-to-r from-orange-400 to-indigo-600 rounded-lg shadow-lg p-6 text-white">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-1">SMS Balance</h3>
@@ -185,7 +185,7 @@ export default function DashboardPage() {
               <div>
                 <p className="text-4xl font-bold">
                   {(smsBalance.credits ?? smsBalance.balance ?? smsBalance.data?.credits ?? smsBalance.data?.balance ?? 0).toFixed(2)}
-                  <span className="text-lg ml-2">USD</span>
+                  <span className="text-lg ml-2">LKR</span>
                 </p>
                 <p className="text-sm text-orange-100 mt-1">QuickSend.lk Account</p>
               </div>
@@ -240,7 +240,7 @@ export default function DashboardPage() {
 
       {/* Key Metrics - Today's Performance */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg shadow-sm p-6 text-white">
+        <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg shadow-sm p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium opacity-90">Today's Sales</h3>
             {stats.salesGrowth > 0 ? (
@@ -282,7 +282,7 @@ export default function DashboardPage() {
           )}
         </div>
 
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg shadow-sm p-6 text-white">
+        <div className="bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg shadow-sm p-6 text-white">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-sm font-medium opacity-90">Inventory Value</h3>
             <Package className="w-5 h-5" />

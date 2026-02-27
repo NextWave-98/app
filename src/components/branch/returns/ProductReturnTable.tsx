@@ -218,7 +218,7 @@ export default function ProductReturnTable({
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(e) => handleSelectAll(e.target.checked)}
-                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                  className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                 />
               </th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -252,7 +252,7 @@ export default function ProductReturnTable({
                     type="checkbox"
                     checked={selectedRows.has(returnItem.id)}
                     onChange={(e) => handleSelectRow(returnItem.id, e.target.checked)}
-                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-500"
+                    className="w-4 h-4 text-orange-600 bg-gray-100 border-gray-300 rounded focus:ring-orange-400"
                   />
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">

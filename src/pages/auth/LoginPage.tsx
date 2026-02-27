@@ -45,21 +45,21 @@ const LoginPage = () => {
 
   return (
     <div
-      className="min-h-screen flex items-center justify-center px-6 py-12 bg-cover bg-center bg-no-repeat"
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
+      <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-8 w-full max-w-md">
         <div>
           <img
             src="/1.png"
             alt="GadgetChain Manager Logo"
-            width={160}
-            height={120}
-            className="mx-auto mb-4"
+            width={120}
+            height={90}
+            className="mx-auto mb-4 sm:w-40 sm:h-30 lg:w-48 lg:h-36"
           />
         </div>
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
             GadgetChain Manager
           </h1>
           <p className="text-gray-600 mt-2">Sign in to your account</p>
